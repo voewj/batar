@@ -1,0 +1,13 @@
+#ignore compile file
+*.pyc
+
+#ignore *.po except zh_CN.po
+*.po
+!zh_CN.po
+
+.project
+.pydevproject
+.settings
+*.log
+odoo.egg-info
+*.conf

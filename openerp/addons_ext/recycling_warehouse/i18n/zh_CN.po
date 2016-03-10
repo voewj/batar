@@ -1,0 +1,102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* recycling_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160301\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-09 04:11+0000\n"
+"PO-Revision-Date: 2016-03-09 04:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: recycling_warehouse
+#: model:product.category,name:recycling_warehouse.product_category_recycling_999
+msgid "999"
+msgstr "999"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_id
+msgid "ID"
+msgstr "ID"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: recycling_warehouse
+#: model:ir.model,name:recycling_warehouse.model_product_template
+msgid "Product Template"
+msgstr "产品模板"
+
+#. module: recycling_warehouse
+#: model:ir.ui.view,arch_db:recycling_warehouse.rewinding_warehouse_form_view
+msgid "Transfer"
+msgstr "调拨"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_template_percentage
+msgid "percentage"
+msgstr "成色"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_price_unit
+msgid "price unit"
+msgstr "差价(g)"
+
+#. module: recycling_warehouse
+#: model:ir.model,name:recycling_warehouse.model_product_recycling_fee
+msgid "product.recycling.fee"
+msgstr "product.recycling.fee"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_product_id
+msgid "products"
+msgstr "产品"
+
+#. module: recycling_warehouse
+#: model:ir.model.fields,field_description:recycling_warehouse.field_product_recycling_fee_name
+msgid "recycling name"
+msgstr "差价"
+
+#. module: recycling_warehouse
+#: model:ir.ui.menu,name:recycling_warehouse.rewinding_warehouse_menu
+msgid "rewinding warehouse"
+msgstr "收料仓"
+
+#. module: recycling_warehouse
+#: model:ir.actions.act_window,name:recycling_warehouse.rewinding_warehouse_action
+msgid "rewinding.warehouse.action"
+msgstr "rewinding.warehouse.action"
+

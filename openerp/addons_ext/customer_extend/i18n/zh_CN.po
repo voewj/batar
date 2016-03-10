@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* customer_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160301\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-09 03:47+0000\n"
+"PO-Revision-Date: 2016-03-09 03:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_create_uid
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_create_date
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_credit_category_id
+msgid "Credit Category"
+msgstr "信用类型"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_value
+msgid "Credit Category Value"
+msgstr "信用额度"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_partner_id
+msgid "Customer"
+msgstr "客户"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_customer_code
+msgid "Customer Code"
+msgstr "客户编码"
+
+#. module: customer_extend
+#: model:ir.ui.view,arch_db:customer_extend.customer_form_view
+msgid "Customer Credit Info"
+msgstr "客户信用信息"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line
+msgid "Customer Credit Limit"
+msgstr "客户信用额度"
+
+#. module: customer_extend
+#: selection:res.partner,credit_level:0
+msgid "Diamond customer"
+msgstr "钻石客户"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_display_name
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: customer_extend
+#: selection:res.partner,credit_level:0
+msgid "Gold customers"
+msgstr "黄金客户"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_id
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category___last_update
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_write_uid
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_write_uid
+msgid "Last Updated by"
+msgstr "最后更新"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_write_date
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_line_write_date
+msgid "Last Updated on"
+msgstr "最后更新"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_category_name
+msgid "Name"
+msgstr "名称"
+
+#. module: customer_extend
+#: selection:res.partner,credit_level:0
+msgid "Ordinary customers"
+msgstr "普通客户"
+
+#. module: customer_extend
+#: model:ir.model,name:customer_extend.model_res_partner
+msgid "Partner"
+msgstr "业务伙伴"
+
+#. module: customer_extend
+#: selection:res.partner,credit_level:0
+msgid "Platinum customers"
+msgstr "铂金客户"
+
+#. module: customer_extend
+#: selection:res.partner,credit_level:0
+msgid "Silver customers"
+msgstr "白银客户"
+
+#. module: customer_extend
+#: selection:res.partner,credit_level:0
+msgid "White Gold customers"
+msgstr "白金客户"
+
+#. module: customer_extend
+#: model:ir.model.fields,field_description:customer_extend.field_res_partner_credit_level
+msgid "credit level"
+msgstr "信用级别"
+
+#. module: customer_extend
+#: model:ir.model,name:customer_extend.model_res_partner_credit_category
+msgid "res.partner.credit.category"
+msgstr "客户信用类型"
+
+#. module: customer_extend
+#: model:ir.model,name:customer_extend.model_res_partner_credit_line
+msgid "res.partner.credit.line"
+msgstr "客户信用明细"
+

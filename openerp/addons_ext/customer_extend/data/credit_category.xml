@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="credit_category_1" model="res.partner.credit.category">
+	    	<field name="name">现金</field>
+	    </record>
+	    <record id="credit_category_2" model="res.partner.credit.category">
+	    	<field name="name">黄金</field>
+	    </record>
+	</data>
+</openerp>

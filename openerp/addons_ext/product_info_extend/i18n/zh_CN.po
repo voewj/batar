@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_info_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160112\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-29 06:08+0000\n"
+"PO-Revision-Date: 2016-02-29 06:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_additional_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_product_template_additional_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_additional_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_stock_move_additional_fee
+msgid "Additional Fee"
+msgstr "附加工费"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_base_weight_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_product_template_base_weight_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_base_weight_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_stock_move_base_weight_fee
+msgid "Base Weight Fee"
+msgstr "基本工费"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_discount
+#: model:ir.model.fields,field_description:product_info_extend.field_product_template_discount
+#: model:ir.model.fields,field_description:product_info_extend.field_stock_move_discount
+msgid "Discount"
+msgstr "折扣"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_item_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_product_template_item_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_item_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_stock_move_item_fee
+msgid "Item Fee"
+msgstr "单件附加费"
+
+#. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_product_product
+msgid "Product"
+msgstr "产品"
+
+#. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_product_template
+msgid "Product Template"
+msgstr "产品模板"
+
+#. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "销售订单行"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_standard_weight
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_standrad_weight
+#: model:ir.model.fields,field_description:product_info_extend.field_product_template_standard_weight
+#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_standrad_weight
+#: model:ir.model.fields,field_description:product_info_extend.field_stock_move_standrad_weight
+msgid "Standard Weight"
+msgstr "标准重量"
+
+#. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_stock_move
+msgid "Stock Move"
+msgstr "库存调拨"
+
