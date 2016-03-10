@@ -26,7 +26,7 @@
         # 'security/ir.model.access.csv',
         'data/recycling_product.xml',
         'data/recycling_warehouse.xml',
-#         'views/recycling_warehouse.xml',
+        'views/recycling_warehouse.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

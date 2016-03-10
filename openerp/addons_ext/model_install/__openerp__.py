@@ -28,6 +28,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'data/base_init.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
@@ -35,4 +36,7 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'auto_install': True,
+    'application': True,
 }
