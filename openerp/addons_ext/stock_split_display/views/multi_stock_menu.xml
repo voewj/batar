@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	   
+	   <record id="mian_warehourse_action" model="ir.actions.act_window">
+	   	<field name="name">main warehourse</field>
+	   	<field name="type">ir.actions.act_window</field>
+	   	<field name="res_model">stock.picking</field>
+	   	<field name="view_type">form</field>
+	   	<field name="view_mode">tree,form</field>
+	   	<field name="domian">[('location_dest_id','ilike',)]</field>
+	   </record>
+	   <menuitem action='mian_warehourse_action' name="main warehourse" id="main_stock_menu" parent="stock.menu_stock_inventory_control"/>
+	</data>
+</openerp>

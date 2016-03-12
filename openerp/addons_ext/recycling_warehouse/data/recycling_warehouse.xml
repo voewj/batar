@@ -3,11 +3,11 @@
 	<data>
 	    <record id="recycling_warehourse" model="stock.warehouse">
 	        <field name="name">收料仓</field>
-	        <field name="code">REWINDING</field>
+	        <field name="code">收料仓</field>
 	    </record>
 	    <record id="sample_warehourse" model="stock.warehouse">
 	        <field name="name">样品库</field>
-	        <field name="code">SAMPLE</field>
+	        <field name="code">样品库</field>
 	    </record>
 	</data>
 </openerp>

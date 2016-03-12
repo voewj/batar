@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    
+	    <!-- 设置公司基本信息 -->
+	    <record id="base.main_partner" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">百泰集团</field>
+            <field name="company_id" eval="None"/>
+            <field name="image" type="base64" file="model_install/static/img/logo.png"/>
+            <field name="customer" eval="False"/>
+            <field name="is_company" eval="True"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">400-003-6610</field>
+            <field name="email">www@batar.cn</field>
+            <field name="website">www.batar.cn</field>
+        </record>
+      
+	</data>
+</openerp>

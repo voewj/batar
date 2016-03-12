@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "库存明细显示",
+    'name': "质量检测",
 
     'summary': """
-        显示库存明细""",
+        质量检测模块""",
 
     'description': """
-        Long description of module's purpose
+        质量检测模块
     """,
 
     'author': "cloudy",
@@ -24,11 +24,11 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/stock_detail_menu.xml',
-
+        'data/quality_inspection.xml',
+        
     ],
     # only loaded in demonstration mode
     'demo': [
-       
+        'demo/demo.xml',
     ],
 }

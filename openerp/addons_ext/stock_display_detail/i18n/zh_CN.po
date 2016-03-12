@@ -18,5 +18,5 @@ msgstr ""
 #. module: stock_display_detail
 #: model:ir.ui.menu,name:stock_display_detail.stock_detail_menu_product_variant
 msgid "Product"
-msgstr "库存明细"
+msgstr "总库存明细"
 

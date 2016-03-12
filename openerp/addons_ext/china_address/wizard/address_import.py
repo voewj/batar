@@ -42,7 +42,7 @@ class address_import(osv.osv_memory):
             else:
                 district_id = district_id and district_id[0]
             res_ids.append(district_id)
-            print 'district:',district
+            #print 'district:',district
         return {
             'name': u'全国地址导入结果',
             'view_type': 'form',

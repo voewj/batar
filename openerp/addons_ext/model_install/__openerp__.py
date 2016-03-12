@@ -28,9 +28,8 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'data/base_init.xml',
-        'views/views.xml',
-        'views/templates.xml',
+        'base_config/base_init.xml',
+       
     ],
     # only loaded in demonstration mode
     'demo': [

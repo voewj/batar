@@ -27,6 +27,7 @@
         
         'views/address.xml',
         'wizard/address_import.xml',
+        'views/res_partner_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

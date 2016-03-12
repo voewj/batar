@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="quality_warehourse" model="stock.warehouse">
+	        <field name="name">质检仓</field>
+	        <field name="code">质检仓</field>
+	    </record>
+	</data>
+</openerp>

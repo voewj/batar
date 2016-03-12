@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "库存明细显示",
+    'name': "stock_qc",
 
     'summary': """
-        显示库存明细""",
+        质量控制""",
 
     'description': """
-        Long description of module's purpose
+       质量控制
     """,
 
     'author': "cloudy",
@@ -24,11 +24,12 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/stock_detail_menu.xml',
-
+        'data/qc_security.xml',
+        'views/stock_qc.xml',
+      
     ],
     # only loaded in demonstration mode
     'demo': [
-       
+        
     ],
 }

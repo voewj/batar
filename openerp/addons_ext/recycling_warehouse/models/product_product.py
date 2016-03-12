@@ -15,6 +15,6 @@ class product_template(models.Model):
     def _get_product_template_type(self, cr, uid, context=None):
         res = super(product_template, self)._get_product_template_type(cr, uid, context=context)
         if 'recycling' not in [item[0] for item in res]:
-            res.append(('recycling', _('Recycling Product')))
+            res.append(('recycling', _(u'回收料')))
         return res
     

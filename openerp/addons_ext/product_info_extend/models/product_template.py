@@ -13,6 +13,7 @@ class product_template(models.Model):
     standard_weight = fields.Float(string="Standard Weight")
     item_fee = fields.Float(string="Item Fee")
     ponderable = fields.Boolean(string='ponderable')
+    
 
     _defaults = {
         'type': "product",
