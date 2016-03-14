@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_quality_inspection_quality_inspection,quality_inspection.quality_inspection,model_quality_inspection_quality_inspection,,1,0,0,0

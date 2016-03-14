@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <template id="hide_about" name="Hide About" inherit_id="web.template">
+	        <xpath expr="//[@t-nam'UserMenu']/li/ul//li[@data-menu='about']" position="replace">
+	            
+	        </xpath>
+	    </template>
+	</data>
+</openerp>

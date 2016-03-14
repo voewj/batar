@@ -25,10 +25,13 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/multi_stock_menu.xml',
+        'views/stock_move_detail.xml',
+        'views/stock_warehouse.xml',
+        
       
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        
     ],
 }

@@ -6,3 +6,4 @@ Created on 2016年3月11日
 '''
 
 import stock_move
+import stock_menu_list_create

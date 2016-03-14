@@ -1,15 +1,60 @@
 <?xml version='1.0' encoding='utf-8'?>
 <openerp>
 	<data>
+	    <record id="stock_menu_list_create_form" model="ir.ui.view">
+	    	<field name="name">stock_menu_list_create</field>
+	    	<field name="model">stock.menu.list.create</field>
+	    	<field name="arch" type="xml">
+	    	    <form string="stock menu list create">
+	    	        <header>
+	    	            <button name="action_auto_create_warehouse_list" string="auto create warehouse list" type="object" class="btn-primary"/>
+	    	            <button name="action_auto_delete_warehouse_list" string="auto delete warehouse list" type="object" class="btn-danger"/>
+	    	        </header>
+	    	        <sheet>
+		    	        <group>
+		    	        	<group>
+		    	        		<field name="warehouse_id"></field>
+		    	        		<field name="en_code" readonly="1"></field>
+		    	        	</group>
+		    	        	<group>
+		    	        	    <div>
+		    	        	    	<h2>Create menus for different warehouses to display inventory details</h2>
+		    	        	    </div>
+		    	        	</group>
+		    	        	<group>
+		    	        	    <label for="domain"/>
+			    	        	<div  name="domain">
+			    	        	    <field name="domain"></field>
+			    	        	</div>
+		    	        	</group>
+		    	        	
+		    	        </group>
+		    	        
+	    	        </sheet>
+	    	    </form>
+	    	</field>
+	    </record>
+	    <record id="stock_menu_list_create_tree" model="ir.ui.view">
+	    	<field name="name">stock_menu_list_create_tree</field>
+	    	<field name="model">stock.menu.list.create</field>
+	    	<field name="arch" type="xml">
+	    	    <tree string="stock_menu_list_create_tree">
+	    	        <field name="warehouse_id"></field>
+	    	        <field name="en_code"></field>
+	    	        <field name="domain"></field>
+	    	    </tree>
+	    	</field>
+	    </record>
 	   
-	   <record id="mian_warehourse_action" model="ir.actions.act_window">
-	   	<field name="name">main warehourse</field>
+	   <record id="stock_menu_list_create_action" model="ir.actions.act_window">
+	   	<field name="name">stock menu list create action</field>
 	   	<field name="type">ir.actions.act_window</field>
-	   	<field name="res_model">stock.picking</field>
+	   	<field name="res_model">stock.menu.list.create</field>
 	   	<field name="view_type">form</field>
 	   	<field name="view_mode">tree,form</field>
-	   	<field name="domian">[('location_dest_id','ilike',)]</field>
+	   	
 	   </record>
-	   <menuitem action='mian_warehourse_action' name="main warehourse" id="main_stock_menu" parent="stock.menu_stock_inventory_control"/>
+	   <menuitem action='stock_menu_list_create_action' name="stock menu list create" id="stock_menu_list_create_menu" parent="stock.menu_stock_inventory_control"/>
+	    
 	</data>
 </openerp>

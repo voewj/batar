@@ -8,7 +8,7 @@
 	    </record>
 	    <record id="product_category_recycling_999" model="product.category">
 	        <field name="parent_id" ref="product_category_recycling_all"></field>
-	        <field name="name">999</field>
+	        <field name="name">千足金</field>
 	    </record>
 	   <!-- 回收料名称，将回收料做为产品来处理，便于库存统计 -->
 	    <record id="recycling_product_999_gold" model="product.template">
