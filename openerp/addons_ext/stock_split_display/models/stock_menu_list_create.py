@@ -29,6 +29,7 @@ class stock_menu_list_create(models.Model):
     act_window_id = fields.Many2one('ir.actions.act_window',string='ir actions act_window')
     menuitem_id = fields.Many2one('ir.ui.menu',string='ir ui menu')
     domain = fields.Text(string='domain',default='')
+    groups = fields.Many2many('res.groups',string="access control")
     
     @api.multi
     @api.depends('warehouse_id')
@@ -62,6 +63,7 @@ class stock_menu_list_create(models.Model):
             en_code = stock_warehouse.en_code
            
             domain = obj.domain
+            groups = obj.groups
             if not domain:
                 domain= "[('en_code','=','%s')]" % en_code
             action_values ={
@@ -85,6 +87,8 @@ class stock_menu_list_create(models.Model):
             menu_values = {
                 'name':"%s:%s" % (stock_warehouse.code,u'库存明细'), 
             }
+            if groups:
+                menu_values['groups_id']= [group.id for group in groups]
             if parent_id and act_window_id:
                 menu_values['parent_id'] = parent_id
                 menu_values['action'] ="ir.actions.act_window,%s" % act_window_id 

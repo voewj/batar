@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="product_category_tree" model="ir.ui.view">
+	    	<field name="name">product category</field>
+	    	<field name="model">product.category</field>
+	    	<field name="inherit_id" ref="product.product_category_list_view"></field>
+	    	<field name="arch" type="xml">
+	    	    <data>
+	    	        <field name="complete_name" position="after">
+	    	        	<field name="sub_top"/>
+	    	        </field>
+	    	    </data>
+	    	</field>
+	    </record>
+	    <record id="product_category_form_view" model="ir.ui.view">
+	    	<field name="name">product category</field>
+	    	<field name="model">product.category</field>
+	    	<field name="inherit_id" ref="product.product_category_form_view"></field>
+	    	<field name="arch" type="xml">
+	    	    <data>
+	    	        <xpath expr="//group[@name='first']" position="before">
+	    	        <div class="oe_title">
+                        <h1><label for="sub_top" string="sub top" />
+                        <field name="sub_top" /></h1>
+                    </div>
+                    </xpath>
+	    	    </data>
+	    	</field>
+	    </record>
+	</data>
+</openerp>

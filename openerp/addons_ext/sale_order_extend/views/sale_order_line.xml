@@ -8,7 +8,7 @@
 	        <field name="arch" type="xml">
 	        	<data>
 	        	    <xpath expr="//field[@name='price_subtotal']" position="before">
-	        	        <field name="second_product_uom_qty"/>
+	        	        <field name="real_time_price_unit"/>
 	        	        
 	        	    </xpath>
 	        	</data>

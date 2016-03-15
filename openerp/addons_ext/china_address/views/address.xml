@@ -43,14 +43,19 @@
             <field name="view_id" ref="view_city_form"/>
             <field name="act_window_id" ref="action_city"/>
         </record>
-        <menuitem id="menu_city" name="city" parent='base.menu_country_state_partner' action='action_city'/>
+        <menuitem 
+            id="menu_city" 
+            name="city" 
+            parent='base.menu_country_state_partner' 
+            web_icon="china_address,static/description/icon.png"
+            action='action_city'/>
         
         <record id="view_district_tree" model="ir.ui.view">
             <field name="name">res.country.state.city.district.tree</field>
             <field name='model'>res.country.state.city.district</field>
             <field name='arch' type='xml'>
                 <tree string='district infos tree view'>
-                	<field name='province_id'/>
+                	
                     <field name='city_id'/> 
                     <field name='name'/>
                 </tree>
@@ -62,7 +67,7 @@
             <field name='arch' type='xml'>
                 <form string='district infos form view'>
                 	<group>
-                		<field name='province_id'/>
+                		
 	                    <field name='city_id'/> 
 	                    <field name='name'/>
                     </group>

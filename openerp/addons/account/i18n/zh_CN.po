@@ -4730,7 +4730,7 @@ msgstr "待确认发票"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance
 msgid "Invoicing"
-msgstr "开票"
+msgstr "会计"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_config_settings

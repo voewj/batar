@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_price_real_time_product_price_real_time,product_price_real_time.product_price_real_time,model_product_price_real_time_product_price_real_time,,1,0,0,0

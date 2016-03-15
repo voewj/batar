@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <openerp>
-	<data noupdate="1">
+	<data><!--  noupdate="1"> -->
+	    <record id="product.product_category_all" model="product.category">
+            <field name="name">所有</field>
+        </record>
 	    <record id="standard_weight" model="decimal.precision">
 	    	<field name="name">Glod Sale</field>
 	    	<field name="digits">2</field>

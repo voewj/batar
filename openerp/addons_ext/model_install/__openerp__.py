@@ -22,7 +22,7 @@
     # any module necessary for this one to work correctly
     'depends': ['base','crm','sale','purchase','product','stock','account_accountant','board','l10n_cn','l10n_cn_standard',
                 'product_menu','china_address','customer_extend','customer_import','sale_order_extend','product_info_extend',
-                'product_import','stock_extend','stock_import','sale_order_extend','stock_product_detail',
+                'product_import','stock_extend','stock_import','sale_order_extend',
                 'multi_warehouse_management','recycling_warehouse','stock_split_display'],
 
     # always loaded

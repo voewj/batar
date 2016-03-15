@@ -22,14 +22,12 @@
 		    	        	    </div>
 		    	        	</group>
 		    	        	<group>
-		    	        	    <label for="domain"/>
-			    	        	<div  name="domain">
-			    	        	    <field name="domain"></field>
-			    	        	</div>
+			    	        	<field name="domain"></field>
 		    	        	</group>
-		    	        	
+		    	        	<group>
+		    	        	    <field name="groups" widget="many2many_tags"/>
+		    	        	</group>
 		    	        </group>
-		    	        
 	    	        </sheet>
 	    	    </form>
 	    	</field>

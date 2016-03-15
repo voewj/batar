@@ -15,7 +15,7 @@ class res_country_state_city_district(osv.Model):
     _columns = {
        'name': fields.char(size=100,string='district name'),
        'city_id': fields.many2one('res.country.state.city',ondelete='cascade',string='city name'),
-       'province_id':fields.related('city_id','province_id',type='many2one',relation='res.country.state',string='province name')
+       
     }
 
 class res_country_state(osv.Model):

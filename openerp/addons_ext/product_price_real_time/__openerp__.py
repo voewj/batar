@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "库存明细显示",
+    'name': "实时金价",
 
     'summary': """
-        显示库存明细""",
+                实时金价，订单价格计算时需要从此模块获得金价""",
 
     'description': """
-        Long description of module's purpose
+                实时金价，订单价格计算时需要从此模块获得金价
     """,
 
     'author': "cloudy",
@@ -19,16 +19,17 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','stock'],
+    'depends': ['base','product'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/stock_detail_menu.xml',
-
+        'views/product_category.xml',
+        'views/product_price_real_time.xml',
+       
     ],
     # only loaded in demonstration mode
     'demo': [
-       
+        'demo/demo.xml',
     ],
 }

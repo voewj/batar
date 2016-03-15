@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','stock','sale'],
+    'depends': ['base','product','stock','sale','product_price_real_time'],
 
     # always loaded
     'data': [
