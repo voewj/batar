@@ -6,6 +6,7 @@
             <field name='model'>res.country.state.city</field>
             <field name='arch' type='xml'>
                 <tree string='city infos tree view'>
+                    <field name="country_id"/>
                     <field name='province_id'/>
                     <field name='name'/>
                 </tree>
@@ -17,6 +18,7 @@
             <field name='arch' type='xml'>
                 <form string='city infos form view'>
 	                <group>
+	                    <field name="country_id"/>
 		                <field name='province_id'/>
 	                    <field name='name'/>
 	                </group>
@@ -55,7 +57,8 @@
             <field name='model'>res.country.state.city.district</field>
             <field name='arch' type='xml'>
                 <tree string='district infos tree view'>
-                	
+                	<field name="country_id"/>
+		            <field name='province_id'/>
                     <field name='city_id'/> 
                     <field name='name'/>
                 </tree>
@@ -67,7 +70,8 @@
             <field name='arch' type='xml'>
                 <form string='district infos form view'>
                 	<group>
-                		
+                		<field name="country_id"/>
+		                <field name='province_id'/>
 	                    <field name='city_id'/> 
 	                    <field name='name'/>
                     </group>

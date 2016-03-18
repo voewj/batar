@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="stock_picking_type_shenzhen_gold" model="stock.picking.type">
+	        
+	    </record>
+	</data>
+</openerp>

@@ -13,12 +13,26 @@
 	                        <label for="ponderable"/>
 	                    </div>
 	                </div>
-	    	        <xpath expr="//notebook/page/group//field[@name='type']" position="before">
-	    	            <field name="standard_weight" required='1'></field>
-	    	        </xpath>
 	    	        <xpath expr="//notebook/page/group//div[@name='standard_price_uom']" position="after">	 
-	    	            <field name="real_time_price_unit" required='1'></field>           
-	    	            <field name="item_fee" require="1"></field>
+	    	            
+	    	            <field name="item_fee" require="1" ></field>
+	    	            <field name='weight_fee'/>
+	    	        </xpath>
+	    	        
+	    	    </data>
+	    	</field>
+	    </record>
+	    <record id="product_product_extend_form" model="ir.ui.view">
+	    	<field name="name">product.product.extend.form</field>
+	    	<field name="model">product.product</field>
+	    	<field name="inherit_id" ref="product.product_normal_form_view"></field>
+	    	<field name="arch" type="xml">
+	    	    <data>
+	    	        <xpath expr="//field[@name='default_code']" position="before">
+	    	            <field name="shang_code"></field>
+	    	        </xpath>
+	    	        <xpath expr="//field[@name='default_code']" position="attributes">
+	    	            <attribute name="readonly">1</attribute>
 	    	        </xpath>
 	    	    </data>
 	    	</field>

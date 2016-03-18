@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	     <record id="gold" model="account.account">
+	        <field name="name">黄金</field>
+	        <field name="code">10031</field>
+	        <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+	    </record>
+	    <record id="gold_journal" model="account.journal">
+            <field name="name">黄金</field>
+            <field name="code">GOLD</field>
+            <field name="type">gold</field>
+            <field name="default_credit_account_id" ref="gold"/>
+            <field name="default_debit_account_id" ref="gold"/>
+            <field name="refund_sequence" eval="True"/>
+        </record>
+	</data>
+</openerp>

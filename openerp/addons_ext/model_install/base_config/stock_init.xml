@@ -8,28 +8,29 @@
         </record>
 	    <record id="stock.warehouse0" model="stock.warehouse">
             <field model="res.company" name="name" search="[]" use="name"/>
-            <field name="name">深圳金库</field>
+            <field name="name">深圳:金库</field>
             <field name="partner_id" ref="base.main_partner"/>
             <field name="en_code">shenzhen_gold_warehouse</field>
-            <field name="code">深圳金库</field>
+            <field name="code">深圳:金库</field>
         </record>
-          <record id="shenzhen_recycling_warehourse" model="stock.warehouse">
-	        <field name="name">深圳收料仓</field>
+     
+         <record id="shenzhen_recycling_warehourse" model="stock.warehouse">
+	        <field name="name">深圳:收料仓</field>
 	        <field name="partner_id" ref="base.main_partner"/>
 	        <field name="en_code">shenzhen_recycling_warehourse</field>
-	        <field name="code">深圳收料仓</field>
+	        <field name="code">深圳:收料仓</field>
 	    </record>
 	    <record id="shenzhen_sample_warehourse" model="stock.warehouse">
-	        <field name="name">深圳样品库</field>
+	        <field name="name">深圳:样品库</field>
 	        <field name="partner_id" ref="base.main_partner"/>
 	        <field name="en_code">shenzhen_sample_warehourse</field>
-	        <field name="code">深圳样品库</field>
+	        <field name="code">深圳:样品库</field>
 	    </record>
 	    <record id="shenzhen_qc_warehourse" model="stock.warehouse">
-	        <field name="name">深圳质检仓</field>
+	        <field name="name">深圳:质检仓</field>
 	        <field name="partner_id" ref="base.main_partner"/>
 	        <field name="en_code">shenzhen_qc_warehourse</field>
-	        <field name="code">深圳质检仓</field>
+	        <field name="code">深圳:质检仓</field>
 	    </record>
 	</data>
 </openerp>

@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'data/credit_category.xml',
+        'data/customer_category.xml',
         'views/res_partner.xml',
     ],
     # only loaded in demonstration mode

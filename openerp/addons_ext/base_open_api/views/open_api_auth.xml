@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <menuitem id="open_api_menu" name="open api menu" />
+	    <menuitem id="open_api_account_menagements" name="Open Api Accounts Managements" parent="open_api_menu"/>
+	    <record id="open_api_authentication_view_tree" model="ir.ui.view">
+	    	<field name="name">open api authentication</field>
+	    	<field name="model">open.api.authentication</field>
+	    	<field name="arch" type="xml">
+	    	    <tree string="open api authentication">
+	    	        <field name="user_id"></field>
+	    	        <field name="active"></field>
+	    	        <field name="period"></field>
+	    	    </tree>
+	    	</field>
+	    </record>
+	    <record id="open_api_authentication_view_form" model="ir.ui.view">
+	    	<field name="name">open api authentication</field>
+	    	<field name="model">open.api.authentication</field>
+	    	<field name="arch" type="xml">
+	    	    <form string="open api authentication">
+	    	        <group>
+	    	        	<group>
+	    	        	    <field name="user_id"></field>
+			    	        <field name="active"></field>
+			    	        <field name="period"></field>
+	    	        	</group>
+	    	        	<group>
+	    	        	    
+	    	        	</group>
+	    	        	<field name="app_key" readonly='1'></field>
+	    	        	<field name="key_secret" readonly='1'></field>
+	    	        </group>
+	    	        
+	    	    </form>
+	    	</field>
+	    </record>
+	</data>
+</openerp>

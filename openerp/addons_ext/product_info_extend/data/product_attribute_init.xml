@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="product_attribute_material" model="product.attribute">
+	    	<field name="name">材质</field>
+	    	<field name="type">radio</field>
+	    	<field name="code">M</field>
+	    </record>
+	    <record id="product_attribute_material_gold99" model="product.attribute.value">
+	    	<field name="name">足金99</field>
+	    	<field name="attribute_id" ref="product_attribute_material"></field>
+	    </record>
+	    <record id="product_attribute_material_gold999" model="product.attribute.value">
+	    	<field name="name">足金999</field>
+	    	<field name="attribute_id" ref="product_attribute_material"></field>
+	    </record>
+	    <record id="product_attribute_material_gold9999" model="product.attribute.value">
+	    	<field name="name">足金9999</field>
+	    	<field name="attribute_id" ref="product_attribute_material"></field>
+	    </record>
+	    <record id="product_attribute_weight" model="product.attribute">
+	    	<field name="name">重量</field>
+	    	<field name="type">radio</field>
+	    	<field name="code">W</field>
+	    </record>
+	</data>
+</openerp>

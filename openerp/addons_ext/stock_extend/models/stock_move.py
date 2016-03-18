@@ -12,5 +12,6 @@ class stock_move(models.Model):
 
     standrad_weight = fields.Float(related='product_id.standard_weight',store=True,string="Standard Weight")
     item_fee = fields.Float(related='product_id.item_fee',store=True,string="Item Fee")
+    all_weights = fields.Float(string='all line weight')
 
     

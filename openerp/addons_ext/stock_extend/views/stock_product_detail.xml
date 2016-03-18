@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	     <menuitem action="product.product_normal_action" id="stock_detail_menu_product_variant"  parent="stock.menu_stock_inventory_control" sequence="10" />
+	</data>
+</openerp>

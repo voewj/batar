@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="res_partner_category_customer" model="res.partner.category">
+	    	<field name="name">客户</field>
+	    </record>
+	    <record id="res_partner_category_supplier" model="res.partner.category">
+	    		<field name="name">供应商</field>
+	    </record>
+	    <record id="res_partner_category_customer_0" model="res.partner.category">
+	    	<field name="name">普通客户</field>
+	    	<field name="parent_id" ref="res_partner_category_customer"></field>
+	    </record>
+	    <record id="res_partner_category_customer_1" model="res.partner.category">
+	    	<field name="name">白银客户</field>
+	    	<field name="parent_id" ref="res_partner_category_customer"></field>
+	    </record>
+	    <record id="res_partner_category_customer_2" model="res.partner.category">
+	    	<field name="name">黄金客户</field>
+	    	<field name="parent_id" ref="res_partner_category_customer"></field>
+	    </record>
+	    <record id="res_partner_category_customer_3" model="res.partner.category">
+	    	<field name="name">白金客户</field>
+	    	<field name="parent_id" ref="res_partner_category_customer"></field>
+	    </record>
+	    <record id="res_partner_category_customer_4" model="res.partner.category">
+	    	<field name="name">铂金客户</field>
+	    	<field name="parent_id" ref="res_partner_category_customer"></field>
+	    </record>
+	    <record id="res_partner_category_customer_5" model="res.partner.category">
+	    	<field name="name">钻石客户</field>
+	    	<field name="parent_id" ref="res_partner_category_customer"></field>
+	    </record>
+	</data>
+</openerp>

@@ -20,10 +20,14 @@ class res_partner(models.Model):
     ]
     customer_code = fields.Char(size=50,string='Customer Code')
     credit_line = fields.One2many('res.partner.credit.line','partner_id',string="Customer Credit Limit")
-    credit_level = fields.Selection(_credit_level,string='credit level')
+    #credit_level = fields.Selection(_credit_level,string='credit level')
+    money_interest_rate = fields.Float(string='money interest rate')
+    stock_interest_rate = fields.Float(string='stock interest rate')
+    free_days = fields.Integer(string='free days')
     
     _defaults = {
-        'credit_level':'ordinary',
+        #'credit_level':'ordinary',
+        'free_days':3,
     }
 
 class res_partner_credit_line(models.Model):

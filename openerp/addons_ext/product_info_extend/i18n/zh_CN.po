@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160301\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 05:45+0000\n"
-"PO-Revision-Date: 2016-03-15 05:45+0000\n"
+"POT-Creation-Date: 2016-03-18 10:21+0000\n"
+"PO-Revision-Date: 2016-03-18 10:21+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,79 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: product_info_extend
+#: model:ir.ui.view,arch_db:product_info_extend.product_attribute_material_price_form
+msgid "1.There is only one valid material at the same time\n"
+"	    	            	    2.The new price will not be valid until the price is created.\n"
+"	    	            	    3.Can only add records can not modify the record"
+msgstr "1.同一个材质同一时刻只有一个有效\n"
+"	    	            	    2.新创建价格时将会使之前的价格无效.\n"
+"	    	            	    3.只能增加记录不能修改记录"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_attribute_id
+msgid "Attribute id"
+msgstr "属性"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_create_uid
+msgid "Created by"
+msgstr "创建于"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_taxes_id
+msgid "Customer Taxes"
+msgstr "客户税"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_property_account_expense_id
+msgid "Expense Account"
+msgstr "费用科目"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_property_account_income_id
+msgid "Income Account"
+msgstr "收入科目"
+
+#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_item_fee
 #: model:ir.model.fields,field_description:product_info_extend.field_product_template_item_fee
-#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_item_fee
 msgid "Item Fee"
 msgstr "单件附加费"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_write_uid
+msgid "Last Updated by"
+msgstr "最后更新"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_write_date
+msgid "Last Updated on"
+msgstr "最后更新"
+
+#. module: product_info_extend
+#: model:ir.ui.view,arch_db:product_info_extend.attribute_tree_view
+msgid "Letters will be converted to upper case"
+msgstr "Letters will be converted to upper case"
 
 #. module: product_info_extend
 #: model:ir.model,name:product_info_extend.model_product_product
@@ -28,32 +96,112 @@ msgid "Product"
 msgstr "产品"
 
 #. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_product_attribute
+msgid "Product Attribute"
+msgstr "产品属性"
+
+#. module: product_info_extend
 #: model:ir.model,name:product_info_extend.model_product_template
 msgid "Product Template"
 msgstr "产品模板"
 
 #. module: product_info_extend
-#: model:ir.model,name:product_info_extend.model_sale_order_line
-msgid "Sales Order Line"
-msgstr "销售订单行"
-
-#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_standard_weight
-#: model:ir.model.fields,field_description:product_info_extend.field_product_template_standard_weight
-#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_standrad_weight
 msgid "Standard Weight"
 msgstr "标准重量"
 
 #. module: product_info_extend
+#: model:ir.model.fields,help:product_info_extend.field_product_product_property_account_expense_id
+msgid "This account will be used for invoices instead of the default one to value expenses for the current product."
+msgstr "这个科目将代替当前产品的默认费用科目用来开票"
+
+#. module: product_info_extend
+#: model:ir.model.fields,help:product_info_extend.field_product_product_property_account_income_id
+msgid "This account will be used for invoices instead of the default one to value sales for the current product."
+msgstr "这个科目将被用来代替当前产品的默认销售科目用来开票"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr "供应商税"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_active
+msgid "active"
+msgstr "活动"
+
+#. module: product_info_extend
+#: sql_constraint:product.attribute:0
+msgid "code must be unique!"
+msgstr "编码必须唯一!"
+
+#. module: product_info_extend
+#: model:ir.ui.menu,name:product_info_extend.product_attribute_material_price_menu
+msgid "material price setting"
+msgstr "材质基础价格设置"
+
+#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_ponderable
 #: model:ir.model.fields,field_description:product_info_extend.field_product_template_ponderable
-#: model:ir.model.fields,field_description:product_info_extend.field_sale_order_line_ponderable
 msgid "ponderable"
 msgstr "可称量"
 
 #. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_price_unit
+msgid "price unit"
+msgstr "差价(g)"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_code
+msgid "product attribute code"
+msgstr "产品属性编码"
+
+#. module: product_info_extend
+#: model:ir.actions.act_window,help:product_info_extend.product_attribute_material_price_action
+#: model:ir.actions.act_window,name:product_info_extend.product_attribute_material_price_action
+#: model:ir.ui.view,arch_db:product_info_extend.product_attribute_material_price_form
+#: model:ir.ui.view,arch_db:product_info_extend.product_attribute_material_price_tree
+msgid "product attribute material price"
+msgstr "产品属性单价"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_attribute_value_id
+msgid "product attribute value"
+msgstr "产品属性值"
+
+#. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_product_attribute_material_price
+msgid "product.attribute.material.price"
+msgstr "产品属性单价"
+
+#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_real_time_price_unit
-#: model:ir.model.fields,field_description:product_info_extend.field_product_template_real_time_price_unit
 msgid "real time price unit"
 msgstr "实时单价(g)"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_shang_code
+msgid "show king code"
+msgstr "尚金缘编码"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_weight_fee
+#: model:ir.model.fields,field_description:product_info_extend.field_product_template_weight_fee
+msgid "weight fee"
+msgstr "加工费"
+
+#. module: product_info_extend
+#: model:product.attribute.value,name:product_info_extend.product_attribute_material_gold99
+msgid "足金99"
+msgstr "足金99"
+
+#. module: product_info_extend
+#: model:product.attribute.value,name:product_info_extend.product_attribute_material_gold999
+msgid "足金999"
+msgstr "足金999"
+
+#. module: product_info_extend
+#: model:product.attribute.value,name:product_info_extend.product_attribute_material_gold9999
+msgid "足金9999"
+msgstr "足金9999"
 

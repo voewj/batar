@@ -19,12 +19,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','stock','sale','product_price_real_time'],
+    'depends': ['base','product',],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'data/product_attribute_init.xml',
         'views/product_template.xml',
+        'views/product_attribute_price.xml',
+        
     ],
     # only loaded in demonstration mode
     'demo': [

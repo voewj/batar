@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="customer_account_view_tree" model="ir.ui.view">
+	    	<field name="name">customer account</field>
+	    	<field name="model">customer.account</field>
+	    	<field name="arch" type="xml">
+	    	    <tree string="customer account">
+	    	        <field name="partner_id"></field>
+	    	        <field name="record_type"></field>
+	    	        <field name="category_id"></field>
+	    	        <field name="weight"></field>
+	    	        <field name="amount_money"></field>
+	    	        <field name="sale_id"></field>
+	    	        <field name="picking_id"></field>
+	    	        <field name="account_id"></field>
+	    	        <field name="interest_rate_money"></field>
+	    	        <field name="interest_rate_stock"></field>
+	    	        <field name="account_clean"/>
+	    	    </tree>
+	    	</field>
+	    </record>
+	    <record id="customer_account_view_form" model="ir.ui.view">
+	    	<field name="name">customer account</field>
+	    	<field name="model">customer.account</field>
+	    	<field name="arch" type="xml">
+	    	    <form string="customer account">
+	    	        <sheet>
+	    	            
+	    	        </sheet>
+	    	    </form>
+	    	</field>
+	    </record>
+	</data>
+</openerp>
