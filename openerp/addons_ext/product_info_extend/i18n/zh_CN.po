@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160301\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-19 02:15+0000\n"
-"PO-Revision-Date: 2016-03-19 02:15+0000\n"
+"POT-Creation-Date: 2016-03-19 08:09+0000\n"
+"PO-Revision-Date: 2016-03-19 08:09+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,6 @@ msgstr "收入科目"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_item_fee
-#: model:ir.model.fields,field_description:product_info_extend.field_product_template_item_fee
 msgid "Item Fee"
 msgstr "单件附加费"
 
@@ -95,6 +94,11 @@ msgstr "最后更新时间"
 #: model:ir.ui.view,arch_db:product_info_extend.attribute_tree_view
 msgid "Letters will be converted to upper case"
 msgstr "字母会自动转换为大写"
+
+#. module: product_info_extend
+#: model:ir.ui.view,arch_db:product_info_extend.product_template_only_extend_form
+msgid "No attribute value needs to be created at the property value interface"
+msgstr "没有的到属性值界面创建"
 
 #. module: product_info_extend
 #: model:ir.model,name:product_info_extend.model_product_product
@@ -181,6 +185,11 @@ msgid "product.attribute.material.price"
 msgstr "产品属性单价"
 
 #. module: product_info_extend
+#: model:ir.model,name:product_info_extend.model_product_attribute_value
+msgid "product.attribute.value"
+msgstr "product.attribute.value"
+
+#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_real_time_price_unit
 msgid "real time price unit"
 msgstr "实时单价(g)"
@@ -192,7 +201,6 @@ msgstr "尚金缘编码"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_weight_fee
-#: model:ir.model.fields,field_description:product_info_extend.field_product_template_weight_fee
 msgid "weight fee"
 msgstr "加工费"
 

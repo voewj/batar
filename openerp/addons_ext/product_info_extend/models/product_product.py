@@ -32,7 +32,6 @@ class prdouct_product(models.Model):
             product.real_time_price_unit = 0
             #为可称量产品
             if product.ponderable:
-                print '获得某个类别的实时单价'
                 attribute_value_ids = product.attribute_value_ids
                 for line in attribute_value_ids:
                     if line.attribute_id.code == "M":
