@@ -10,8 +10,6 @@ from openerp import fields,models,api
 class product_template(models.Model):
     _inherit = "product.template"
     
-    item_fee = fields.Float(string="Item Fee")
-    weight_fee = fields.Float(string='weight fee')
     ponderable = fields.Boolean(string='ponderable')
     
     _defaults = {

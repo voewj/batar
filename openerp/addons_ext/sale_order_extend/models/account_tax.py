@@ -19,7 +19,7 @@ class account_tax(models.Model):
         """ Returns the amount of a single tax. base_amount is the actual amount on which the tax is applied, which is
             price_unit * quantity eventually affected by previous taxes (if tax is include_base_amount XOR price_include)
         """
-        print '+++++++++++++++++++++++++++++'
+        
         self.ensure_one()
         if self.amount_type == 'fixed':
             return math.copysign(self.amount, base_amount) * quantity

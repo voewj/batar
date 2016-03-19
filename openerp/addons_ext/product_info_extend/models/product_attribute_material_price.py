@@ -5,7 +5,7 @@ Created on 2016年3月18日
 @author: cloudy
 '''
 from openerp import models,fields,api,_
-from openerp.exceptions import UserError, ValidationError
+from openerp.exceptions import UserError
 
 
 class product_attribute_material_price(models.Model):

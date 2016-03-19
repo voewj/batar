@@ -8,26 +8,26 @@
 	    	<field name="name">Glod Sale</field>
 	    	<field name="digits">2</field>
 	    </record>
-	    <record id="product_category_gold" model="product.category">
-	        <field name="parent_id" ref="product.product_category_1"></field>
-	        <field name="name">黄金</field>
-	    </record>
+<!-- 	    <record id="product_category_gold" model="product.category"> -->
+<!-- 	        <field name="parent_id" ref="product.product_category_1"></field> -->
+<!-- 	        <field name="name">黄金</field> -->
+<!-- 	    </record> -->
 	    
-	    <record id="product_gold_ring" model="product.category">
-	    	<field name="parent_id" ref="product_category_gold"></field>
-	    	<field name="name">黄金戒指</field>
-	    </record>
-	    <record id="product_gold_necklace" model="product.category">
-	    	<field name="parent_id" ref="product_category_gold"></field>
-	    	<field name="name">黄金项链</field>
-	    </record>
-	    <record id="product_gold_bracelet" model="product.category">
-	    	<field name="parent_id" ref="product_category_gold"></field>
-	    	<field name="name">黄金手链</field>
-	    </record>
-	    <record id="product_gold_9999" model="product.category">
-	    	<field name="parent_id" ref="product_category_gold"></field>
-	    	<field name="name">万足金</field>
-	    </record>
+<!-- 	    <record id="product_gold_ring" model="product.category"> -->
+<!-- 	    	<field name="parent_id" ref="product_category_gold"></field> -->
+<!-- 	    	<field name="name">黄金戒指</field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="product_gold_necklace" model="product.category"> -->
+<!-- 	    	<field name="parent_id" ref="product_category_gold"></field> -->
+<!-- 	    	<field name="name">黄金项链</field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="product_gold_bracelet" model="product.category"> -->
+<!-- 	    	<field name="parent_id" ref="product_category_gold"></field> -->
+<!-- 	    	<field name="name">黄金手链</field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="product_gold_9999" model="product.category"> -->
+<!-- 	    	<field name="parent_id" ref="product_category_gold"></field> -->
+<!-- 	    	<field name="name">万足金</field> -->
+<!-- 	    </record> -->
 	</data>
 </openerp>

@@ -6,55 +6,52 @@
 	        <field name="parent_id" ref="product.product_category_all"></field>
 	        <field name="name">回收料</field>
 	    </record>
-	    <record id="product_category_recycling_999" model="product.category">
-	        <field name="parent_id" ref="product_category_recycling_all"></field>
-	        <field name="name">千足金</field>
-	    </record>
+	    
 	   <!-- 回收料名称，将回收料做为产品来处理，便于库存统计 -->
 	    <record id="recycling_product_999_gold" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD001</field>
 	        <field name="name">千足金料</field>
 	    </record>
 	    <record id="recycling_product_gold" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD002</field>
 	        <field name="name">足金料</field>
 	    </record>
 	    <record id="recycling_product_pure_gold" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD003</field>
 	        <field name="name">千足旧料(外厂)</field>
 	    </record>
 	    <record id="recycling_product_pure_gold_iner" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD004</field>
 	        <field name="name">千足旧料(内厂)</field>
 	    </record>
 	    <record id="recycling_product_bracelet" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>  
+	        <field name="categ_id" ref="product_category_recycling_all"></field>  
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD005</field>
 	        <field name="name">(手环)旧料</field>
 	    </record>
 	    <record id="recycling_product_gold" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD006</field>
 	        <field name="name">足金旧料</field>
 	    </record>
 	    <record id="recycling_product_bank" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	       <field name="type">recycling</field>
 	       <field name="default_code">OLD007</field>
 	        <field name="name">银行料</field>
 	    </record>
 	    <record id="recycling_product_not_bank" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_999"></field>
+	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD008</field>
 	        <field name="name">非银行料</field>

@@ -7,8 +7,11 @@
             <field name="inherit_id" ref="product.attribute_tree_view"/>
             <field name="arch" type="xml">
                 <data>
+                    <field name="name" position="attributes">
+                    	<attribute name='attrs'>{'readonly':[('code','in',('W','M'))]}</attribute>
+                    </field>
                     <field name="name" position="after">
-                        <field name="code" required='1' placeholder="Letters will be converted to upper case"></field>
+                        <field name="code" required='1' attrs="{'readonly':[('code','in',('W','M'))]}" placeholder="Letters will be converted to upper case"></field>
                     </field>
                 </data>
             </field>
@@ -48,6 +51,7 @@
 		    	        	          attrs="{'readonly': [('active', '=', 1)]}"
 		    	        	        domain="[('code', '=', 'M')]" options="{'no_create':True,'no_open': True}"></field>
 		    	    			<field name="attribute_value_id" 
+		    	    			    domain="[('attribute_id.code', '=', 'M')]"
 		    	    			     attrs="{'readonly': [('active', '=', 1)]}"
 		    	    			    options="{'no_create':True,'no_open': True}"></field>
 		    	        	</group>

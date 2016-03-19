@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160301\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-18 10:21+0000\n"
-"PO-Revision-Date: 2016-03-18 10:21+0000\n"
+"POT-Creation-Date: 2016-03-19 02:15+0000\n"
+"PO-Revision-Date: 2016-03-19 02:15+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,18 @@ msgstr ""
 
 #. module: product_info_extend
 #: model:ir.ui.view,arch_db:product_info_extend.product_attribute_material_price_form
-msgid "1.There is only one valid material at the same time\n"
-"	    	            	    2.The new price will not be valid until the price is created.\n"
-"	    	            	    3.Can only add records can not modify the record"
-msgstr "1.同一个材质同一时刻只有一个有效\n"
-"	    	            	    2.新创建价格时将会使之前的价格无效.\n"
-"	    	            	    3.只能增加记录不能修改记录"
+msgid "1.There is only one valid material at the same time"
+msgstr "1.同一个材质同一时刻只有一个有效"
+
+#. module: product_info_extend
+#: model:ir.ui.view,arch_db:product_info_extend.product_attribute_material_price_form
+msgid "2.The new price will not be valid until the price is created."
+msgstr "2.新创建价格时将会使之前的价格无效."
+
+#. module: product_info_extend
+#: model:ir.ui.view,arch_db:product_info_extend.product_attribute_material_price_form
+msgid "3.Can only add records can not modify the record"
+msgstr "3.只能新增记录不能修改记录"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_attribute_id
@@ -32,12 +38,12 @@ msgstr "属性"
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_create_uid
 msgid "Created by"
-msgstr "创建于"
+msgstr "创建人"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_create_date
 msgid "Created on"
-msgstr "创建于"
+msgstr "创建时间"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_taxes_id
@@ -78,17 +84,17 @@ msgstr "最后修改日"
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_write_uid
 msgid "Last Updated by"
-msgstr "最后更新"
+msgstr "最后更新人"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_write_date
 msgid "Last Updated on"
-msgstr "最后更新"
+msgstr "最后更新时间"
 
 #. module: product_info_extend
 #: model:ir.ui.view,arch_db:product_info_extend.attribute_tree_view
 msgid "Letters will be converted to upper case"
-msgstr "Letters will be converted to upper case"
+msgstr "字母会自动转换为大写"
 
 #. module: product_info_extend
 #: model:ir.model,name:product_info_extend.model_product_product

@@ -5,14 +5,16 @@ Created on 2016年3月18日
 @author: cloudy
 '''
 from openerp import models,fields,api
+from openerp.exceptions import UserError, ValidationError
+import re
 
 class product_attribute(models.Model):
     _inherit = 'product.attribute'
     
     code = fields.Char(string='product attribute code')
+    
     _sql_constraints = [
-        ('code_uniq', 'unique(code)', 'code must be unique!'),
-       
+        ('code_uniq', 'unique(code)', 'code must be unique!'), 
     ]
     @api.multi
     def write(self, vals):
@@ -27,4 +29,28 @@ class product_attribute(models.Model):
         code = code.strip()
         vals['code'] = code.upper()
         return super(product_attribute,self).create(vals)
+
+class product_attribute_value(models.Model):
+    _inherit = 'product.attribute.value'
     
+    @api.multi
+    def write(self, vals):
+        if self.attribute_id.code =='W':
+            name = vals.get('name','')
+            m = re.match(r"(^[0-9]\d*\.\d|\d+)",name)
+            if not m:
+                raise UserError(_('The value of the weight attribute can only be: 10 or 10g')) 
+            vals['name']= '%sg' % m.group(1)
+        return super(product_attribute_value,self).write(vals)
+    @api.model
+    def create(self, vals):
+        attribute_id = vals.get('attribute_id',None)
+       
+        attr_obj = self.env['product.attribute'].search([('id','=',attribute_id)])
+        if attr_obj.code == 'W':
+            name = vals.get('name','')
+            m = re.match(r"(^[0-9]\d*\.\d|\d+)",name)
+            if not m:
+                raise UserError(_('The value of the weight attribute can only be: 10 or 10g')) 
+            vals['name']= '%sg' % m.group(1)
+        return super(product_attribute_value,self).create(vals)
