@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<openerp>
-	<data>
-	    <menuitem name="Quality Control" id="qc_menu" sequence="67"/>
-	    <menuitem id="menu_qc_mgmt" name="Qualtity Control" parent="qc_menu" sequence="10"/>
-	</data>
-</openerp>

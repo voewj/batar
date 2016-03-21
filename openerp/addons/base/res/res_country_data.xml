@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-		
 
         <record id="ad" model="res.country">
             <field name="name">Andorra, Principality of</field>
@@ -339,7 +338,7 @@
             <field file="base/static/img/country_flags/cm.png" name="image" type="base64" />
             <field name="currency_id" ref="XAF" />
             <field eval="237" name="phone_code" />
-        </record> 
+        </record>
         <record id="cn" model="res.country">
             <field name="name">China</field>
             <field name="code">cn</field>
@@ -348,7 +347,6 @@
             <field name="currency_id" ref="CNY" />
             <field eval="86" name="phone_code" />
         </record>
-        
         <record id="co" model="res.country">
             <field name="name">Colombia</field>
             <field name="code">co</field>
@@ -1781,7 +1779,6 @@
                 ref('lv'),ref('lt'),ref('lu'),ref('mt'),ref('nl'),
                 ref('pl'),ref('pt'),ref('ro'),ref('sk'),ref('si'),
                 ref('es'),ref('se'),ref('uk')])]"/>
-        </record> 
-  
+        </record>
     </data>
 </openerp>

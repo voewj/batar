@@ -42,17 +42,6 @@ class prdouct_product(models.Model):
                         m= re.match(r"(^[0-9]\d*\.\d|\d+)", line.name) 
                         weight = m.group(1)
                         product.standard_weight = float(weight)
-                    
-       
-
-
-
-
-
-
-
-
-
 
 
             
