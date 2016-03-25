@@ -13,9 +13,14 @@ class stock_warehouse(models.Model):
 class stock_move_detail(models.TransientModel):
     _name = 'stock.move.detail'
     
-    def _compute_qty_and_weight(self):
-        ''''''
-        pass
+    @api.multi
+    @api.depends('warehouse_id')
+    def name_get(self):
+        result = []
+        for line in self:
+            name = "%s" % (line.warehouse_id.name)
+            result.append((line.id,name))
+        return result
     product_id = fields.Many2one('product.product',string='products')
     default_code = fields.Char(related='product_id.default_code',sting='default code')
     attribute_value_ids = fields.Many2many(related='product_id.attribute_value_ids',string='product attributes')
@@ -27,12 +32,8 @@ class stock_move_detail(models.TransientModel):
     warehouse_id = fields.Many2one('stock.warehouse')
     en_code = fields.Char(related='warehouse_id.en_code',string='stock warehouse english code')
     
-    @api.multi
-    @api.depends('warehouse_id')
-    def name_get(self):
-        result = []
-        for line in self:
-            name = "%s" % (line.warehouse_id.name)
-            result.append((line.id,name))
-        return result
+    
+    def _compute_qty_and_weight(self):
+        ''''''
+        pass
     

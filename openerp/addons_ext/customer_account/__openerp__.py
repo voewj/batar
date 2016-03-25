@@ -24,6 +24,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'views/customer_account.xml',
         
     ],
     # only loaded in demonstration mode

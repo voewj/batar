@@ -12,8 +12,11 @@
 	                        <field name="ponderable"/>
 	                        <label for="ponderable"/>
 	                    </div>
+	                    <div>
+	                        <field name="active"/>
+	                        <label for="active"/>
+	                    </div>
 	                </div>
-	    	       
 	    	    </data>
 	    	</field>
 	    </record>
@@ -40,6 +43,9 @@
 	    		    <tree position="attributes">
 	    		    	<attribute name="create">false</attribute>
 	    		    </tree>
+	    		    <field name="lst_price" position="replace">
+	    		        <field name="sale_price" widget="monetary"></field>
+	    		    </field>
 	    		</data>
 	    	</field>
 	    </record>
@@ -54,10 +60,16 @@
 					</form>
 	    	        <xpath expr="//field[@name='default_code']" position="before">
 	    	            <field name="shang_code"></field>
-	    	            <field name="real_time_price_unit" readonly="1"></field> -->
 	    	        </xpath>
 	    	        <xpath expr="//field[@name='default_code']" position="attributes">
 	    	            <attribute name="readonly">1</attribute>
+	    	        </xpath>
+	    	       
+	    	        <xpath expr="//field[@name='lst_price']" position="before">
+	    	            <field name="real_time_price_unit" widget="monetary" readonly="1" attrs="{'invisible':[('ponderable','=',False)]}"/> 
+	    	        </xpath>
+	    	        <xpath expr="//field[@name='lst_price']" position="attributes">
+	    	            <attribute name="attrs">{'invisible':[('ponderable','=',True)]}</attribute>
 	    	        </xpath>
 	    	    </data>
 	    	</field>

@@ -3,25 +3,43 @@
 	<data>
 	    <record id="product_attribute_material" model="product.attribute">
 	    	<field name="name">材质</field>
+	    	<field name="sequence">1</field>
 	    	<field name="type">radio</field>
-	    	<field name="code">M</field>
+	    	<field name="code">material</field>
 	    </record>
-	    <record id="product_attribute_material_gold99" model="product.attribute.value">
-	    	<field name="name">足金99</field>
-	    	<field name="attribute_id" ref="product_attribute_material"></field>
+	    <record id="product_attribute_style" model="product.attribute">
+	    	<field name="name">款式</field>
+	    	<field name="sequence">2</field>
+	    	<field name="type">radio</field>
+	    	<field name="code">style</field>
 	    </record>
-	    <record id="product_attribute_material_gold999" model="product.attribute.value">
-	    	<field name="name">足金999</field>
-	    	<field name="attribute_id" ref="product_attribute_material"></field>
-	    </record>
-	    <record id="product_attribute_material_gold9999" model="product.attribute.value">
-	    	<field name="name">足金9999</field>
-	    	<field name="attribute_id" ref="product_attribute_material"></field>
+	    <record id="product_attribute_model" model="product.attribute">
+	    	<field name="name">型号</field>
+	    	<field name="sequence">3</field>
+	    	<field name="type">radio</field>
+	    	<field name="code">model</field>
 	    </record>
 	    <record id="product_attribute_weight" model="product.attribute">
 	    	<field name="name">重量</field>
 	    	<field name="type">radio</field>
-	    	<field name="code">W</field>
+	    	<field name="sequence">200</field>
+	    	<field name="code">weight</field>
 	    </record>
+<!-- 	    <record id="product_attribute_material_gold99" model="product.attribute.value"> -->
+<!-- 	    	<field name="name">足金99</field> -->
+<!-- 	    	<field name="sequence">10</field> -->
+<!-- 	    	<field name="attribute_id" ref="product_attribute_material"></field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="product_attribute_material_gold999" model="product.attribute.value"> -->
+<!-- 	    	<field name="name">足金999</field> -->
+<!-- 	    	<field name="sequence">11</field> -->
+<!-- 	    	<field name="attribute_id" ref="product_attribute_material"></field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="product_attribute_material_gold9999" model="product.attribute.value"> -->
+<!-- 	    	<field name="name">足金9999</field> -->
+<!-- 	    	<field name="sequence">12</field> -->
+<!-- 	    	<field name="attribute_id" ref="product_attribute_material"></field> -->
+<!-- 	    </record> -->
+	    
 	</data>
 </openerp>

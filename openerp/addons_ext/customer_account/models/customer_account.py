@@ -26,8 +26,8 @@ class customer_account(models.Model):
     interest_rate_money = fields.Float(string='interest rate money')
     interest_rate_stock = fields.Float(string='interest rate stock')
     user_comment = fields.Text(string='user comment')
-    expenses_id = fields.Many2many('customer.account',string='expenses records')
+#     expenses_id = fields.Many2many('customer.account',string='expenses records')
     expenses_comment = fields.Text(string='expenses comment')
-    account_clean = fields.Boolean(string='account clean')
+    active = fields.Boolean(string='account clean')
     
     

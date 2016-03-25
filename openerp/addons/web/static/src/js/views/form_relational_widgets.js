@@ -1445,7 +1445,13 @@ var FieldMany2ManyTags = AbstractManyField.extend(common.CompletionFieldMixin, c
     get_render_data: function(ids){
         var self = this;
         this.dataset.cancel_read();
-        var fields = this.fields.color ? ['display_name', 'name', 'color'] : ['display_name', 'name']; // TODO master: remove useless 'name'
+        var fields = ['display_name', 'name']; // TODO master: remove useless 'name'
+        if (this.fields){
+        	if(this.fields.color){
+        		fields= ['display_name', 'name', 'color']
+        	}
+        }
+       // var fields = this.fields.color ? ['display_name', 'name', 'color'] : ['display_name', 'name']; // TODO master: remove useless 'name'
         return this.dataset.read_ids(ids, fields);
     },
     render_tag: function(data) {

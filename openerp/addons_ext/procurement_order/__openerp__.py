@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "产品信息扩展",
+    'name': "procurement_order",
 
     'summary': """
-        增加单品优惠工费和单品 折扣""",
+        订单流程改进，增加响应的信息""",
 
     'description': """
-        Long description of module's purpose
+        订单流程改进，增加响应的信息
     """,
 
     'author': "cloudy",
@@ -19,19 +19,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product',],
+    'depends': ['base','procurement','stock','sale_order_extend'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'data/product_attribute_init.xml',
-        'views/product_template.xml',
-        'views/product_attribute.xml',
-        'views/product_attribute_price.xml',
         
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+       
     ],
 }

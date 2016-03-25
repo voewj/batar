@@ -15,7 +15,9 @@ class product_template(models.Model):
     _defaults = {
         'type': "product",
         'ponderable':True,
+        'categ_id':2,
     }
+    
     
 
         

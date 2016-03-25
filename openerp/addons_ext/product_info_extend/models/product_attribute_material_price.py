@@ -16,6 +16,9 @@ class product_attribute_material_price(models.Model):
     active = fields.Boolean(string='active')
     price_unit = fields.Float(string='price unit')
     
+    _sql_constraints = [
+        ('price_unit', 'CHECK(price_unit > 0.0)','price_unit must be greater than 0.0!'),
+    ]
 
     _defaults = {
         'active':False,

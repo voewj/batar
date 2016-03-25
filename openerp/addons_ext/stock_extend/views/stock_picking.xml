@@ -6,12 +6,53 @@
 	        <field name="model">stock.move</field>
 	        <field name="inherit_id" ref="stock.view_move_picking_tree"></field>
 	        <field name="arch" type="xml">
-	            <field name='state' position='before'>
-	                <field name="standrad_weight" readonly='1'></field>
-	                <field name="item_fee" readonly='1'></field>
-	                <field name='all_weights'/>
-	            </field>
+	            <data>
+<!-- 	                <xpath expr="//tree" position="attributes"> -->
+<!-- 	                	<attribute name="edit">bottom</attribute> -->
+<!-- 	                </xpath> -->
+		            <field name='state' position='before'>
+		                <field name="standrad_weight" readonly='1'></field>
+		                <field name="item_fee" readonly='1'></field>
+		                <field name='all_weights'/>
+		            </field>
+	            </data>
 	        </field>
 	    </record>
+	    <record id="stock_move_lines_view_form" model="ir.ui.view">
+            <field name="name">stock.move.extend.form.view</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='group_id']" position="after">
+                    <field name="all_weights" edit='1'/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_picking_form_modify" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"></field>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//sheet/group/group//field[@name='partner_id']" position="attributes">
+                        <attribute name="options">{'no_open':True}</attribute>
+                    </xpath>
+<!--                     <xpath expr="//field[@name='move_lines_related']" position="replace"> -->
+<!--                         <field name="move_lines_related"> -->
+<!--                             <tree string="move_lines_related" editable="bottom"> -->
+<!--                                 <field name="product_id" readonly="1"></field> -->
+<!--                                 <field name="real_time_price_unit" readonly="1"></field> -->
+<!--                                 <field name="item_fee" readonly="1"></field> -->
+<!--                                 <field name="weight_fee" readonly="1"></field> -->
+<!--                                 <field name="product_qty"></field>  				 -->
+<!--                                 <field name="all_weights"></field> -->
+<!--                                 <field name='price_subtotal' readonly='1'/> -->
+<!--                             </tree> -->
+<!--                         </field> -->
+<!--                     </xpath> -->
+                </data>
+            </field>
+        </record>
+        
 	</data>
 </openerp>

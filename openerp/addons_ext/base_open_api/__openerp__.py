@@ -3,14 +3,13 @@
     'name': "base_open_api",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        odoo系统开放接口""",
 
     'description': """
-        Long description of module's purpose
+        odoo系统开放接口，不采用proxy的方式，参考淘宝京东的开放接口
     """,
 
-    'author': "My Company",
+    'author': "cloudy",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -25,8 +24,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/open_api_auth.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

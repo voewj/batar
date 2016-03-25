@@ -8,10 +8,13 @@
             <field name="arch" type="xml">
                 <data>
                     <field name="name" position="attributes">
-                    	<attribute name='attrs'>{'readonly':[('code','in',('W','M'))]}</attribute>
+                    	<attribute name='attrs'>{'readonly':[('code','in',('material','style','model','weight'))]}</attribute>
                     </field>
                     <field name="name" position="after">
-                        <field name="code" required='1' attrs="{'readonly':[('code','in',('W','M'))]}" placeholder="Letters will be converted to upper case"></field>
+                        <field name="sequence" 
+                            attrs="{'readonly':[('code','in',('material','style','model','weight'))]}" 
+                             placeholder="sequence must rather than 100"/>
+                        <field name="code"  attrs="{'readonly':[('code','in',('material','style','model','weight'))]}" />
                     </field>
                 </data>
             </field>
@@ -32,7 +35,7 @@
 	    	<field name="name">product attribute material price</field>
 	    	<field name="model">product.attribute.material.price</field>
 	    	<field name="arch" type="xml">
-	    	    <form string="product attribute material price">
+	    	    <form string="product attribute material price" edit="0">
 	    	        <sheet>
 	    	            <div style="color:red">
 	    	                <h2>
@@ -47,18 +50,15 @@
 	    	            </div>
 		    	        <group>
 		    	        	<group>
-		    	        	    <field name="attribute_id"
-		    	        	          attrs="{'readonly': [('active', '=', 1)]}"
-		    	        	        domain="[('code', '=', 'M')]" options="{'no_create':True,'no_open': True}"></field>
-		    	    			<field name="attribute_value_id" 
-		    	    			    domain="[('attribute_id.code', '=', 'M')]"
-		    	    			     attrs="{'readonly': [('active', '=', 1)]}"
+		    	        	    <field name="attribute_id" required='1'
+		    	        	        domain="[('code', '=', 'material')]" options="{'no_create':True,'no_open': True}"></field>
+		    	    			<field name="attribute_value_id"  required='1'
+		    	    			    domain="[('attribute_id.code', '=', 'material')]"
 		    	    			    options="{'no_create':True,'no_open': True}"></field>
 		    	        	</group>
 		    	        	<group>
 		    	        	    <field name="active"></field>
 		    	    			<field name="price_unit"
-		    	    			     attrs="{'readonly': [('active', '=', 1)]}" 
 		    	    			    required='1'></field>
 		    	        	</group>
 		    	        </group>

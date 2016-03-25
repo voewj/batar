@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c-20160301\n"
+"Project-Id-Version: Odoo Server 9.0c-20160321\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-19 08:09+0000\n"
-"PO-Revision-Date: 2016-03-19 08:09+0000\n"
+"POT-Creation-Date: 2016-03-21 08:58+0000\n"
+"PO-Revision-Date: 2016-03-21 08:58+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,14 +36,19 @@ msgid "Attribute id"
 msgstr "属性"
 
 #. module: product_info_extend
+#: sql_constraint:product.attribute.value:0
+msgid "Attribute values of the same attribute must be unique!"
+msgstr "同一个属性的属性值必须唯一!"
+
+#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_create_uid
 msgid "Created by"
-msgstr "创建人"
+msgstr "创建者"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_create_date
 msgid "Created on"
-msgstr "创建时间"
+msgstr "创建于"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_taxes_id
@@ -159,7 +164,7 @@ msgstr "可称量"
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_price_unit
 msgid "price unit"
-msgstr "差价(g)"
+msgstr "单价(g)"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_code
@@ -178,6 +183,11 @@ msgstr "产品属性单价"
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_attribute_value_id
 msgid "product attribute value"
 msgstr "产品属性值"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_value_value_code
+msgid "product attribute value code"
+msgstr "属性值编码"
 
 #. module: product_info_extend
 #: model:ir.model,name:product_info_extend.model_product_attribute_material_price

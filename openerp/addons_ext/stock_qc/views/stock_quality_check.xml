@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <menuitem id="stock_qc_top_menu" name="Quality Check"/>
+	    <menuitem id="stock_qc_menu" name="Quality Check" parent="stock_qc_top_menu"/>
+	    
+	</data>
+</openerp>
