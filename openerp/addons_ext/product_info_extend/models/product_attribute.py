@@ -10,11 +10,8 @@ import re
 
 class product_attribute(models.Model):
     _inherit = 'product.attribute'
-    
     code = fields.Char(string='product attribute code')
-    _defaults = {
-        'sequence':200,
-    }
+   
     _sql_constraints = [
         ('code_uniq', 'unique(code)', 'code must be unique!'), 
     ]
@@ -27,6 +24,14 @@ class product_attribute(models.Model):
     @api.model
     def create(self, vals):
         code = vals.get('code','')
+        sequence_list  = self.env['product.attribute'].search([])
+        sequence = 1
+        sequence_list = [line.sequence for line in sequence_list]
+        if sequence_list:
+           
+            sequence = max(sequence_list) + 1
+        
+        vals['sequence'] = sequence
         if code:
             vals['code'] = code.strip()
         return super(product_attribute,self).create(vals)

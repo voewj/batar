@@ -7,9 +7,9 @@
 	        <field name="inherit_id" ref="stock.view_move_picking_tree"></field>
 	        <field name="arch" type="xml">
 	            <data>
-<!-- 	                <xpath expr="//tree" position="attributes"> -->
-<!-- 	                	<attribute name="edit">bottom</attribute> -->
-<!-- 	                </xpath> -->
+	                <xpath expr="//tree" position="attributes">
+	                	<attribute name="edit">1</attribute>
+	                </xpath>
 		            <field name='state' position='before'>
 		                <field name="standrad_weight" readonly='1'></field>
 		                <field name="item_fee" readonly='1'></field>
@@ -37,19 +37,19 @@
                     <xpath expr="//sheet/group/group//field[@name='partner_id']" position="attributes">
                         <attribute name="options">{'no_open':True}</attribute>
                     </xpath>
-<!--                     <xpath expr="//field[@name='move_lines_related']" position="replace"> -->
-<!--                         <field name="move_lines_related"> -->
-<!--                             <tree string="move_lines_related" editable="bottom"> -->
-<!--                                 <field name="product_id" readonly="1"></field> -->
-<!--                                 <field name="real_time_price_unit" readonly="1"></field> -->
-<!--                                 <field name="item_fee" readonly="1"></field> -->
-<!--                                 <field name="weight_fee" readonly="1"></field> -->
-<!--                                 <field name="product_qty"></field>  				 -->
-<!--                                 <field name="all_weights"></field> -->
-<!--                                 <field name='price_subtotal' readonly='1'/> -->
-<!--                             </tree> -->
-<!--                         </field> -->
-<!--                     </xpath> -->
+                    <xpath expr="//field[@name='move_lines_related']" position="replace">
+                        <field name="move_lines_related">
+                            <tree string="move_lines_related" editable="bottom">
+                                <field name="product_id" readonly="1"></field>
+                                <field name="real_time_price_unit" readonly="1"></field>
+                                <field name="item_fee" readonly="1"></field>
+                                <field name="weight_fee" readonly="1"></field>
+                                <field name="product_qty"></field>  				
+                                <field name="all_weights"></field>
+                                <field name='price_subtotal' readonly='1'/>
+                            </tree>
+                        </field>
+                    </xpath>
                 </data>
             </field>
         </record>

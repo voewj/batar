@@ -12,9 +12,11 @@
                     </field>
                     <field name="name" position="after">
                         <field name="sequence" 
-                            attrs="{'readonly':[('code','in',('material','style','model','weight'))]}" 
+                            readonly='1'
                              placeholder="sequence must rather than 100"/>
-                        <field name="code"  attrs="{'readonly':[('code','in',('material','style','model','weight'))]}" />
+                        <field name="code"
+                            placeholder="code default is empty" 
+                             attrs="{'readonly':[('code','in',('material','style','model','weight'))]}" />
                     </field>
                 </data>
             </field>

@@ -9,7 +9,7 @@
         入库之前质量检测
     """,
 
-    'author': "My Company",
+    'author': "cloudy",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -19,11 +19,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','stock','purchase'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'data/stock_quality_check_init.xml',
+        'views/stock_quality_picking.xml',
+        'views/purchase_order.xml',
+        'views/stock_location.xml',
+        
        
     ],
     # only loaded in demonstration mode

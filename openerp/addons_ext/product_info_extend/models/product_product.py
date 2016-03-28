@@ -60,8 +60,7 @@ class prdouct_product(models.Model):
             suffix = ''
             for i in range(len(norms_list)):
                 suffix = "%s%s" % (suffix,norms_list[i])
-            print 'norms_list',norms_list
-            default_code = "%02d%s-%s-%s" %(material,style,model,suffix)
+            default_code = "%s%s-%s-%s" %(material,style,model,suffix)
             vals['default_code'] = default_code
             
         return super(prdouct_product,self).create(vals)

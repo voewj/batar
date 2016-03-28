@@ -4,7 +4,7 @@
 	    
 	    <!-- 设置公司基本信息 -->
 	    <record id="base.main_partner" model="res.partner" context="{'default_is_company': True}">
-            <field name="name">百泰集团</field>
+            <field name="name">深圳尚金缘</field>
             <field name="company_id" eval="None"/>
             <field name="image" type="base64" file="model_install/static/img/logo.png"/>
             <field name="customer" eval="False"/>
@@ -16,6 +16,7 @@
             <field name="email">www@batar.cn</field>
             <field name="website">www.batar.cn</field>
         </record>
+      
       
 	</data>
 </openerp>

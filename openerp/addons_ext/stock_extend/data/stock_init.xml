@@ -26,11 +26,6 @@
 	        <field name="en_code">shenzhen_sample_warehourse</field>
 	        <field name="code">深圳:样品库</field>
 	    </record>
-	    <record id="shenzhen_qc_warehourse" model="stock.warehouse">
-	        <field name="name">深圳:质检仓</field>
-	        <field name="partner_id" ref="base.main_partner"/>
-	        <field name="en_code">shenzhen_qc_warehourse</field>
-	        <field name="code">深圳:质检仓</field>
-	    </record>
+	   
 	</data>
 </openerp>

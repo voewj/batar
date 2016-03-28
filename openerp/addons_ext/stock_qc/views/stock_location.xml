@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+	<data>
+	    <record id="stock_location_form_extend" model="ir.ui.view">
+	    	<field name="stock location"></field>
+	    	<field name="model">stock.location</field>
+	    	<field name="inherit_id" ref="stock.view_location_form"></field>
+	    	<field name="arch" type="xml">
+	    	    <data>
+	    	        <field name="return_location" position="after">
+	    	        	<field name="qc_location"></field>
+	    	        </field>
+	    	    </data>
+	    	</field>
+	    </record>
+	</data>
+</openerp>

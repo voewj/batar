@@ -1,0 +1,577 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_qc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160321\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-26 01:19+0000\n"
+"PO-Revision-Date: 2016-03-26 01:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_state
+msgid "\n"
+"                * Draft: not confirmed yet and will not be scheduled until confirmed\n"
+"\n"
+"                * Waiting Another Operation: waiting for another move to proceed before it becomes automatically available (e.g. in Make-To-Order flows)\n"
+"\n"
+"                * Waiting Availability: still waiting for the availability of products\n"
+"\n"
+"                * Partially Available: some products are available and reserved\n"
+"\n"
+"                * Ready to Transfer: products reserved, simply waiting for confirmation.\n"
+"\n"
+"                * Transferred: has been processed, can't be modified or cancelled anymore\n"
+"\n"
+"                * Cancelled: has been cancelled, can't be confirmed anymore"
+msgstr "\n"
+"                * 草稿：即未确认状态，直到确认前不会被安排分拣。\n"
+"\n"
+"                * 等待另一操作：等待另一库存移动完成后而自动变为可用状态（例如MTO流程）。\n"
+"\n"
+"                * 等待可用：等待产品可用状态。\n"
+"\n"
+"                * 部分可用：部分产品可用并被保留。\n"
+"\n"
+"                * 准备调拨：产品已被保留，等待确认即可调拨。\n"
+"\n"
+"                * 已调拨：已完成调拨，无法修改和取消。\n"
+"\n"
+"                * 已取消：已取消，无法被再次确认。"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_needaction
+msgid "Action Needed"
+msgstr "所需行动"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,move_type:0
+msgid "All at once"
+msgstr "一次性发货"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Available"
+msgstr "可用"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_backorder_id
+msgid "Back Order of"
+msgstr "欠单于"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_weight_bulk
+msgid "Bulk Weight"
+msgstr "散重"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Cancelled"
+msgstr "取消"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_carrier_id
+msgid "Carrier"
+msgstr "承运方"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_carrier_tracking_ref
+msgid "Carrier Tracking Ref"
+msgstr "承运方跟踪号"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_pack_operation_exist
+msgid "Check the existance of pack operation on the picking"
+msgstr "勾选拣货包装操作的存在"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_quant_reserved_exist
+msgid "Check the existance of quants linked to this picking"
+msgstr "勾选这次拣货关联的数量的存在"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_date_done
+msgid "Completion Date of Transfer"
+msgstr "调拨的完成日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_date
+msgid "Creation Date"
+msgstr "创建日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_date
+msgid "Creation Date, usually the time of the order"
+msgstr "创建日期,通常是订单的时间"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,picking_type_code:0
+msgid "Customers"
+msgstr "Customers"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_date_done
+msgid "Date of Transfer"
+msgstr "调拨日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "发布到记录上的最后消息的日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_owner_id
+msgid "Default Owner"
+msgstr "默认所有者"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_move_type
+msgid "Delivery Method"
+msgstr "交货方法"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_location_dest_id
+msgid "Destination Location Zone"
+msgstr "目标位置区域"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Done"
+msgstr "完成"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(频道)"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者（合作伙伴）"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_pack_operation_exist
+msgid "Has Pack Operations"
+msgstr "有包装操作"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_quant_reserved_exist
+msgid "Has quants already reserved"
+msgstr "有预留的份"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有需要留意的新信息。"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 会出现新消息."
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_backorder_id
+msgid "If this shipment was split, then this field links to the shipment which contains the already processed part."
+msgstr "如果这个装运单被分割，该字段将连接到包括了已经处理的部分的装运单。"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,picking_type_code:0
+msgid "Internal"
+msgstr "Internal"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_is_follower
+msgid "Is Follower"
+msgstr "是否关注者"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_move_type
+msgid "It specifies goods to be deliver partially or all at once"
+msgstr "指定货物是部分发运还是一次性发运所有的"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_last_post
+msgid "Last Message Date"
+msgstr "最后消息日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking___last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_write_uid
+msgid "Last Updated by"
+msgstr "最后更新"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_launch_pack_operations
+msgid "Launch Pack Operations"
+msgstr "开始包装操作"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_max_date
+msgid "Max. Expected Date"
+msgstr "最大预计日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_move_lines_related
+msgid "Move Lines"
+msgstr "移动行"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_pack_operation_product_ids
+msgid "Non pack"
+msgstr "没有包装"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,priority:0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,priority:0
+msgid "Not urgent"
+msgstr "Not urgent"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_note
+msgid "Notes"
+msgstr "记录"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_needaction_counter
+msgid "Number of Actions"
+msgstr "动作的序列号"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_number_of_packages
+msgid "Number of Packages"
+msgstr "包装件数"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要动作的消息编号"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读的消息数量"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_owner_id
+msgid "Owner"
+msgstr "所有者"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_pack_operation_pack_ids
+msgid "Pack"
+msgstr "包裹"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_package_ids
+msgid "Packages"
+msgstr "包裹"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,move_type:0
+msgid "Partial"
+msgstr "Partial"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Partially Available"
+msgstr "部分发货"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_partner_id
+msgid "Partner"
+msgstr "合作伙伴"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_picking_type_id
+msgid "Picking Type"
+msgstr "分拣类型"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_delivery_type
+msgid "Price Computation"
+msgstr "价格计算"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_printed
+msgid "Printed"
+msgstr "已打印"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_priority
+msgid "Priority"
+msgstr "优先级"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_priority
+msgid "Priority for this picking. Setting manually a value here would set it as priority for all the moves"
+msgstr "此分拣的优先级。手动在这设定一个值作为所有移动的优先级。"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_group_id
+msgid "Procurement Group"
+msgstr "补货组"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_purchase_id
+msgid "Purchase Orders"
+msgstr "采购订单"
+
+#. module: stock_qc
+#: model:ir.ui.menu,name:stock_qc.stock_qc_menu
+#: model:ir.ui.menu,name:stock_qc.stock_qc_top_menu
+msgid "Quality Check"
+msgstr "质检检测"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_recompute_pack_op
+msgid "Recompute pack operation?"
+msgstr "重新计算打包作业？"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_name
+msgid "Reference"
+msgstr "引用"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_origin
+msgid "Reference of the document"
+msgstr "单据的参考"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_pack_operation_ids
+msgid "Related Packing Operations"
+msgstr "相关的打包作业"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_sale_id
+msgid "Sale Order"
+msgstr "销售订单"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_min_date
+msgid "Scheduled Date"
+msgstr "计划日期"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_min_date
+msgid "Scheduled time for the first part of the shipment to be processed. Setting manually a value here would set it as expected date for all the stock moves."
+msgstr "计划时间的第一部分发货即将进行。在此手动设定一个值表示所有库存移动的期望时间。"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_max_date
+msgid "Scheduled time for the last part of the shipment to be processed"
+msgstr "待处理的最后一部分发货的计划时间"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_carrier_price
+msgid "Shipping Cost"
+msgstr "发货成本"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_origin
+msgid "Source Document"
+msgstr "源文档"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_location_id
+msgid "Source Location Zone"
+msgstr "源位置区域"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_state
+msgid "Status"
+msgstr "状态"
+
+#. module: stock_qc
+#: model:ir.model,name:stock_qc.model_stock_move
+msgid "Stock Move"
+msgstr "库存移动"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_move_lines
+msgid "Stock Moves"
+msgstr "库存移动"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,picking_type_code:0
+msgid "Suppliers"
+msgstr "供应商"
+
+#. module: stock_qc
+#: model:ir.model,name:stock_qc.model_stock_quality_picking
+msgid "Transfer"
+msgstr "调拨"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_recompute_pack_op
+msgid "True if reserved quants changed, which mean we might need to recompute the package operations"
+msgstr "如果保留的份变化了，则为True，这意味着我们需要重新计算包裹作业"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_weight_uom_id
+msgid "Unit of Measure"
+msgstr "计量单位"
+
+#. module: stock_qc
+#: model:ir.model.fields,help:stock_qc.field_stock_quality_picking_weight_uom_id
+msgid "Unit of measurement for Weight"
+msgstr "重量的计量单位"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,priority:0
+msgid "Urgent"
+msgstr "Urgent"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,priority:0
+msgid "Very Urgent"
+msgstr "Very Urgent"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_volume
+msgid "Volume"
+msgstr "体积"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Waiting Another Operation"
+msgstr "Waiting Another Operation"
+
+#. module: stock_qc
+#: selection:stock.quality.picking,state:0
+msgid "Waiting Availability"
+msgstr "Waiting Availability"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_weight
+msgid "Weight"
+msgstr "重量"
+
+#. module: stock_qc
+#: selection:stock.move,qc_result:0
+#: selection:stock.quality.picking,qc_result:0
+msgid "partial passed"
+msgstr "部分合格"
+
+#. module: stock_qc
+#: selection:stock.move,qc_result:0
+#: selection:stock.quality.picking,qc_result:0
+msgid "passed"
+msgstr "全部合格"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_qc_date
+msgid "quality check date time"
+msgstr "质检时间"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_qc_note
+msgid "quality check note"
+msgstr "质检说明"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_move_qc_result
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_qc_result
+msgid "quality check result"
+msgstr "质检结果"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_qc_checker
+msgid "quality checker"
+msgstr "质检员"
+
+#. module: stock_qc
+#: selection:stock.move,qc_result:0
+#: selection:stock.quality.picking,qc_result:0
+msgid "rejected"
+msgstr "不合格"
+
+#. module: stock_qc
+#: model:ir.actions.act_window,name:stock_qc.stock_qc_action
+#: model:ir.ui.menu,name:stock_qc.stock_qc_menu_action
+#: model:ir.ui.view,arch_db:stock_qc.stock_qc_form_view
+#: model:ir.ui.view,arch_db:stock_qc.stock_qc_tree_view
+msgid "stock quality check"
+msgstr "质检"
+
+#. module: stock_qc
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_picking_type_code
+#: model:ir.model.fields,field_description:stock_qc.field_stock_quality_picking_picking_type_entire_packs
+msgid "unknown"
+msgstr "unknown"
+
