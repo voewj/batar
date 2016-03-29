@@ -6,13 +6,6 @@ Created on 2016年3月23日
 '''
 from openerp import models,fields
 
-class stock_location(models.Model):
-    _inherit = 'stock.location'
-    
-    qc_location = fields.Boolean(string='is quality check stock picking')
-    _defaults = {
-        'qc_location':False,
-    }
 
 
 class stock_quality_picking(models.Model):

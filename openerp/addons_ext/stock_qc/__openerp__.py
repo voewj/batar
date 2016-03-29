@@ -24,10 +24,10 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'data/stock_quality_check_init.xml',
+        
         'views/stock_quality_picking.xml',
         'views/purchase_order.xml',
-        'views/stock_location.xml',
+        'views/stock_warehouse.xml',
         
        
     ],
