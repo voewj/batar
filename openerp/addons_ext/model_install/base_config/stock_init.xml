@@ -10,84 +10,84 @@
 	    <record id="stock.warehouse0" model="stock.warehouse">
             <field model="res.company" name="name" search="[]" use="name"/>
             <field name="name">深圳:金库</field>
-            <field name="partner_id" ref="show_king_shenzhen"/>
+            <field name="partner_id" ref="base.main_partner"/>
             <field name="en_code">shenzhen_gold_warehouse</field>
             <field name="code">深圳:金库</field>
         </record>
          <record id="shenzhen_recycling_warehourse" model="stock.warehouse">
 	        <field name="name">深圳:收料仓</field>
-	        <field name="partner_id" ref="show_king_shenzhen"/>
+	        <field name="partner_id" ref="base.main_partner"/>
 	        <field name="en_code">shenzhen_recycling_warehourse</field>
 	        <field name="code">深圳:收料仓</field>
 	    </record>
 	    <record id="shenzhen_sample_warehourse" model="stock.warehouse">
 	        <field name="name">深圳:样品库</field>
-	        <field name="partner_id" ref="show_king_shenzhen"/>
+	        <field name="partner_id" ref="base.main_partner"/>
 	        <field name="en_code">shenzhen_sample_warehourse</field>
 	        <field name="code">深圳:样品库</field>
 	    </record>
 	     <record id="shenzhen_quality_warehourse" model="stock.warehouse">
 	        <field name="name">深圳:质检仓</field>
 	        <field name='is_quality'>1</field>
-	        <field name="partner_id" ref="show_king_shenzhen"/>
+	        <field name="partner_id" ref="base.main_partner"/>
 	        <field name="en_code">shenzhen_stock_quality_check</field>
 	        <field name="code">深圳:质检仓</field>
 	    </record>
-	    <!-- 天津尚金缘 -->
-	     <record id="tianjin_gold_warehouse" model="stock.warehouse">
-            <field model="res.company" name="name" search="[]" use="name"/>
-            <field name="name">天津:金库</field>
-            <field name="partner_id" ref="show_king_tianjin"/>
-            <field name="en_code">tianjin_gold_warehouse</field>
-            <field name="code">天津:金库</field>
-        </record>
-         <record id="tianjin_recycling_warehourse" model="stock.warehouse">
-	        <field name="name">天津:收料仓</field>
-	        <field name="partner_id" ref="show_king_tianjin"/>
-	        <field name="en_code">tianjin_recycling_warehourse</field>
-	        <field name="code">天津:收料仓</field>
-	    </record>
-	    <record id="tianjin_sample_warehourse" model="stock.warehouse">
-	        <field name="name">天津:样品库</field>
-	        <field name="partner_id" ref="show_king_tianjin"/>
-	        <field name="en_code">tianjin_sample_warehourse</field>
-	        <field name="code">天津:样品库</field>
-	    </record>
-	     <record id="tianjin_quality_warehourse" model="stock.warehouse">
-	        <field name="name">天津:质检仓</field>
-	        <field name='is_quality'>1</field>
-	        <field name="partner_id" ref="show_king_tianjin"/>
-	        <field name="en_code">tianjin_stock_quality_check</field>
-	        <field name="code">天津:质检仓</field>
-	    </record>
+<!-- 	    天津尚金缘 -->
+<!-- 	     <record id="tianjin_gold_warehouse" model="stock.warehouse"> -->
+<!--             <field model="res.company" name="name" search="[]" use="name"/> -->
+<!--             <field name="name">天津:金库</field> -->
+<!--             <field name="partner_id" ref="show_king_tianjin"/> -->
+<!--             <field name="en_code">tianjin_gold_warehouse</field> -->
+<!--             <field name="code">天津:金库</field> -->
+<!--         </record> -->
+<!--          <record id="tianjin_recycling_warehourse" model="stock.warehouse"> -->
+<!-- 	        <field name="name">天津:收料仓</field> -->
+<!-- 	        <field name="partner_id" ref="show_king_tianjin"/> -->
+<!-- 	        <field name="en_code">tianjin_recycling_warehourse</field> -->
+<!-- 	        <field name="code">天津:收料仓</field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="tianjin_sample_warehourse" model="stock.warehouse"> -->
+<!-- 	        <field name="name">天津:样品库</field> -->
+<!-- 	        <field name="partner_id" ref="show_king_tianjin"/> -->
+<!-- 	        <field name="en_code">tianjin_sample_warehourse</field> -->
+<!-- 	        <field name="code">天津:样品库</field> -->
+<!-- 	    </record> -->
+<!-- 	     <record id="tianjin_quality_warehourse" model="stock.warehouse"> -->
+<!-- 	        <field name="name">天津:质检仓</field> -->
+<!-- 	        <field name='is_quality'>1</field> -->
+<!-- 	        <field name="partner_id" ref="show_king_tianjin"/> -->
+<!-- 	        <field name="en_code">tianjin_stock_quality_check</field> -->
+<!-- 	        <field name="code">天津:质检仓</field> -->
+<!-- 	    </record> -->
 	    
-	    <!-- 杭州尚金缘 -->
-	     <record id="hangzhou_gold_warehouse" model="stock.warehouse">
-            <field model="res.company" name="name" search="[]" use="name"/>
-            <field name="name">杭州:金库</field>
-            <field name="partner_id" ref="show_king_hangzhou"/>
-            <field name="en_code">hangzhou_gold_warehouse</field>
-            <field name="code">杭州:金库</field>
-        </record>
-         <record id="hangzhou_recycling_warehourse" model="stock.warehouse">
-	        <field name="name">杭州:收料仓</field>
-	        <field name="partner_id" ref="show_king_hangzhou"/>
-	        <field name="en_code">hangzhou_recycling_warehourse</field>
-	        <field name="code">杭州:收料仓</field>
-	    </record>
-	    <record id="hangzhou_sample_warehourse" model="stock.warehouse">
-	        <field name="name">杭州:样品库</field>
-	        <field name="partner_id" ref="show_king_hangzhou"/>
-	        <field name="en_code">hangzhou_sample_warehourse</field>
-	        <field name="code">杭州:样品库</field>
-	    </record>
-	     <record id="hangzhou_quality_warehourse" model="stock.warehouse">
-	        <field name="name">杭州:质检仓</field>
-	        <field name='is_quality'>1</field>
-	        <field name="partner_id" ref="show_king_hangzhou"/>
-	        <field name="en_code">hangzhou_stock_quality_check</field>
-	        <field name="code">杭州:质检仓</field>
-	    </record>
+<!-- 	    杭州尚金缘 -->
+<!-- 	     <record id="hangzhou_gold_warehouse" model="stock.warehouse"> -->
+<!--             <field model="res.company" name="name" search="[]" use="name"/> -->
+<!--             <field name="name">杭州:金库</field> -->
+<!--             <field name="partner_id" ref="show_king_hangzhou"/> -->
+<!--             <field name="en_code">hangzhou_gold_warehouse</field> -->
+<!--             <field name="code">杭州:金库</field> -->
+<!--         </record> -->
+<!--          <record id="hangzhou_recycling_warehourse" model="stock.warehouse"> -->
+<!-- 	        <field name="name">杭州:收料仓</field> -->
+<!-- 	        <field name="partner_id" ref="show_king_hangzhou"/> -->
+<!-- 	        <field name="en_code">hangzhou_recycling_warehourse</field> -->
+<!-- 	        <field name="code">杭州:收料仓</field> -->
+<!-- 	    </record> -->
+<!-- 	    <record id="hangzhou_sample_warehourse" model="stock.warehouse"> -->
+<!-- 	        <field name="name">杭州:样品库</field> -->
+<!-- 	        <field name="partner_id" ref="show_king_hangzhou"/> -->
+<!-- 	        <field name="en_code">hangzhou_sample_warehourse</field> -->
+<!-- 	        <field name="code">杭州:样品库</field> -->
+<!-- 	    </record> -->
+<!-- 	     <record id="hangzhou_quality_warehourse" model="stock.warehouse"> -->
+<!-- 	        <field name="name">杭州:质检仓</field> -->
+<!-- 	        <field name='is_quality'>1</field> -->
+<!-- 	        <field name="partner_id" ref="show_king_hangzhou"/> -->
+<!-- 	        <field name="en_code">hangzhou_stock_quality_check</field> -->
+<!-- 	        <field name="code">杭州:质检仓</field> -->
+<!-- 	    </record> -->
 	   
 	</data>
 </openerp>

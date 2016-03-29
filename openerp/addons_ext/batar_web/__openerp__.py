@@ -5,7 +5,7 @@
     'description': """
     修改OD首页，新增样式及JS。LOGO图片等。
     """,
-    'depends': ['web'],
+    'depends': ['base','web'],
     'data': ['views/webclient_templates.xml'],
 
 }
