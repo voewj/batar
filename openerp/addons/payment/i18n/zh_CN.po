@@ -1,47 +1,47 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * payment
-# 
-# Translators:
-# Joshua Jan <popkar77@gmail.com>, 2016
-# liulixia <liu.lixia@elico-corp.com>, 2015
-# Luke <cialuo@qq.com>, 2015
-# 珠海-老天 <liangjia@qq.com>, 2015
+# 	* payment
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: Odoo Server 8.0alpha1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:40+0000\n"
-"PO-Revision-Date: 2016-03-12 01:56+0000\n"
-"Last-Translator: Joroy <13637815@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/odoo/odoo-9/language/zh_CN/)\n"
+"POT-Creation-Date: 2015-11-01 22:42+0800\n"
+"PO-Revision-Date: 2016-01-16 22:06+0800\n"
+"Last-Translator: 保定-粉刷匠 <openerp@126.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: zh_CN\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_transaction_callback_eval
 msgid ""
-"            Will be safe_eval with `self` being the current transaction. i.e.:\n"
+"            Will be safe_eval with `self` being the current transaction. i."
+"e.:\n"
 "                self.env['my.model'].payment_validated(self)"
-msgstr "此事务会通过带有‘self’参数的safe_eval来执行。例如：\nself.env['my.model'].payment_validated(self)"
+msgstr ""
+"            safe_eval 和 `self` 组合将成为当前的事物。例如：\n"
+"                self.env['my.model'].payment_validated(self)"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_account_config_settings_module_payment_adyen
 msgid "-It installs the module payment_adyen."
-msgstr "-安装模块 payment_adyen 。"
+msgstr "-它安装模块“payment_adyen”。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_account_config_settings_module_payment_authorize
 msgid "-It installs the module payment_authorize."
-msgstr "需要安装模块payment_authorize"
+msgstr "-它安装模块“payment_authorize”。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_account_config_settings_module_payment_buckaroo
 msgid "-It installs the module payment_buckaroo."
-msgstr "-为此将安装“ payment_buckaroo”模块。"
+msgstr "-它安装模块“ payment_buckaroo”。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_account_config_settings_module_payment_ogone
@@ -51,37 +51,37 @@ msgstr "-它安装模块“payment_ogone”。"
 #. module: payment
 #: model:ir.model.fields,help:payment.field_account_config_settings_module_payment_paypal
 msgid "-It installs the module payment_paypal."
-msgstr "-为此将安装 payment_paypal 模块。"
+msgstr "-它安装模块“payment_paypal”。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_account_config_settings_module_payment_transfer
 msgid "-It installs the module payment_transfer."
-msgstr "-它安装模块“payment_transfer”。"
+msgstr "-它安装模块“支付转帐”。"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_html_3ds
 msgid "3D Secure HTML"
-msgstr "3D Secure HTML"
+msgstr "3D安全HTML"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_acquirer_id
 msgid "Acquirer"
-msgstr "收单方"
+msgstr "托收银行"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_method_acquirer_id
 msgid "Acquirer Account"
-msgstr "收单帐号"
+msgstr "托收银行科目"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_method_acquirer_ref
 msgid "Acquirer Ref."
-msgstr "收单参照"
+msgstr "托收银行参考信息"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_acquirer_reference
 msgid "Acquirer Reference"
-msgstr "收单参考"
+msgstr "托收银行参考"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_method_active
@@ -91,7 +91,7 @@ msgstr "有效"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_fees_active
 msgid "Add Extra Fees"
-msgstr "添加额外的费用"
+msgstr "增加额外费用"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_address
@@ -108,22 +108,22 @@ msgstr "Adyen"
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_amount
 #: model:ir.model.fields,help:payment.field_payment_transaction_amount
 msgid "Amount"
-msgstr "总额"
+msgstr "数量"
 
 #. module: payment
 #: selection:payment.acquirer,auto_confirm:0
 msgid "At payment no acquirer confirmation needed"
-msgstr "付款时候不须收款确认信息"
+msgstr "支付时不需要托收银行确认"
 
 #. module: payment
 #: selection:payment.acquirer,auto_confirm:0
 msgid "At payment with acquirer confirmation"
-msgstr "付款时有收款确认"
+msgstr "需要托收银行确认的支付"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_account_config_settings_module_payment_buckaroo
 msgid "Buckaroo"
-msgstr "牛仔"
+msgstr "Buckaroo"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_cancel_msg
@@ -133,7 +133,7 @@ msgstr "取消信息"
 #. module: payment
 #: selection:payment.transaction,state:0
 msgid "Canceled"
-msgstr "已作废"
+msgstr "取消"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_city
@@ -154,12 +154,12 @@ msgstr "配置"
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.payment_acquirer_installation
 msgid "Configure payment acquiring methods"
-msgstr "配置支付收购办法"
+msgstr "设置托收银行付款方式"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_partner_payment_method_count
 msgid "Count Payment Method"
-msgstr "统计付款的方法"
+msgstr "按次数付款方式"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_country_id
@@ -178,7 +178,7 @@ msgstr "创建者"
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_create_date
 #: model:ir.model.fields,field_description:payment.field_payment_method_create_date
 msgid "Created on"
-msgstr "创建时间"
+msgstr "创建在"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_create_date
@@ -188,7 +188,7 @@ msgstr "创建日期"
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid "Credentials"
-msgstr "授权认证"
+msgstr "密码"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.view_partners_form_payment_defaultcreditcard
@@ -225,7 +225,7 @@ msgstr "完成"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_done_msg
 msgid "Done Message"
-msgstr "完成的信息"
+msgstr "已完成消息"
 
 #. module: payment
 #: selection:payment.transaction,state:0
@@ -235,12 +235,12 @@ msgstr "草稿"
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.transaction_form
 msgid "E-mail"
-msgstr "电子邮件"
+msgstr "E-mail"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_email
 msgid "Email"
-msgstr "Email"
+msgstr "邮件"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_environment
@@ -250,7 +250,7 @@ msgstr "环境"
 #. module: payment
 #: selection:payment.transaction,state:0
 msgid "Error"
-msgstr "Error"
+msgstr "错误"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_error_msg
@@ -285,22 +285,22 @@ msgstr "固定的手续费"
 #. module: payment
 #: selection:payment.transaction,type:0
 msgid "Form"
-msgstr "表单"
+msgstr "表格"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_view_template_id
 msgid "Form Button Template"
-msgstr "Form按钮模板"
+msgstr "按钮的模板"
 
 #. module: payment
 #: selection:payment.transaction,type:0
 msgid "Form with credentials storage"
-msgstr "带有凭证存储的表单"
+msgstr "凭据存储形式"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_search
 msgid "Group By"
-msgstr "分组"
+msgstr "分组被"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_pre_msg
@@ -317,12 +317,12 @@ msgstr "ID"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_image
 msgid "Image"
-msgstr "图像"
+msgstr "图片"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_transaction_reference
 msgid "Internal reference of the TX"
-msgstr "该TX内部参考"
+msgstr "TX的内部参考"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_lang
@@ -334,21 +334,21 @@ msgstr "语言"
 #: model:ir.model.fields,field_description:payment.field_payment_method___last_update
 #: model:ir.model.fields,field_description:payment.field_payment_transaction___last_update
 msgid "Last Modified on"
-msgstr "最后修改日"
+msgstr "最后修改日期"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_write_uid
 #: model:ir.model.fields,field_description:payment.field_payment_method_write_uid
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_write_uid
 msgid "Last Updated by"
-msgstr "最后更新"
+msgstr "最后更新者"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_write_date
 #: model:ir.model.fields,field_description:payment.field_payment_method_write_date
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_write_date
 msgid "Last Updated on"
-msgstr "最后更新"
+msgstr "最后更新时间"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_website_published
@@ -366,13 +366,15 @@ msgid ""
 "Medium-sized image of this provider. It is automatically resized as a "
 "128x128px image, with aspect ratio preserved. Use this field in form views "
 "or some kanban views."
-msgstr "这个供应方的中等大小的图片。它被自动调整为128*128图片纵横比保存起来。通常在表单视图或者看板视图中用这个字段"
+msgstr ""
+"这个提供者的中等尺寸的图片。它被自动重新设置为128x128像素，比例不变。在窗体或"
+"看板视图中使用这个字段。"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_state_message
 #: model:ir.ui.view,arch_db:payment.transaction_form
 msgid "Message"
-msgstr "消息"
+msgstr "信息"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_post_msg
@@ -387,26 +389,26 @@ msgstr "在支付过程中显示说明及帮助信息."
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_error_msg
 msgid "Message displayed, if error is occur during the payment process."
-msgstr "如果在付款过程中发生错误，会有消息提示"
+msgstr "在付款过程中如果有错误，就显示错误消息。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_cancel_msg
 msgid "Message displayed, if order is cancel during the payment process."
-msgstr "如果在付款的时候订单被取消，会有消息提示"
+msgstr "在付款过程中如果订单取消了，就显示消息。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_done_msg
 msgid ""
 "Message displayed, if order is done successfully after having done the "
 "payment process."
-msgstr "如果付款后订单被顺利完成，会有消息提示"
+msgstr "在付款完成后，如果订单成功完成了，就显示消息。"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_pending_msg
 msgid ""
 "Message displayed, if order is in pending state after having done the "
 "payment process."
-msgstr "如果在付款后订单还是打开的状态，会有消息提示"
+msgstr "在付款过程中，如果订单被挂起，就显示消息。"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
@@ -424,7 +426,7 @@ msgstr "名称"
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_method_name
 msgid "Name of the payment method"
-msgstr "付款方法名称"
+msgstr "付款方式的名称"
 
 #. module: payment
 #: selection:payment.acquirer,auto_confirm:0
@@ -446,30 +448,30 @@ msgstr "订单确认"
 #: model:ir.model.fields,field_description:payment.field_payment_method_partner_id
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_id
 msgid "Partner"
-msgstr "业务伙伴"
+msgstr "联系人"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_name
 msgid "Partner Name"
-msgstr "业务伙伴名称"
+msgstr "联系人名称"
 
 #. module: payment
 #: model:ir.model,name:payment.model_payment_acquirer
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid "Payment Acquirer"
-msgstr "付款 托收方"
+msgstr "付款托收银行"
 
 #. module: payment
 #: model:ir.actions.act_window,name:payment.action_payment_acquirer
 #: model:ir.ui.menu,name:payment.payment_acquirer_menu
 #: model:ir.ui.view,arch_db:payment.acquirer_list
 msgid "Payment Acquirers"
-msgstr "收单银行"
+msgstr "付款托收银行"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_payment_method_id
 msgid "Payment Method"
-msgstr "付款方法"
+msgstr "付款方式"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_partner_payment_method_ids
@@ -477,7 +479,7 @@ msgstr "付款方法"
 #: model:ir.ui.view,arch_db:payment.payment_method_tree_view
 #: model:ir.ui.view,arch_db:payment.payment_method_view_search
 msgid "Payment Methods"
-msgstr "付款方法"
+msgstr "付款方式"
 
 #. module: payment
 #: model:ir.model,name:payment.model_payment_transaction
@@ -502,22 +504,22 @@ msgstr "支付交易"
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 #: model:ir.ui.view,arch_db:payment.payment_method_form_view
 msgid "Payments"
-msgstr "付款"
+msgstr "支付"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_account_config_settings_module_payment_paypal
 msgid "Paypal"
-msgstr "贝宝"
+msgstr "Paypal"
 
 #. module: payment
 #: selection:payment.transaction,state:0
 msgid "Pending"
-msgstr "暂停"
+msgstr "代办事项"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_pending_msg
 msgid "Pending Message"
-msgstr "待定消息"
+msgstr "挂起消息"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_phone
@@ -527,7 +529,7 @@ msgstr "电话"
 #. module: payment
 #: selection:payment.acquirer,environment:0
 msgid "Production"
-msgstr "生产单"
+msgstr "生产"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_provider
@@ -538,7 +540,7 @@ msgstr "提供者"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_reference
 msgid "Reference"
-msgstr "引用"
+msgstr "参考"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_transaction_acquirer_reference
@@ -553,24 +555,24 @@ msgstr "必须填写的信息没有填写"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_callback_eval
 msgid "S2S Callback"
-msgstr "S2S回调"
+msgstr "S2S 反馈"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_registration_view_template_id
 msgid "S2S Form Template"
-msgstr "S2S表单模板"
+msgstr "S2S 表格模板"
 
 #. module: payment
 #: model:ir.actions.act_window,name:payment.payment_method_action
 #: model:ir.ui.menu,name:payment.finance_pay_method_menu
 #: model:ir.ui.menu,name:payment.payment_method_menu
 msgid "Saved Payment Data"
-msgstr "保存的付款数据"
+msgstr "已保存的付款数据"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_sequence
 msgid "Sequence"
-msgstr "序号"
+msgstr "序列"
 
 #. module: payment
 #: selection:payment.transaction,type:0
@@ -585,10 +587,12 @@ msgstr "小尺寸图片"
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_image_small
 msgid ""
-"Small-sized image of this provider. It is automatically resized as a 64x64px"
-" image, with aspect ratio preserved. Use this field anywhere a small image "
-"is required."
-msgstr "这个供应方的小尺寸图片。他会被自动调整为６４＊６４大小的图片被保存起来，任何地方用这个小图片字段是必要的"
+"Small-sized image of this provider. It is automatically resized as a 64x64px "
+"image, with aspect ratio preserved. Use this field anywhere a small image is "
+"required."
+msgstr ""
+"这个提供者的小尺寸的图片。它被自动重新设置为64x64像素，比例不变。如果需要小图"
+"片，可以使用这个字段。"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_state
@@ -598,7 +602,7 @@ msgstr "状态"
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_registration_view_template_id
 msgid "Template for method registration"
-msgstr "用来登记方法的模板"
+msgstr "登记方式的模板"
 
 #. module: payment
 #: selection:payment.acquirer,environment:0
@@ -619,14 +623,18 @@ msgstr "支付的订单必须是唯一的"
 #: model:ir.model.fields,help:payment.field_payment_acquirer_image
 msgid ""
 "This field holds the image used for this provider, limited to 1024x1024px"
-msgstr "这个字段保持着这个供应方的图片，限制为1024x1024px"
+msgstr "这个字段保存了提供器使用的图片，限制在1024x1024像素"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid ""
 "This template renders the acquirer button with all necessary values.\n"
-"                                            It is be rendered with qWeb with the following evaluation context:"
-msgstr "这个模板渲染了带有必要价值的接收方按钮\n　　　　　　　　　　　　　　　　　　它被带有估值上下文的Qweb渲染"
+"                                            It is be rendered with qWeb with "
+"the following evaluation context:"
+msgstr ""
+"这个模板将显示采购按钮和所有必须的数据。\n"
+"                                            它使用qWeb和下面的评价上下文来渲"
+"染："
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_type
@@ -636,7 +644,7 @@ msgstr "类型"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_date_validate
 msgid "Validation Date"
-msgstr "审核日期"
+msgstr "验证日期"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_fees_dom_var
@@ -661,7 +669,7 @@ msgstr "电汇"
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.transaction_form
 msgid "ZIP"
-msgstr "邮编"
+msgstr "邮政编码"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_zip
@@ -671,12 +679,12 @@ msgstr "邮编"
 #. module: payment
 #: model:ir.model,name:payment.model_account_config_settings
 msgid "account.config.settings"
-msgstr "会计.配置.设定"
+msgstr "账户.设置.设置"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid "acquirer: payment.acquirer browse record"
-msgstr "采购: payment.acquirer 浏览数据"
+msgstr "托收银行: payment.acquirer 浏览数据"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
@@ -713,7 +721,7 @@ msgstr "payment.method"
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid "reference: the transaction reference number"
-msgstr "reference: 参考订单号"
+msgstr "参考:交易参考单号"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
@@ -728,9 +736,117 @@ msgstr "tx_values:交易价值"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_account_config_settings_module_payment_authorize
 msgid "unknown"
-msgstr "未知的"
+msgstr "未知"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid "user: current user browse record"
-msgstr "user: 当前用户浏览记录"
+msgstr "用户：当前用户浏览记录"
+
+#~ msgid "Amount in cents"
+#~ msgstr "多少价值"
+
+#~ msgid "Automatic"
+#~ msgstr "自动"
+
+#~ msgid "Date of the last message posted on the record."
+#~ msgstr "记录上最后信息的日期。"
+
+#~ msgid "Followers"
+#~ msgstr "关注人"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "关注者（频道）"
+
+#~ msgid "Followers (Partners)"
+#~ msgstr "关注者（合作伙伴）"
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "请选择你关注的消息"
+
+#~ msgid "Is Follower"
+#~ msgstr "是关注者"
+
+#~ msgid "Last Message Date"
+#~ msgstr "最后信息日期"
+
+#~ msgid "Manual"
+#~ msgstr "人工"
+
+#~ msgid "Messages and communication history"
+#~ msgstr "信息和通讯记录"
+
+#~ msgid "Need Action"
+#~ msgstr "需要行动"
+
+#~ msgid "Need Action Counter"
+#~ msgstr "需要行动计数"
+
+#~ msgid "Number of needaction messages"
+#~ msgstr "需要行动的信息数量"
+
+#~ msgid "Number of unread messages"
+#~ msgstr "未读信息数量"
+
+#~ msgid "Partner Reference"
+#~ msgstr "联系人参考"
+
+#~ msgid "Pay safely online"
+#~ msgstr "网上安全支付"
+
+#~ msgid "Process Method"
+#~ msgstr "过程方法"
+
+#~ msgid "Reference of the customer in the acquirer database"
+#~ msgstr "供应商数据参照"
+
+#~ msgid "Send a message to the group"
+#~ msgstr "向指定组中发送信息"
+
+#~ msgid ""
+#~ "Static payments are payments like transfer, that require manual steps."
+#~ msgstr "像转账类的静态付款，需要手动步骤。"
+
+#~ msgid "Unread Messages"
+#~ msgstr "未读消息"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "未读消息计数"
+
+#~ msgid "Website Messages"
+#~ msgstr "网站信息"
+
+#~ msgid "Website communication history"
+#~ msgstr "网站流量历史"
+
+#~ msgid "At payment"
+#~ msgstr "支付"
+
+#~ msgid "Compute fees"
+#~ msgstr "计算费用"
+
+#~ msgid "false"
+#~ msgstr "false"
+
+#~ msgid "Payment"
+#~ msgstr "支付"
+
+#~ msgid ""
+#~ "Holds the Chatter summary (number of messages, ...). This summary is "
+#~ "directly in html format in order to be inserted in kanban views."
+#~ msgstr "保存聊天信息,保存的内容可以使用HTML格式直接查看"
+
+#~ msgid "Manage Payments Using Adyen"
+#~ msgstr "使用Adyen管理付款"
+
+#~ msgid "Manage Payments Using Buckaroo"
+#~ msgstr "使用 Buckaroo管理付款"
+
+#~ msgid "Manage Payments Using Ogone"
+#~ msgstr "使用Ogone管理付款"
+
+#~ msgid "Manage Payments Using Paypal"
+#~ msgstr "使用Paypal（贝宝）进行付款管理"
+
+#~ msgid "Summary"
+#~ msgstr "总结"

@@ -1,23 +1,22 @@
-# Translation of Odoo Server.
-# This file contains the translation of the following modules:
-# * decimal_precision
-# 
-# Translators:
-# fausthuang, 2015
-# Joroy <13637815@qq.com>, 2016
+# Chinese (Simplified) translation for openobject-addons
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the openobject-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:40+0000\n"
-"PO-Revision-Date: 2016-03-12 01:56+0000\n"
-"Last-Translator: Joroy <13637815@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/odoo/odoo-9/language/zh_CN/)\n"
+"POT-Creation-Date: 2015-11-12 20:17+0800\n"
+"PO-Revision-Date: 2015-11-12 20:17+0800\n"
+"Last-Translator: 保定-粉刷匠 <openerp@126.com>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-03-28 05:37+0000\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #. module: decimal_precision
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_create_uid
@@ -29,13 +28,13 @@ msgstr "创建者"
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_create_date
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_test_create_date
 msgid "Created on"
-msgstr "创建于"
+msgstr "创建在"
 
 #. module: decimal_precision
 #: model:ir.actions.act_window,name:decimal_precision.action_decimal_precision_form
 #: model:ir.ui.menu,name:decimal_precision.menu_decimal_precision_form
 msgid "Decimal Accuracy"
-msgstr "小数准确性"
+msgstr "小数精度"
 
 #. module: decimal_precision
 #: model:ir.ui.view,arch_db:decimal_precision.view_decimal_precision_form
@@ -64,19 +63,19 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision___last_update
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_test___last_update
 msgid "Last Modified on"
-msgstr "最后修改日"
+msgstr "最近修改日期"
 
 #. module: decimal_precision
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_test_write_uid
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_write_uid
 msgid "Last Updated by"
-msgstr "最后更新"
+msgstr "最后更新者"
 
 #. module: decimal_precision
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_test_write_date
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_write_date
 msgid "Last Updated on"
-msgstr "最后更新"
+msgstr "最后更新时间"
 
 #. module: decimal_precision
 #: sql_constraint:decimal.precision:0
@@ -96,7 +95,7 @@ msgstr "decimal.precision"
 #. module: decimal_precision
 #: model:ir.model,name:decimal_precision.model_decimal_precision_test
 msgid "decimal.precision.test"
-msgstr "十进制.精确.测试"
+msgstr "decimal.precision.test"
 
 #. module: decimal_precision
 #: model:ir.model,name:decimal_precision.model_ir_qweb_field_float
@@ -108,4 +107,4 @@ msgstr "ir.qweb.field.float"
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_test_float_2
 #: model:ir.model.fields,field_description:decimal_precision.field_decimal_precision_test_float_4
 msgid "unknown"
-msgstr "未知的"
+msgstr "未知"

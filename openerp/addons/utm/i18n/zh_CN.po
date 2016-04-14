@@ -1,23 +1,20 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * utm
-# 
-# Translators:
-# Gary Wei <Gary.wei@elico-corp.com>, 2016
-# Joroy <13637815@qq.com>, 2016
+# 	* utm
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: Odoo Server 9.0alpha1-20150318\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 10:26+0000\n"
-"PO-Revision-Date: 2016-03-12 01:56+0000\n"
-"Last-Translator: Joroy <13637815@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/odoo/odoo-9/language/zh_CN/)\n"
+"POT-Creation-Date: 2016-02-13 12:05+0800\n"
+"PO-Revision-Date: 2016-03-27 08:41+0800\n"
+"Last-Translator: 保定-粉刷匠 <992102498@qq.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_medium_active
@@ -35,7 +32,7 @@ msgstr "营销活动"
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_campaign_name
 msgid "Campaign Name"
-msgstr "营销活动名称"
+msgstr "活动名称"
 
 #. module: utm
 #: model:ir.actions.act_window,name:utm.utm_campaign_act
@@ -62,17 +59,17 @@ msgstr "渠道"
 #. module: utm
 #: model:utm.campaign,name:utm.utm_campaign_christmas_special
 msgid "Christmas Special"
-msgstr ""
+msgstr "圣诞特别活动"
 
 #. module: utm
 #: model:ir.actions.act_window,help:utm.utm_medium_action
 msgid "Click to define a new medium."
-msgstr ""
+msgstr "点击来定义一个新渠道。"
 
 #. module: utm
 #: model:ir.actions.act_window,help:utm.utm_source_action
 msgid "Click to define a new source."
-msgstr ""
+msgstr "单击来定义一个新的源。"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_campaign_create_uid
@@ -86,7 +83,7 @@ msgstr "创建者"
 #: model:ir.model.fields,field_description:utm.field_utm_medium_create_date
 #: model:ir.model.fields,field_description:utm.field_utm_source_create_date
 msgid "Created on"
-msgstr "创建于"
+msgstr "创建时间"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_campaign_display_name
@@ -99,22 +96,22 @@ msgstr "显示名称"
 #. module: utm
 #: model:utm.campaign,name:utm.utm_campaign_email_campaign_products
 msgid "Email Campaign - Products"
-msgstr "电邮广告-产品"
+msgstr "通过Email发出活动-产品"
 
 #. module: utm
 #: model:utm.campaign,name:utm.utm_campaign_email_campaign_services
 msgid "Email Campaign - Services"
-msgstr "电邮营销 - 服务"
+msgstr "通过Email发出活动-服务"
 
 #. module: utm
 #: model:utm.source,name:utm.utm_source_facebook
 msgid "Facebook"
-msgstr "脸书"
+msgstr "Facebook"
 
 #. module: utm
 #: model:ir.model,name:utm.model_ir_http
 msgid "HTTP routing"
-msgstr "HTTP 路由"
+msgstr "HTTP路径"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_campaign_id
@@ -130,21 +127,21 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:utm.field_utm_mixin___last_update
 #: model:ir.model.fields,field_description:utm.field_utm_source___last_update
 msgid "Last Modified on"
-msgstr "最后修改日"
+msgstr "最近修改在"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_campaign_write_uid
 #: model:ir.model.fields,field_description:utm.field_utm_medium_write_uid
 #: model:ir.model.fields,field_description:utm.field_utm_source_write_uid
 msgid "Last Updated by"
-msgstr "最后更新"
+msgstr "最后更新者"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_campaign_write_date
 #: model:ir.model.fields,field_description:utm.field_utm_medium_write_date
 #: model:ir.model.fields,field_description:utm.field_utm_source_write_date
 msgid "Last Updated on"
-msgstr "最后更新"
+msgstr "最后更新时间"
 
 #. module: utm
 #: model:ir.ui.menu,name:utm.menu_link_tracker_root
@@ -154,7 +151,7 @@ msgstr "链接跟踪"
 #. module: utm
 #: model:utm.source,name:utm.utm_source_mailing
 msgid "Mailing Partner"
-msgstr "发邮件至业务伙伴"
+msgstr "邮寄到合作伙伴"
 
 #. module: utm
 #: model:ir.actions.act_window,name:utm.utm_medium_action
@@ -163,12 +160,12 @@ msgstr "发邮件至业务伙伴"
 #: model:ir.ui.view,arch_db:utm.utm_medium_view_tree
 #: model:ir.ui.view,arch_db:utm.utm_source_view_tree
 msgid "Medium"
-msgstr "普通"
+msgstr "渠道"
 
 #. module: utm
 #: model:utm.source,name:utm.utm_source_newsletter
 msgid "Newsletter"
-msgstr "时事通信"
+msgstr "快讯"
 
 #. module: utm
 #: model:utm.campaign,name:utm.utm_campaign_fall_drive
@@ -184,49 +181,77 @@ msgstr "搜索引擎"
 #: model:ir.model,name:utm.model_utm_source
 #: model:ir.model.fields,field_description:utm.field_utm_mixin_source_id
 msgid "Source"
-msgstr "原文"
+msgstr "资源"
 
 #. module: utm
 #: model:ir.model.fields,field_description:utm.field_utm_source_name
 msgid "Source Name"
-msgstr "源名称"
+msgstr "资源名称"
 
 #. module: utm
 #: model:ir.actions.act_window,name:utm.utm_source_action
 #: model:ir.ui.menu,name:utm.menu_utm_source
 msgid "Sources"
-msgstr ""
+msgstr "资源"
 
 #. module: utm
 #: model:ir.model.fields,help:utm.field_utm_mixin_campaign_id
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts "
 "Ex: Fall_Drive, Christmas_Special"
-msgstr "这里是一个帮助跟踪您不同市场活动尝试的名称。例如：Fall_Drive，Christmas_Special"
+msgstr "这是用以协助你随时跟进各种促销活动的名称（如秋季促销，圣诞特卖）"
 
 #. module: utm
 #: model:ir.model.fields,help:utm.field_utm_mixin_medium_id
 msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-msgstr "这里是交付的方式。例如： 明信片、 电子邮件、 或横幅广告"
+msgstr "这是交付方式（如明信片，Email，横幅广告）"
 
 #. module: utm
 #: model:ir.model.fields,help:utm.field_utm_mixin_source_id
 msgid ""
-"This is the source of the link Ex: Search Engine, another domain, or name of"
-" email list"
-msgstr "这是链接的来源，例如：搜索引擎，其他领域，或者邮件列表名称"
+"This is the source of the link Ex: Search Engine, another domain, or name of "
+"email list"
+msgstr "这是链接资源（如搜索引擎，域名，邮件列表）"
 
 #. module: utm
 #: model:utm.source,name:utm.utm_source_twitter
 msgid "Twitter"
-msgstr "Twitter"
+msgstr "推特（Twitter）"
 
 #. module: utm
 #: model:ir.ui.menu,name:utm.marketing_utm
 msgid "UTMs"
-msgstr ""
+msgstr "安全网关"
 
 #. module: utm
 #: model:ir.model,name:utm.model_utm_mixin
 msgid "utm.mixin"
-msgstr ""
+msgstr "utm.mixin"
+
+#~ msgid ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                Click to define a new medium.\n"
+#~ "              </p>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                点击此处来定义一个新媒体              \n"
+#~ "               </p>\n"
+#~ "            "
+
+#~ msgid ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                Click to define a new source.\n"
+#~ "              </p>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                点击此处来定义一个新资源\n"
+#~ "              </p>\n"
+#~ "            "
+
+#~ msgid "Fall Drive"
+#~ msgstr "秋季促销"
+
+#~ msgid "false"
+#~ msgstr "false"

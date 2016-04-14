@@ -1,40 +1,41 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_quote
-# 
-# Translators:
-# fausthuang, 2015
-# fausthuang, 2015
-# Martin Trigaux, 2016
-# 珠海-老天 <liangjia@qq.com>, 2015-2016
+# 	* website_quote
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: Odoo Server GreenOdoo-trunk-wms-20140425-"
+"linux-34ff97d-599b23a-16a05eb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-21 09:19+0000\n"
-"PO-Revision-Date: 2016-03-12 01:56+0000\n"
-"Last-Translator: Joray <13637815@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/odoo/odoo-9/language/zh_CN/)\n"
+"POT-Creation-Date: 2015-10-03 10:13+0800\n"
+"PO-Revision-Date: 2015-10-03 10:45+0800\n"
+"Last-Translator: 保定-粉刷匠 <openerp@126.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.8.5\n"
 
 #. module: website_quote
 #: model:mail.template,body_html:website_quote.email_template_edi_sale
 msgid ""
 "\n"
-"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, "
+"255, 255); \">\n"
 "\n"
 "    <p>Hello ${object.partner_id.name},</p>\n"
 "\n"
-"    <p>Here is your ${object.state in ('draft', 'sent') and 'quotation' or 'order confirmation'} from ${object.company_id.name}: </p>\n"
+"    <p>Here is your ${object.state in ('draft', 'sent') and 'quotation' or "
+"'order confirmation'} from ${object.company_id.name}: </p>\n"
 "\n"
 "    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
 "       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
 "       &nbsp;&nbsp;Order number: <strong>${object.name}</strong><br />\n"
-"       &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object.pricelist_id.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object."
+"pricelist_id.currency_id.name}</strong><br />\n"
 "       &nbsp;&nbsp;Order date: ${object.date_order}<br />\n"
 "       % if object.origin:\n"
 "       &nbsp;&nbsp;Order reference: ${object.origin}<br />\n"
@@ -43,7 +44,8 @@ msgid ""
 "       &nbsp;&nbsp;Your reference: ${object.client_order_ref}<br />\n"
 "       % endif\n"
 "       % if object.user_id:\n"
-"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or ''}?subject=Order%20${object.name}\">${object.user_id.name}</a>\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or "
+"''}?subject=Order%20${object.name}\">${object.user_id.name}</a>\n"
 "       % endif\n"
 "    </p>\n"
 "\n"
@@ -52,15 +54,22 @@ msgid ""
 "    <p>\n"
 "    You can access this document and pay online via our Customer Portal:\n"
 "    </p>\n"
-"        <a style=\"display:block; width: 150px; height:20px; margin-left: 120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; text-align: center; text-decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; background-color: #8E0000; border-radius: 5px 5px; background-repeat: repeat no-repeat;\"\n"
-"           href=\"${signup_url}\">View ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'}</a>\n"
+"        <a style=\"display:block; width: 150px; height:20px; margin-left: "
+"120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, sans-"
+"serif; font-size: 13px; font-weight: bold; text-align: center; text-"
+"decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; "
+"background-color: #8E0000; border-radius: 5px 5px; background-repeat: repeat "
+"no-repeat;\"\n"
+"           href=\"${signup_url}\">View ${object.state in ('draft', 'sent') "
+"and 'Quotation' or 'Order'}</a>\n"
 "    % endif\n"
 "\n"
 "    % if object.paypal_url and object.amount_total > 0 :\n"
 "    <br/>\n"
 "    <p>It is also possible to directly pay with Paypal:</p>\n"
 "        <a style=\"margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
-"            <img class=\"oe_edi_paypal_button\" src=\"/sale/static/img/btn_paynowcc_lg.gif\"/>\n"
+"            <img class=\"oe_edi_paypal_button\" src=\"/sale/static/img/"
+"btn_paynowcc_lg.gif\"/>\n"
 "        </a>\n"
 "    % endif\n"
 "\n"
@@ -69,11 +78,105 @@ msgid ""
 "    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
 "    <br/>\n"
 "    <br/>\n"
-"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
-"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
-"            <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: "
+"#8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; "
+"background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: "
+"#DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id."
+"name}</strong></h3>\n"
 "    </div>\n"
-"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: "
+"16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"            ${object.company_id.partner_id.sudo()."
+"with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: "
+"0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: "
+"0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object."
+"company_id.website}</a>\n"
+"            </div>\n"
+"        % endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, "
+"255, 255); \">\n"
+"\n"
+"    <p>你好 ${object.partner_id.name},</p>\n"
+"\n"
+"    <p>这是你的 ${object.state in ('draft', 'sent') and 'quotation' or "
+"'order confirmation'} 从 ${object.company_id.name}: </p>\n"
+"\n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"       &nbsp;&nbsp;Order number: <strong>${object.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order total: <strong>${object.amount_total} ${object."
+"pricelist_id.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Order date: ${object.date_order}<br />\n"
+"       % if object.origin:\n"
+"       &nbsp;&nbsp;订单详请: ${object.origin}<br />\n"
+"       % endif\n"
+"       % if object.client_order_ref:\n"
+"       &nbsp;&nbsp;你的详情: ${object.client_order_ref}<br />\n"
+"       % endif\n"
+"       % if object.user_id:\n"
+"       &nbsp;&nbsp;Your contact: <a href=\"mailto:${object.user_id.email or "
+"''}?subject=Order%20${object.name}\">${object.user_id.name}</a>\n"
+"       % endif\n"
+"    </p>\n"
+"\n"
+"    <% set signup_url = object.get_signup_url() %>\n"
+"    % if signup_url:\n"
+"    <p>\n"
+"    你可以通过我们的客户门户来查看这个文档和付款：\n"
+"    </p>\n"
+"        <a style=\"display:block; width: 150px; height:20px; margin-left: "
+"120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, sans-"
+"serif; font-size: 13px; font-weight: bold; text-align: center; text-"
+"decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; "
+"background-color: #8E0000; border-radius: 5px 5px; background-repeat: repeat "
+"no-repeat;\"\n"
+"           href=\"${signup_url}\">View ${object.state in ('draft', 'sent') "
+"and 'Quotation' or 'Order'}</a>\n"
+"    % endif\n"
+"\n"
+"    % if object.paypal_url:\n"
+"    <br/>\n"
+"    <p>你也可以直接通过贝宝付款:</p>\n"
+"        <a style=\"margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
+"            <img class=\"oe_edi_paypal_button\" src=\"https://www.paypal.com/"
+"en_US/i/btn/btn_paynowCC_LG.gif\"/>\n"
+"        </a>\n"
+"    % endif\n"
+"\n"
+"    <br/>\n"
+"    <p>如果你有任何疑问，敬请联系我们。</p>\n"
+"    <p>感谢你选择 ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: "
+"#8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; "
+"background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: "
+"#DDD;\">\n"
+"            <strong style=\"text-transform:uppercase;\">${object.company_id."
+"name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: "
+"16px; background-color: #F2F2F2;\">\n"
 "        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
 "        % if object.company_id.street:\n"
 "            ${object.company_id.street}<br/>\n"
@@ -85,89 +188,87 @@ msgid ""
 "            ${object.company_id.zip} ${object.company_id.city}<br/>\n"
 "        % endif\n"
 "        % if object.company_id.country_id:\n"
-"            ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"            ${object.company_id.state_id and ('%s, ' % object.company_id."
+"state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
 "        % endif\n"
 "        </span>\n"
 "        % if object.company_id.phone:\n"
-"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
-"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: "
+"0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: "
+"0px; padding-left: 0px; \">\n"
+"                电话:&nbsp; ${object.company_id.phone}\n"
 "            </div>\n"
 "        % endif\n"
 "        % if object.company_id.website:\n"
 "            <div>\n"
-"                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"                网址 :&nbsp;<a href=\"${object.company_id.website}\">"
+"${object.company_id.website}</a>\n"
 "            </div>\n"
 "        % endif\n"
 "        <p></p>\n"
 "    </div>\n"
 "</div>\n"
 "            "
-msgstr ""
-
-#. module: website_quote
-#: model:ir.ui.view,arch_db:website_quote.so_quotation
-msgid "! You can"
-msgstr ""
 
 #. module: website_quote
 #: model:mail.template,report_name:website_quote.email_template_edi_sale
 msgid ""
 "${(object.name or '').replace('/','_')}_${object.state == 'draft' and "
 "'draft' or ''}"
-msgstr "${(object.name or '').replace('/','_')}_${object.state == 'draft' and '草稿' or ''}"
+msgstr ""
+"${(object.name or '').replace('/','_')}_${object.state == 'draft' and "
+"'draft' or ''}"
 
 #. module: website_quote
 #: model:mail.template,subject:website_quote.email_template_edi_sale
 msgid ""
 "${object.company_id.name|safe} ${object.state in ('draft', 'sent') and "
 "'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })"
-msgstr "${object.company_id.name|safe} ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })"
+msgstr ""
+"${object.company_id.name|safe} ${object.state in ('draft', 'sent') and "
+"'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.optional_products
 #: model:ir.ui.view,arch_db:website_quote.pricing
 #: model:ir.ui.view,arch_db:website_quote.report_saleorder_validity_date
 msgid "% discount"
-msgstr "% discount"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "&amp;nbsp;"
-msgstr "&amp;nbsp;"
+msgstr "% 折扣"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 #: model:ir.ui.view,arch_db:website_quote.so_template
 msgid "&amp;times;"
-msgstr "次数"
+msgstr "&amp;次数;"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_template
 msgid ""
 ":\n"
-"                                this content will appear on the quotation only if this\n"
+"                                this content will appear on the quotation "
+"only if this\n"
 "                                product is put on the quote."
-msgstr ":\n                                此内容只出现在当前报价\n                                引号内的产品。"
+msgstr ""
+":\n"
+"                                此内容只出现在当前报价\n"
+"                                引号内的产品。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_template
 msgid ""
 ":\n"
-"                                this content will appear on the quotation only if this\n"
+"                                this content will appear on the quotation "
+"only if this\n"
 "                                product is used in the quote."
-msgstr ":\n                                此内容只出现在当前报价\n                                用于引用的产品。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid ""
-"<b> To write a quotation description, edit your product, go the sales tab "
-"and add a text in \"Description for quotations\"</b>"
-msgstr "<b> 要编写一个报价的描述，编辑你的产品，去销售标签，并在添加文本“描述的语录”\"</b>"
+msgstr ""
+":\n"
+"                                此内容只出现在当前报价\n"
+"                                用于引用的产品。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "<i class=\"fa fa-check\"/> Accept"
-msgstr "接受"
+msgstr "<i class=\"fa fa-check\"/> 接受"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -177,7 +278,7 @@ msgstr "<i class=\"fa fa-check\"/> 接受订单"
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "<i class=\"fa fa-check\"/> Pay Now"
-msgstr "<i class=\"fa fa-check\"/>立即支付"
+msgstr "<i class=\"fa fa-check\"/> 现在支付"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.chatter
@@ -190,133 +291,70 @@ msgid "<i class=\"fa fa-times\"/> Reject"
 msgstr "<i class=\"fa fa-times\"/> 拒绝"
 
 #. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid ""
-"<i>You will be able to create dynamic page interacting with the ORM.</i>"
-msgstr "<i>你将能够创建和ORM相互作用的动态页面</i>"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid ""
-"<i>You will be able to develop a full application with backend and user "
-"interface.</i>"
-msgstr "<i>你将能够开发出一个完整的带有后台和前端界面的应用</i>"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid ""
-"<i>You will be able to develop simple dynamic compenents in HTML pages.</i>"
-msgstr "您将能够在HTML页面开发简单的动态组件"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.quotations
 msgid ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
 "Expired</span>"
-msgstr "<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> 过期</span>"
+msgstr ""
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> 已失效"
+"</span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.quotations
 msgid ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> "
 "Cancelled</span>"
-msgstr "<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> 取消</span>"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid ""
-"<span style=\"text-align: -webkit-center; \">This course is dedicated to "
-"developers who need to grasp knowledge of the <strong>business applications "
-"development </strong>process. This course is for new developers or for IT "
-"professionals eager to learn more about technical aspects.</span>"
-msgstr "<span style=\"text-align: -webkit-center; \">本课程是专门针对需要掌握业务应用程序的开发过程中知识的开发者的。这课程是对新的开发人员或IT专业人员渴望了解更多有关技术方面的问题。"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid ""
-"<span style=\"text-align: -webkit-center; \">Upon completion of the "
-"training, the participant will be able to:</span>"
-msgstr "一旦培训结束后，学员将能够"
+msgstr ""
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> 已取消"
+"</span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "<span>, for an amount of </span>"
-msgstr "为了...的"
+msgstr "<span>, 金额 </span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid ""
 "<span>I agree that by paying this proposal, I\n"
 "                                accept it on the behalf of </span>"
-msgstr "<SPAN>本人同意支付这个建议，我接受</SPAN>"
+msgstr ""
+"<span>签署这个方案代表我\n"
+"                                  接受它为了 </span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid ""
 "<span>I agree that by signing this proposal, I\n"
 "                                  accept it on the behalf of </span>"
-msgstr "<SPAN>本人同意签署这项提案，我接受</SPAN>"
+msgstr ""
+"<span>签署这个方案代表我\n"
+"                                  接受它为了 </span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.report_saleorder_validity_date
 msgid "<span>Suggested Products</span>"
-msgstr "<SPAN>推荐产品</SPAN>"
+msgstr "<span>产品推荐</span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "<span>with payment terms: </span>"
-msgstr "<SPAN>付款方式：</SPAN>"
+msgstr "<span>你的支付条款： </span>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.opt_quotation_signature
 msgid "<strong>Draw your signature</strong>"
-msgstr "<STRONG>绘制你的签名</STRONG>"
+msgstr "<strong>你的签名</strong>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.report_saleorder_validity_date
 msgid "<strong>Expiration Date:</strong>"
-msgstr "<STRONG>到期日：</STRONG>"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"<strong>Get high billing rates</strong> as you deliver a\n"
-"                                     highly valuable software."
-msgstr "<strong>获取高结算利率</strong>作为你提供一个非常有价值的软件。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"<strong>Grow with your existing customer base</strong>\n"
-"                                       by continuously proposing new modules."
-msgstr "<STRONG>与您现有的客户群成长</STRONG>通过不断提出新的模块。"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid ""
-"<strong>Having attended this course, participants should be able "
-"to:</strong>"
-msgstr "<STRONG>已经参加了这门课程，学员应能：</STRONG>"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "<strong>Objectives:</strong>"
-msgstr "<strong>目标:</strong>"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "<strong>Our prices include:</strong>"
-msgstr "<strong>我们的订单包括:</strong>"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "<strong>Requirements:</strong>"
-msgstr "<strong>需求:</strong>"
+msgstr "<strong>有效期:</strong>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
 msgid "<strong>Subtotal:</strong>"
-msgstr "<STRONG>小计：</STRONG>"
+msgstr "<strong>小计：</strong>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_template
@@ -324,70 +362,36 @@ msgid ""
 "<strong>Template Header:</strong> this content\n"
 "                                will appear on all quotations using this\n"
 "                                template."
-msgstr "<STRONG>模板头：</STRONG>此内容将出现在使用该模板的所有报价。"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "<strong>There are three components to the training</strong>"
-msgstr "<STRONG>有三个组成部分的训练</STRONG>"
+msgstr ""
+"<strong>模板标题:</strong> this content\n"
+"                                将出现在所有使用这个模板的\n"
+"                                报价单中"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid ""
 "<strong>This offer expired!</strong><br/>\n"
 "                                  Contact us for new quote."
-msgstr "<STRONG>此优惠过期！</STRONG><BR/>联系我们新的报价。"
+msgstr ""
+"<strong>这个报价过期了!</strong><br/>\n"
+"                                  请联系我们做新的报价单。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "<strong>This offer expires in</strong>"
-msgstr "<STRONG>此报价在</STRONG>到期"
+msgstr "<strong>此优惠有效在</strong>"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid ""
 "<strong>This quotation has been canceled.</strong> Contact us to get a new "
 "quote."
-msgstr "<STRONG>此报价已取消。</STRONG>与我们联系获得一个新的报价。"
+msgstr "<strong>这个报价单已经被取消</strong> 请联系我们做新报价单。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
 msgid "<strong>Total:</strong>"
-msgstr "<strong>总计:</strong>"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "A Dedicated Account Manager"
-msgstr "专门的客户经理"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "A Strong Demand"
-msgstr "有强烈的需求"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "A Valuable Product"
-msgstr "有价值的产品"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "Access to the Lead"
-msgstr "访问线索"
-
-#. module: website_quote
-#: model:product.product,name:website_quote.product_product_quote_3
-#: model:product.template,name:website_quote.product_product_quote_3_product_template
-#: model:product.template,name:website_quote.product_template_quote_3
-#: model:sale.quote.option,name:website_quote.website_sale_option_line_1
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Advanced CRM Functional"
-msgstr "高级CRM功能"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Advanced JQuery"
-msgstr "高级的JQuery"
+msgstr "<strong>总计：</strong>"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_amount_undiscounted
@@ -399,17 +403,12 @@ msgstr "折扣前金额"
 msgid ""
 "An administrator can set up default Terms and conditions in your Company "
 "settings."
-msgstr "管理员可以在您的公司设置中设置默认的条款和条件."
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Arrays"
-msgstr "阵列"
+msgstr "管理员在公司设置中可以设置默认条款和条件。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.chatter
 msgid "Ask Changes"
-msgstr "要求变更"
+msgstr "询问更改"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
@@ -417,64 +416,14 @@ msgid "Back to Sale Order"
 msgstr "返回销售订单"
 
 #. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Become an Odoo Consultant."
-msgstr "成为Odoo顾问。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "Benefit from the OpenERP branding"
-msgstr "从OpenERP的品牌受益"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Benefit from the growing customer demand\n"
-"                                    and our Odoo brand."
-msgstr "从不断增长的客户需求和我们Odoo品牌收到效益。"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Better comfort to facilitate your learning process"
-msgstr "更好的舒适性，方便你的学习过程"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Bill To:"
-msgstr "账单地址："
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Bootstrap CSS"
-msgstr "引导CSS"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Bring your own laptop."
-msgstr "带上你自己的笔记本电脑"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Building a Full Application"
-msgstr "创建一个完整的应用"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Calling the ORM"
-msgstr "呼叫ORM"
+msgstr "发票寄送地址："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Cancel"
 msgstr "取消"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid ""
-"Change the look and feel from the front-end(GUI) rather than aneed of "
-"technical knowledge."
-msgstr "从前端(GUI)改变它的外观，而不是后端的技术。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.opt_quotation_signature
@@ -484,37 +433,12 @@ msgstr "清除"
 #. module: website_quote
 #: model:ir.actions.act_window,help:website_quote.action_sale_quotation_template
 msgid "Click here to create your template."
-msgstr "点击这里创建模板。"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Company Configuration and Multi Company Management"
-msgstr "公司配置和多公司管理"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Configure Odoo using the standard modules."
-msgstr "使用标准的模块配置Odoo。"
+msgstr "点击这里来创建你的模板。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Contact us"
 msgstr "联系我们"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Controlers and Views"
-msgstr "控制器和视图"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Convert Lead to Opportunity &amp; Customer management"
-msgstr "线索转换为机遇，客户管理"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Course Summary"
-msgstr "课程总结"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_create_uid
@@ -530,48 +454,12 @@ msgstr "创建者"
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_create_date
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_create_date
 msgid "Created on"
-msgstr "创建于"
+msgstr "创建在"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Customer:"
-msgstr "客户:"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Customers/Vendors"
-msgstr "客户/供应商"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Database management"
-msgstr "数据库管理"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Day 1"
-msgstr "第1天"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Day 2"
-msgstr "第2天"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Day 3"
-msgstr "第3天"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Deliver <strong>strong value added services</strong> as you can\n"
-"                                       rely on a leading open source software, with\n"
-"                                       the support of the publisher."
-msgstr "交付<strong>强大的增值服务</strong>作为你可以依靠领先的开源软件，和发行者的支持。"
+msgstr "客服："
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_name
@@ -583,22 +471,12 @@ msgstr "交付<strong>强大的增值服务</strong>作为你可以依靠领先�
 #: model:ir.ui.view,arch_db:website_quote.report_saleorder_validity_date
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
 msgid "Description"
-msgstr "说明"
+msgstr "描述"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_product_template_quote_description
 msgid "Description for the quote"
-msgstr "报价说明"
-
-#. module: website_quote
-#: model:ir.model.fields,field_description:website_quote.field_product_template_website_description
-msgid "Description for the website"
-msgstr "网站的描述"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Develop a new module for a particular application."
-msgstr "开发用于特定应用的新模块。"
+msgstr "报价描述"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
@@ -610,7 +488,7 @@ msgstr "折扣"
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_line_discount
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_discount
 msgid "Discount (%)"
-msgstr "折扣(%)"
+msgstr "折扣 (%)"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_display_name
@@ -621,19 +499,9 @@ msgid "Display Name"
 msgstr "显示名称"
 
 #. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Dive into Strings"
-msgstr "深入到琴弦中"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Do the GAP analysis of any Business Process."
-msgstr "做任何业务流程的差异分析。"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Edit Quote"
-msgstr "编辑报价"
+msgstr "编辑报价单"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
@@ -641,114 +509,19 @@ msgid "Edit Template"
 msgstr "编辑模板"
 
 #. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Enjoy the traction of the <strong>fastest growing\n"
-"                                    management software</strong> in the world."
-msgstr "享受<strong>世界上成长最快的管理软件</STRONG>的牵引。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Every year, we redirect more than 100,000 customer\n"
-"                                requests to our official partners. These are prospects\n"
-"                                that filled a form on the Odoo website and wanted to\n"
-"                                use Odoo. The right partner to fulfill the customer\n"
-"                                request is selected based on the customer localization\n"
-"                                (nearest partner) and the grade of the partner."
-msgstr "每年，我们重定向超过100,000客户的需求，通过我们的官方合作伙伴。这些想用Odoo的愿望，填一个Odoo网站上的表格。选择合适的合作伙伴，以满足客户的要求是基于客户定位(最近的合伙人)和合作伙伴的等级。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Every year, we redirect more than 100,000 customer\n"
-"                        requests to our official partners. These are prospects\n"
-"                        that filled a form on the Odoo website and wanted to\n"
-"                        use Odoo. The right partner to fulfill the customer\n"
-"                        request is selected based on the customer localization\n"
-"                        (nearest partner) and the grade of the partner."
-msgstr "每年，我们重定向超过100,000客户的需求，通过我们的官方合作伙伴。这些想用Odoo的愿望，填一个Odoo网站上的表格。选择合适的合作伙伴，以满足客户的要求是基于客户定位(最近的合伙人)和合作伙伴的等级。"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Expiration Date:"
-msgstr "截止日期："
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Fetchmail Configuration"
-msgstr "fetchmail的配置"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"For an extra fee, partners can get access to Odoo's\n"
-"                                core developers and functional experts. This can help\n"
-"                                you succeed in delivering more complex or bigger\n"
-"                                projects by getting the support of highly experienced\n"
-"                                consultants on demand."
-msgstr "支付额外费用，合作伙伴可以访问Odoo的核心开发人员和职能专家。这可以帮助您通过获取的需求具有丰富经验的顾问的支持下提供更复杂或更大的项目取得成功。"
-
-#. module: website_quote
-#: model:product.product,name:website_quote.product_product_quote_1
-#: model:product.template,name:website_quote.product_product_quote_1_product_template
-#: model:product.template,name:website_quote.product_template_quote_1
-#: model:sale.quote.line,name:website_quote.website_sale_order_line_1
-msgid "Functional Training"
-msgstr "功能培训"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Functions"
-msgstr "功能"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Generate Sale Order &amp; direct mail to customer"
-msgstr "生成销售订单;直接邮寄给客户"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "Get access to our experts"
-msgstr "可以访问我们的专家"
+msgstr "有效期至："
 
 #. module: website_quote
 #: model:ir.model.fields,help:website_quote.field_sale_quote_line_sequence
 msgid "Gives the sequence order when displaying a list of sale quote lines."
-msgstr "给出销售报价行名单时的排列顺序"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Grow by developing a <strong>recurring\n"
-"                                     revenue flow</strong> from Odoo\n"
-"                                     Enterprise's commission system."
-msgstr "通过制定<STRONG>Odoo企业的佣金制度经常性收入流程</STRONG>成长。"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Hands-on exercises and their solutions"
-msgstr "实际操作练习和他们的解决方案"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Hello World"
-msgstr "Hello World"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "High Margins"
-msgstr "高毛利"
+msgstr "当显示一个销售标价单明细列表时，提供订单序列号。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.chatter
 msgid "History"
 msgstr "历史"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "How to Debug"
-msgstr "怎样Debug"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_id
@@ -764,13 +537,13 @@ msgstr "ID"
 msgid ""
 "If we store your payment information on our server, subscription payments "
 "will be made automatically."
-msgstr "如果我们在服务器存储你的支付信息,订阅将自动支付。"
+msgstr "如果我们在我们的服务器上保存你的付款信息，付款订阅将被自动生成。"
 
 #. module: website_quote
 #: selection:sale.order,require_payment:0
 #: selection:sale.quote.template,require_payment:0
 msgid "Immediate after website order validation"
-msgstr "网站验证后立即"
+msgstr "在网站订单确认后立即"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -778,58 +551,9 @@ msgid "Incl. tax)"
 msgstr "Incl. tax)"
 
 #. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Install and administer Odoo."
-msgstr "安装和管理Odoo。"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Install and administer your own server;"
-msgstr "安装并管理自己的服务器"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Installation and Configuration"
-msgstr "安装和配置"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Integrated Help"
-msgstr "帮助集成"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.navigation_menu
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
 msgid "Introduction"
-msgstr "说明"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Introduction to JQuery"
-msgstr "JQuery介绍"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Introduction to Javascript"
-msgstr "Javascript介绍"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Introduction to QWeb"
-msgstr "Qweb介绍"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"It includes <strong>discounts on Odoo\n"
-"                                Enterprise</strong>, technical and/or functional\n"
-"                                <strong>trainings</strong>,\n"
-"                                <strong>support</strong> services,\n"
-"                                <strong>marketing documents</strong>, access to\n"
-"                                the <strong>partner portal</strong>, rights to\n"
-"                                <strong>use the trademark</strong>, sales support\n"
-"                                from a <strong>dedicated account manager</strong>."
-msgstr "它包括Odoo企业</STRONG>，技术和/或功能的<strong>培训</STRONG><STRONG>支持</STRONG>服务，<STRONG>营销文件</STRONG>，进入<STRONG>折扣在<strong>合作伙伴门户网站</STRONG>，权限<strong>使用该商标</STRONG>，销售支持从<STRONG>专门的客户经理</STRONG>。"
+msgstr "介绍"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option___last_update
@@ -837,7 +561,7 @@ msgstr "它包括Odoo企业</STRONG>，技术和/或功能的<strong>培训</STR
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option___last_update
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template___last_update
 msgid "Last Modified on"
-msgstr "最后修改日"
+msgstr "最近修改日期"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_write_uid
@@ -845,7 +569,7 @@ msgstr "最后修改日"
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_write_uid
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_write_uid
 msgid "Last Updated by"
-msgstr "最后更新"
+msgstr "最后更新者"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_write_date
@@ -853,75 +577,19 @@ msgstr "最后更新"
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_write_date
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_write_date
 msgid "Last Updated on"
-msgstr "最后更新"
-
-#. module: website_quote
-#: model:product.product,description_sale:website_quote.product_product_quote_1
-#: model:product.product,description_sale:website_quote.product_product_quote_3
-#: model:product.template,description_sale:website_quote.product_product_quote_1_product_template
-#: model:product.template,description_sale:website_quote.product_product_quote_3_product_template
-#: model:product.template,description_sale:website_quote.product_template_quote_1
-#: model:product.template,description_sale:website_quote.product_template_quote_3
-msgid ""
-"Learn directly from our team and network of Odoo experts. Choose from the "
-"available training sessions for a better functional understanding of Odoo"
-msgstr "从我们的团队和Odoo专家网络直接了解。为更好的理解Odoo技术，选择可用的培训课程"
-
-#. module: website_quote
-#: model:product.product,description_sale:website_quote.product_product_quote_2
-#: model:product.template,description_sale:website_quote.product_product_quote_2_product_template
-#: model:product.template,description_sale:website_quote.product_template_quote_2
-msgid ""
-"Learn directly from our team and network of Odoo experts. Choose from the "
-"available training sessions for a better technical understanding of Odoo"
-msgstr "从我们的团队和Odoo专家网络直接了解。为更好的理解Odoo功能，选择可用的培训课程"
+msgstr "最后更新时间"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_line_website_description
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_website_description
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_line_website_description
 msgid "Line Description"
-msgstr "行说明"
+msgstr "明细描述"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
 msgid "Lines"
-msgstr "行"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Live Q&amp;A sessions with a trainer"
-msgstr "有教练现场问答环节"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Loops"
-msgstr "循环"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Lower training budget for the same quality courses"
-msgstr "对于相同质量下的课程培训预算"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Modular approach applied to the learning method"
-msgstr "模块化的方法应用到学习方法"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Module Installation"
-msgstr "模块安装"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Modules"
-msgstr "模块"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Multi Language Management"
-msgstr "多语言管理"
+msgstr "明细"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -929,77 +597,20 @@ msgid "My Account"
 msgstr "我的账户"
 
 #. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Negotiation and Quotation Revisions"
-msgstr "谈判和报价修订"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "New interactive learning experience"
-msgstr "新的交互式的学习经验"
-
-#. module: website_quote
 #: selection:sale.order,require_payment:0
 #: selection:sale.quote.template,require_payment:0
 msgid "Not mandatory on website quote validation"
-msgstr "不强制对网报价验证"
+msgstr "在网站报价单确认后不强制"
 
 #. module: website_quote
 #: model:ir.model.fields,help:website_quote.field_sale_quote_template_number_of_days
 msgid "Number of days for the validity date computation of the quotation"
-msgstr "天数为报价的有效期计算"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Objectives"
-msgstr "目标"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Odoo Official Website"
-msgstr "官方Odoo网站"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Odoo Web Client"
-msgstr "ODoo 的Web客户端"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Odoo promotes its partners through various ways:\n"
-"                                publication on our website, official communication,\n"
-"                                publication of your success stories, etc. As soon as\n"
-"                                you become an Odoo partner and have followed the\n"
-"                                official trainings, you will be visible on the partner\n"
-"                                directory listing."
-msgstr "Odoo促进通过各种方式与其合作伙伴：只要你成为一个Odoo的合作伙伴，并已按照官方公布的培训我们的网站上，正式沟通，发表您的成功案例，等等，你将在合作伙伴目录列表可见。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "Official certified partner"
-msgstr "官方认证的合作伙伴"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Online Training + Certification"
-msgstr "在线培训+认证"
+msgstr "报价的有效性日期计算的天数"
 
 #. module: website_quote
 #: model:ir.actions.client,name:website_quote.open_quotation_menu
 msgid "Open Quotations"
-msgstr "打开报价"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Opening Stock and Physical Inventory"
-msgstr "打开仓库和库存盘点"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Operate/Work with Odoo Smoothly on regular basis."
-msgstr "操作/与Odoo定期工作的顺利开展。"
+msgstr "打开报价单"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_website_description
@@ -1016,122 +627,47 @@ msgstr "可选产品："
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_options
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_options
 msgid "Optional Products Lines"
-msgstr "可选产品行"
+msgstr "可选的产品线"
 
 #. module: website_quote
 #: code:addons/website_quote/models/order.py:291
 #, python-format
 msgid "Order payed by %s. Transaction: %s. Amount: %s."
-msgstr "订单支付被%s.交易：%s.。金额：%s.。"
+msgstr "订单被 %s 支付，交易：%s，金额：%s。"
 
 #. module: website_quote
 #: code:addons/website_quote/controllers/main.py:90
 #, python-format
 msgid "Order signed by %s"
-msgstr "订单签署自 %s"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "Our Partnership Offer"
-msgstr "我们的合作伙伴提供"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Our automated testing server software is called Runbot,\n"
-"                                and you can try it out here: http://runbot.odoo.com.\n"
-"                                A dedicated runbot server is available for every\n"
-"                                partner."
-msgstr "我们的自动化测试服务器软件被称为Runbot，你可以尝试一下在这里 http://runbot.odoo.com. 一个专用runbot服务器可用于每一个合作伙伴。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid "Our offer"
-msgstr "我们的报价"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid ""
-"Our offer is based on 3 commitments, which drive our business and our "
-"partners:"
-msgstr "我们的报价是基于3个承诺，这推动我们的业务和我们的合作伙伴："
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Our partnership offer includes all you need to\n"
-"                                grow your business and deliver quality services\n"
-"                                with the Odoo Partner Program."
-msgstr "我们的合作伙伴提供，包括所有你需要拓展您的业务，并与Odoo合作伙伴计划提供高质量的服务。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid ""
-"Our prices are the lowest in the region, if you find cheaper elsewhere, we "
-"will refund the difference"
-msgstr "我们的合作伙伴提供，包括所有你需要拓展您的业务，并与Odoo合作伙伴计划提供高质量的服务。"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Partial and Full Shipment / Delivery"
-msgstr "部分或全部装运/交货"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid ""
-"Participants are expected to have some knowledge in programming. A basic "
-"knowledge of the Python programming is recommended."
-msgstr "与会者预计将有编程的一些知识。建议有 Python编程的基础知识"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid ""
-"Participants preferably have a functional knowledge of our software (see "
-"Functional Training)."
-msgstr "参与者最好最我们的系统的业务流程比较了解（参照功能培训）"
+msgstr "订单签订人 %s"
 
 #. module: website_quote
 #: code:addons/website_quote/controllers/main.py:64
 #, python-format
 msgid "Pay & Confirm"
-msgstr "支付&确认"
+msgstr "付款并确认"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_require_payment
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_require_payment
 msgid "Payment"
-msgstr "付款"
+msgstr "支付"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Payment Method:"
-msgstr "付款方法"
+msgstr "付款方法："
 
 #. module: website_quote
 #: model:ir.model,name:website_quote.model_payment_transaction
 msgid "Payment Transaction"
-msgstr "支付交易"
-
-#. module: website_quote
-#: model:web.tip,description:website_quote.quotation_tip_1
-msgid ""
-"Preview the online quotation. You'll be able to edit the quotation content "
-"before send it to the customer."
-msgstr ""
+msgstr "付款交易"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.optional_products
 #: model:ir.ui.view,arch_db:website_quote.pricing
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
 msgid "Price"
 msgstr "价格"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Pricelist and auto Segmentation"
-msgstr "价目表和经销商的分割"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
@@ -1153,16 +689,6 @@ msgid "Product"
 msgstr "产品"
 
 #. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Product Category &amp; product Configuration with Order point"
-msgstr "产品类别，产品配置与订购点"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Product Expiry and Warranty"
-msgstr "产品到期和保修"
-
-#. module: website_quote
 #: model:ir.model,name:website_quote.model_product_template
 msgid "Product Template"
 msgstr "产品模板"
@@ -1170,33 +696,13 @@ msgstr "产品模板"
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_template
 msgid "Product:"
-msgstr "产品："
+msgstr "产品名称："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.optional_products
 #: model:ir.ui.view,arch_db:website_quote.pricing
 msgid "Products"
-msgstr "产品"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Purchase Requisition and Purchase Order Management"
-msgstr "采购申请和采购订单管理"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Python Objects"
-msgstr "Python的对象"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid "Quality"
-msgstr "质量"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid "Quality in many ways, our reputation was built on the first value."
-msgstr "在很多方面的质量，我们的声誉是放在第一位的。"
+msgstr "产品展示"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_quantity
@@ -1209,12 +715,12 @@ msgstr "数量"
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Quotation"
-msgstr "报价"
+msgstr "报价单"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_number_of_days
 msgid "Quotation Duration"
-msgstr "报价时间"
+msgstr "报价单有效期"
 
 #. module: website_quote
 #: model:ir.model,name:website_quote.model_sale_quote_option
@@ -1226,30 +732,30 @@ msgstr "报价选项"
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_name
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
 msgid "Quotation Template"
-msgstr "报价模板"
+msgstr "报价单模板"
 
 #. module: website_quote
 #: model:ir.model,name:website_quote.model_sale_quote_line
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_quote_line
 msgid "Quotation Template Lines"
-msgstr "报价模板行"
+msgstr "报价模板线"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_line_quote_id
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_template_id
 msgid "Quotation Template Reference"
-msgstr "报价模板参考"
+msgstr "报价参考模板"
 
 #. module: website_quote
 #: model:ir.actions.act_window,name:website_quote.action_sale_quotation_template
 #: model:ir.ui.menu,name:website_quote.menu_sale_quote_template
 msgid "Quotation Templates"
-msgstr "报价模板"
+msgstr "报价单模板"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_quote_viewed
 msgid "Quotation Viewed"
-msgstr "报价浏览过"
+msgstr "已查看的报价单"
 
 #. module: website_quote
 #: code:addons/website_quote/controllers/main.py:32
@@ -1270,36 +776,20 @@ msgstr "拒绝"
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Reject This Quote"
-msgstr "拒绝此报价"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Report Engine"
-msgstr "报表引擎"
+msgstr "拒绝此报价单"
 
 #. module: website_quote
 #: model:ir.model.fields,help:website_quote.field_sale_order_require_payment
 #: model:ir.model.fields,help:website_quote.field_sale_quote_template_require_payment
 msgid ""
-"Require immediate payment by the customer when validating the order from the"
-" website quote"
-msgstr "从网站报价验证订单时，需要立即付款的客户"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Requirements"
-msgstr "要求"
+"Require immediate payment by the customer when validating the order from the "
+"website quote"
+msgstr "当从网站报价单确认订单后，要求客户立即付款"
 
 #. module: website_quote
 #: model:ir.model,name:website_quote.model_sale_order_option
 msgid "Sale Options"
 msgstr "销售选项"
-
-#. module: website_quote
-#: model:ir.model.fields,field_description:website_quote.field_payment_transaction_sale_order_id
-msgid "Sale Order"
-msgstr "销售订单"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_order_id
@@ -1311,7 +801,7 @@ msgstr "销售订单参考"
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_tree
 msgid "Sale Quotation Template"
-msgstr "销售报价模板"
+msgstr "销售报价单模板"
 
 #. module: website_quote
 #: model:ir.model,name:website_quote.model_sale_order
@@ -1321,29 +811,13 @@ msgstr "销售订单"
 #. module: website_quote
 #: model:ir.model,name:website_quote.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "销售订单行"
+msgstr "销售订单明细"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.sale_order_form_quote
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
 msgid "Sales Quotation Template Lines"
-msgstr "销售报价单模板行"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"Save time in your implementation project by having your\n"
-"                                developments tested automatically by our automated test\n"
-"                                servers. At every code commit, you get a full Odoo\n"
-"                                instance that you can try out online. When this\n"
-"                                instance is deployed, your code is automatically put\n"
-"                                through our 2000+ automated unit tests."
-msgstr "通过让我们的自动化测试的服务器会自动检测你的开发节省时间的实施项目。在每一个代码提交，你会得到一个完整的Odoo实例，你可以尝试在网上。在这种情况下部署，你的代码是通过我们的2000多个自动单元测试自动放。"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Schedule Phone Calls and Meetings"
-msgstr "安排电话和会议计划"
+msgstr "销售报价单明细模板"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_access_token
@@ -1353,63 +827,39 @@ msgstr "安全令牌"
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.sale_order_form_quote
 msgid "Send by Email"
-msgstr "以邮件发送"
+msgstr "发送电子邮件"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_line_sequence
 msgid "Sequence"
-msgstr "序号"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid "Service"
-msgstr "服务"
+msgstr "序列号"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Ship To:"
-msgstr "配送到:"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Shop, Location &amp; Warehouse Configuration"
-msgstr "店铺, 位置 &amp; 仓库配置"
+msgstr "货物运送地址："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Sign &amp; Confirm"
-msgstr "签名，确认"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Structure of the Training"
-msgstr "培训结构"
+msgstr "签名 &amp; 确认"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.optional_products
 #: model:ir.ui.view,arch_db:website_quote.sale_order_form_quote
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
 msgid "Suggested Products"
-msgstr "推荐的产品"
+msgstr "产品推荐"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
 msgid "Taxes"
-msgstr "税金"
+msgstr "税"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
 msgid "Taxes:"
-msgstr "税金:"
-
-#. module: website_quote
-#: model:product.product,name:website_quote.product_product_quote_2
-#: model:product.template,name:website_quote.product_product_quote_2_product_template
-#: model:product.template,name:website_quote.product_template_quote_2
-#: model:sale.quote.line,name:website_quote.website_sale_order_line_2
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Technical Training"
-msgstr "技术培训"
+msgstr "税："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -1422,7 +872,7 @@ msgstr "请告诉我们你为什么拒绝这个报价，这将帮助我们改进
 #: model:ir.ui.view,arch_db:website_quote.pricing
 #: model:ir.ui.view,arch_db:website_quote.so_template
 msgid "Terms &amp; Conditions"
-msgstr "方式  &amp; 条件"
+msgstr "条款 &amp; 条件"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_template_note
@@ -1430,39 +880,13 @@ msgid "Terms and conditions"
 msgstr "条款和条件"
 
 #. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid "Test developments automatically"
-msgstr "测试自动发展"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid ""
-"The description of products/services from your quotation will be displayed "
-"below"
-msgstr "产品说明/从你的报价服务，将在下面显示"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid ""
-"These courses feature the same high quality course content found in our "
-"traditional classroom trainings, supplemented with modular sessions and "
-"cloud-based labs. Many of our online learning courses also include dozens of"
-" recorded webinars and live sessions by our senior instructors. At the end "
-"of the training, you can pass the Odoo Certification exam in one of the "
-"5000+ Pearson VUE test centers worldwide."
-msgstr "这些课程特点在我们传统的课堂培训，发现相同的高品质课程内容，辅以模块化会议和基于云的实验室。我们的许多在线学习课程，还包括几十个记录的网络研讨会和活动的会话由我们的资深讲师。在训练结束后，你可以通过Odoo认证考试在全球范围内5000+的Pearson VUE考试中心之一。"
-
-#. module: website_quote
-#: model:ir.ui.view,arch_db:website_quote.so_quotation
-msgid "This order"
-msgstr ""
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid ""
 "This order has been validated. Thanks for your trust\n"
 "                          and do not hesitate to"
-msgstr "此订单已被确认。感谢您的信任不要犹豫"
+msgstr ""
+"此订单已被确认。感谢你的信任\n"
+"                          不要犹豫"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -1473,35 +897,13 @@ msgstr "此报价已被拒绝。"
 #: model:ir.ui.view,arch_db:website_quote.so_template
 msgid ""
 "Titles with style <i>Heading 1</i> and\n"
-"                                <i>Heading 2</i> will be used to generate the\n"
+"                                <i>Heading 2</i> will be used to generate "
+"the\n"
 "                                table of content automatically."
-msgstr "标题风格的<i>标题1</I>and<I>标题2</i>的将被用于自动生成表的内容。"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "To get more information, visit the"
-msgstr "要看更多信息，请前往"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Training Center Module"
-msgstr "培训中心模块"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Underscore"
-msgstr "强调"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Understand the development concepts and architecture;"
-msgstr "了解开发概念和结构"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Understand the functional concepts, business processes by Odoo."
-msgstr "了解功能性的概念，通过Odoo业务流程。"
+msgstr ""
+"使用样式 <i>标题 1</i> and\n"
+"                                <i>标题 2</i> 将被用来自动生成\n"
+"                                内容表格。"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_price_unit
@@ -1517,15 +919,20 @@ msgstr "单价"
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_line_product_uom_id
 #: model:ir.model.fields,field_description:website_quote.field_sale_quote_option_uom_id
 msgid "Unit of Measure "
-msgstr "计量单位 "
+msgstr "计量单位"
 
 #. module: website_quote
 #: model:ir.actions.act_window,help:website_quote.action_sale_quotation_template
 msgid ""
 "Use templates to create polished, professional quotes in minutes.\n"
-"                    Send these quotes by email and let your customers sign online.\n"
-"                    Use cross-selling and discounts to push and boost your sales."
-msgstr "马上使用模板来创建精美的专业报价。通过电子邮件发送这些报价，让您的客户在网上签名。利用交叉销售和折扣来推动和提高你的销售。"
+"                    Send these quotes by email and let your customers sign "
+"online.\n"
+"                    Use cross-selling and discounts to push and boost your "
+"sales."
+msgstr ""
+"使用模板可以在几分钟内创建漂亮的、专业的报价单。\n"
+"                    通过电子邮件发送标价单，并且让你的客户在线签名。\n"
+"                    使用捆绑销售和折扣来推动和促进你的销售。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -1533,47 +940,14 @@ msgid "Validate Order"
 msgstr "验证订单"
 
 #. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Variables &amp; Operators"
-msgstr "变量和操作"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Videos with detailed demos"
-msgstr "视频详细的演示"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.sale_order_form_quote
 msgid "View Online Quotation"
-msgstr "查看网上报价"
-
-#. module: website_quote
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "Warehouse Management Introduction"
-msgstr "仓库管理简介"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid ""
-"We are always reachable to help you, do not hesitate to contact us at any "
-"time."
-msgstr "我们总是能帮你，不要犹豫，随时联系我们。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_1
-msgid ""
-"We will assign you a dedicated account manager, an\n"
-"                        experienced sales person, to help you develop your\n"
-"                        Odoo business. The account manager helps you get\n"
-"                        leads, close deals, gives you feedback and best\n"
-"                        practices, delivers sales training and is your direct\n"
-"                        point of contact for any request you may have."
-msgstr "我们会为您指定专门的客户经理，有经验的销售人员，以帮助您开发Odoo业务。该客户经理可以帮助你得到的线索，完成交易，给你的反馈和最佳实践，提供销售培训，是您的直接联系点，您的任何要求。"
+msgstr "查看在线报价单"
 
 #. module: website_quote
 #: model:ir.actions.report.xml,name:website_quote.report_web_quote
 msgid "Web Quotation"
-msgstr "网站报价"
+msgstr "网页报价单"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.view_sale_quote_template_form
@@ -1581,21 +955,10 @@ msgid "Website Description"
 msgstr "网站简介"
 
 #. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-#: model:sale.quote.option,website_description:website_quote.website_sale_option_line_1
-msgid "What you will learn?"
-msgstr "你要学些什么"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "Workflows"
-msgstr "工作流"
-
-#. module: website_quote
 #: code:addons/website_quote/controllers/main.py:137
 #, python-format
 msgid "You cannot add options to a confirmed order."
-msgstr "你不能添加选项为确认的顺序。"
+msgstr "你不能对一个确认的订单添加功能。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
@@ -1605,57 +968,47 @@ msgstr "你的联系人："
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Your Name:"
-msgstr "您的姓名："
+msgstr "你的姓名："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Your Order"
-msgstr "您的订单"
+msgstr "你的订单"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Your Quotation"
-msgstr "您的报价"
+msgstr "你的报价"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation_content
 msgid "Your Reference:"
-msgstr "您的关联单号："
+msgstr "你的参考："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Your advantage:"
-msgstr "您的权益："
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_1
-msgid "Your advantages"
-msgstr "您的优势"
+msgstr "你的权益："
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Your feedback....."
-msgstr "您的反馈....."
+msgstr "你的反馈....."
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Your message has been successfully sent!"
-msgstr "您的留言已成功发送！"
+msgstr "你的留言已成功发送！"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Your payment has been received, thank you for your trust."
-msgstr "您的款项已收到，感谢您的信任。"
-
-#. module: website_quote
-#: model:sale.quote.template,website_description:website_quote.website_quote_template_default
-msgid "Your products/services"
-msgstr "你的产品/服务"
+msgstr "已收到你的付款，感谢你的信任。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Your transaction is waiting confirmation."
-msgstr "你的交易正等待确认"
+msgstr "你的交易正等待确认."
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -1674,31 +1027,13 @@ msgid "days"
 msgstr "天"
 
 #. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "drinks and lunch;"
-msgstr "饮料和午餐"
-
-#. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid ""
 "for\n"
 "                          any question."
-msgstr "用于\n                           任何问题。"
-
-#. module: website_quote
-#: model:ir.ui.view,arch_db:website_quote.so_quotation
-msgid "has already been cancelled"
 msgstr ""
-
-#. module: website_quote
-#: model:ir.ui.view,arch_db:website_quote.so_quotation
-msgid "has already been validated"
-msgstr ""
-
-#. module: website_quote
-#: model:ir.ui.view,arch_db:website_quote.so_quotation
-msgid "has not yet been sent"
-msgstr ""
+"用于\n"
+"                           任何问题。"
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
@@ -1709,14 +1044,1333 @@ msgstr "如果你想要一个新的。"
 #: model:ir.ui.view,arch_db:website_quote.chatter
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "or"
-msgstr "或"
-
-#. module: website_quote
-#: model:sale.quote.line,website_description:website_quote.website_sale_order_line_2
-msgid "training material."
-msgstr "培训资料"
+msgstr "或者"
 
 #. module: website_quote
 #: model:ir.model.fields,field_description:website_quote.field_sale_order_option_line_id
 msgid "unknown"
-msgstr "未知的"
+msgstr "未知"
+
+#~ msgid ""
+#~ ",\n"
+#~ "                                  for an amount of"
+#~ msgstr ""
+#~ ",\n"
+#~ "                                  一个量"
+
+#~ msgid "Accept"
+#~ msgstr "接受"
+
+#~ msgid "Accept Order"
+#~ msgstr "接受订货"
+
+#~ msgid "Contact us for new quote."
+#~ msgstr "联系我们获取最新报价。"
+
+#~ msgid "Contact us to get a new quote."
+#~ msgstr "联系我们获取一个新的报价。"
+
+#~ msgid "Expiry Date"
+#~ msgstr "有效期"
+
+#~ msgid "Feedback"
+#~ msgstr "反馈"
+
+#~ msgid "Heading 1"
+#~ msgstr "标题 1"
+
+#~ msgid "Heading 2"
+#~ msgstr "标题 2"
+
+#~ msgid "Optional Products & Services"
+#~ msgstr "可选产品和服务"
+
+#~ msgid "Options"
+#~ msgstr "选项"
+
+#~ msgid "Quote Template"
+#~ msgstr "报价单模板"
+
+#~ msgid "Quote Template Lines"
+#~ msgstr "报价单模板明细"
+
+#~ msgid "Sale Quote Template"
+#~ msgstr "销售报价模板"
+
+#~ msgid "Send"
+#~ msgstr "发送"
+
+#~ msgid "Send us a note..."
+#~ msgstr "发送给我们一个说明..."
+
+#~ msgid "Sign Order"
+#~ msgstr "签署订单"
+
+#~ msgid "Subtotal:"
+#~ msgstr "小计："
+
+#~ msgid "Template Header:"
+#~ msgstr "模板标题："
+
+#~ msgid "Terms and conditions..."
+#~ msgstr "条款和条件..."
+
+#~ msgid "This offer expired!"
+#~ msgstr "此优惠已过期！"
+
+#~ msgid "This quotation has been canceled."
+#~ msgstr "此报价已被取消。"
+
+#~ msgid "Titles with style"
+#~ msgstr "标题与风格"
+
+#~ msgid "Total:"
+#~ msgstr "总计："
+
+#~ msgid "and"
+#~ msgstr "和"
+
+#~ msgid "on"
+#~ msgstr "在"
+
+#~ msgid ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1 class=\"page-header\">Our Partnership Offer</h1>\n"
+#~ "                </section>\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <p>\n"
+#~ "                                Our partnership offer includes all you "
+#~ "need to\n"
+#~ "                                grow your business and deliver quality "
+#~ "services\n"
+#~ "                                with the Odoo Partner Program.\n"
+#~ "                            </p><p>\n"
+#~ "                                It includes <strong>discounts on Odoo\n"
+#~ "                                Enterprise</strong>, technical and/or "
+#~ "functional\n"
+#~ "                                <strong>trainings</strong>,\n"
+#~ "                                <strong>support</strong> services,\n"
+#~ "                                <strong>marketing documents</strong>, "
+#~ "access to\n"
+#~ "                                the <strong>partner portal</strong>, "
+#~ "rights to\n"
+#~ "                                <strong>use the trademark</strong>, sales "
+#~ "support\n"
+#~ "                                from a <strong>dedicated account manager</"
+#~ "strong>.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"pricing\">\n"
+#~ "                    <div class=\"row mt32\">\n"
+#~ "                        <div class=\"col-md-4\">\n"
+#~ "                            <div class=\"panel panel-info\">\n"
+#~ "                                <div class=\"panel-heading\">\n"
+#~ "                                   <h3 class=\"panel-title\">A Valuable "
+#~ "Product</h3>\n"
+#~ "                                </div>\n"
+#~ "                                <div class=\"panel-body\">\n"
+#~ "                                   <p>\n"
+#~ "                                       Deliver <strong>strong value added "
+#~ "services</strong> as you can\n"
+#~ "                                       rely on a leading open source "
+#~ "software, with\n"
+#~ "                                       the support of the publisher.\n"
+#~ "                                   </p><p></p>\n"
+#~ "                                       <strong>Grow with your existing "
+#~ "customer base</strong>\n"
+#~ "                                       by continuously proposing new "
+#~ "modules.\n"
+#~ "                                   \n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-4\">\n"
+#~ "                            <div class=\"panel panel-info\">\n"
+#~ "                                <div class=\"panel-heading\">\n"
+#~ "                                   <h3 class=\"panel-title\">A Strong "
+#~ "Demand</h3>\n"
+#~ "                                </div>\n"
+#~ "                                <div class=\"panel-body\">\n"
+#~ "                                   <p>\n"
+#~ "                                    Enjoy the traction of the "
+#~ "<strong>fastest growing\n"
+#~ "                                    management software</strong> in the "
+#~ "world.\n"
+#~ "                                   </p><p>\n"
+#~ "                                    Benefit from the growing customer "
+#~ "demand\n"
+#~ "                                    and our Odoo brand.\n"
+#~ "                                   </p>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-4\">\n"
+#~ "                            <div class=\"panel panel-info\">\n"
+#~ "                                <div class=\"panel-heading\">\n"
+#~ "                                   <h3 class=\"panel-title\">High "
+#~ "Margins</h3>\n"
+#~ "                                </div>\n"
+#~ "                                <div class=\"panel-body\">\n"
+#~ "                                   <p>\n"
+#~ "                                     <strong>Get high billing rates</"
+#~ "strong> as you deliver a\n"
+#~ "                                     highly valuable software.\n"
+#~ "                                   </p><p>\n"
+#~ "                                     Grow by developing a "
+#~ "<strong>recurring\n"
+#~ "                                     revenue flow</strong> from Odoo\n"
+#~ "                                     Enterprise's commission system. \n"
+#~ "                                   </p>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <h2>A Dedicated Account Manager</h2>\n"
+#~ "                    <p>\n"
+#~ "                        We will assign you a dedicated account manager, "
+#~ "an\n"
+#~ "                        experienced sales person, to help you develop "
+#~ "your\n"
+#~ "                        Odoo business. The account manager helps you get\n"
+#~ "                        leads, close deals, gives you feedback and best\n"
+#~ "                        practices, delivers sales training and is your "
+#~ "direct\n"
+#~ "                        point of contact for any request you may have.\n"
+#~ "                    </p>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Get access to our experts</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p>\n"
+#~ "                                For an extra fee, partners can get access "
+#~ "to Odoo's\n"
+#~ "                                core developers and functional experts. "
+#~ "This can help\n"
+#~ "                                you succeed in delivering more complex or "
+#~ "bigger\n"
+#~ "                                projects by getting the support of highly "
+#~ "experienced\n"
+#~ "                                consultants on demand.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "partner_icon_01.png\">\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Official certified partner</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p>\n"
+#~ "                                Odoo promotes its partners through "
+#~ "various ways:\n"
+#~ "                                publication on our website, official "
+#~ "communication,\n"
+#~ "                                publication of your success stories, etc. "
+#~ "As soon as\n"
+#~ "                                you become an Odoo partner and have "
+#~ "followed the\n"
+#~ "                                official trainings, you will be visible "
+#~ "on the partner\n"
+#~ "                                directory listing.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "openerp_gold_partner.png\">\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Access to the Lead</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p>\n"
+#~ "                                Every year, we redirect more than 100,000 "
+#~ "customer\n"
+#~ "                                requests to our official partners. These "
+#~ "are prospects\n"
+#~ "                                that filled a form on the Odoo website "
+#~ "and wanted to\n"
+#~ "                                use Odoo. The right partner to fulfill "
+#~ "the customer\n"
+#~ "                                request is selected based on the customer "
+#~ "localization\n"
+#~ "                                (nearest partner) and the grade of the "
+#~ "partner.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "partner_icon_02.png\" class=\"img\">\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <h2>Benefit from the Odoo branding</h2>\n"
+#~ "                    <p>\n"
+#~ "                        Every year, we redirect more than 100,000 "
+#~ "customer\n"
+#~ "                        requests to our official partners. These are "
+#~ "prospects\n"
+#~ "                        that filled a form on the Odoo website and wanted "
+#~ "to\n"
+#~ "                        use Odoo. The right partner to fulfill the "
+#~ "customer\n"
+#~ "                        request is selected based on the customer "
+#~ "localization\n"
+#~ "                        (nearest partner) and the grade of the partner.\n"
+#~ "                    </p>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section class=\"mb32\" data-snippet-id=\"text-block\">\n"
+#~ "                    <h2>Test developments automatically</h2>\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "partner_sc_01.png\" class=\"img shadow\">\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p class=\"mt23\">\n"
+#~ "                                Save time in your implementation project "
+#~ "by having your\n"
+#~ "                                developments tested automatically by our "
+#~ "automated test\n"
+#~ "                                servers. At every code commit, you get a "
+#~ "full Odoo\n"
+#~ "                                instance that you can try out online. "
+#~ "When this\n"
+#~ "                                instance is deployed, your code is "
+#~ "automatically put\n"
+#~ "                                through our 2000+ automated unit tests.\n"
+#~ "                            </p><p>\n"
+#~ "                                Our automated testing server software is "
+#~ "called Runbot,\n"
+#~ "                                and you can try it out here: http://"
+#~ "runbot.openerp.com.\n"
+#~ "                                A dedicated runbot server is available "
+#~ "for every\n"
+#~ "                                partner.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1 class=\"page-header\">我们的合作伙伴提供</h1>\n"
+#~ "                </section>\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <p>\n"
+#~ "                               我们的合作伙伴为你提供所有通过Odoo\n"
+#~ "                                          增加业绩或提供高质量服务的计"
+#~ "划。                            </p><p>\n"
+#~ "                                It includes <strong>discounts on Odoo\n"
+#~ "                                Enterprise</strong>, technical and/or "
+#~ "functional\n"
+#~ "                                <strong>trainings</strong>,\n"
+#~ "                                <strong>support</strong> services,\n"
+#~ "                                <strong>marketing documents</strong>, "
+#~ "access to\n"
+#~ "                                the <strong>partner portal</strong>, "
+#~ "rights to\n"
+#~ "                                <strong>use the trademark</strong>, sales "
+#~ "support\n"
+#~ "                                from a <strong>dedicated account manager</"
+#~ "strong>.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"pricing\">\n"
+#~ "                    <div class=\"row mt32\">\n"
+#~ "                        <div class=\"col-md-4\">\n"
+#~ "                            <div class=\"panel panel-info\">\n"
+#~ "                                <div class=\"panel-heading\">\n"
+#~ "                                   <h3 class=\"panel-title\">A Valuable "
+#~ "Product</h3>\n"
+#~ "                                </div>\n"
+#~ "                                <div class=\"panel-body\">\n"
+#~ "                                   <p>\n"
+#~ "                                       Deliver <strong>strong value added "
+#~ "services</strong> as you can\n"
+#~ "                                       rely on a leading open source "
+#~ "software, with\n"
+#~ "                                       the support of the publisher.\n"
+#~ "                                   </p><p></p>\n"
+#~ "                                       <strong>Grow with your existing "
+#~ "customer base</strong>\n"
+#~ "                                       by continuously proposing new "
+#~ "modules.\n"
+#~ "                                   \n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-4\">\n"
+#~ "                            <div class=\"panel panel-info\">\n"
+#~ "                                <div class=\"panel-heading\">\n"
+#~ "                                   <h3 class=\"panel-title\">A Strong "
+#~ "Demand</h3>\n"
+#~ "                                </div>\n"
+#~ "                                <div class=\"panel-body\">\n"
+#~ "                                   <p>\n"
+#~ "                                    Enjoy the traction of the "
+#~ "<strong>fastest growing\n"
+#~ "                                    management software</strong> in the "
+#~ "world.\n"
+#~ "                                   </p><p>\n"
+#~ "                                    Benefit from the growing customer "
+#~ "demand\n"
+#~ "                                    and our Odoo brand.\n"
+#~ "                                   </p>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-4\">\n"
+#~ "                            <div class=\"panel panel-info\">\n"
+#~ "                                <div class=\"panel-heading\">\n"
+#~ "                                   <h3 class=\"panel-title\">High "
+#~ "Margins</h3>\n"
+#~ "                                </div>\n"
+#~ "                                <div class=\"panel-body\">\n"
+#~ "                                   <p>\n"
+#~ "                                     <strong>Get high billing rates</"
+#~ "strong> as you deliver a\n"
+#~ "                                     highly valuable software.\n"
+#~ "                                   </p><p>\n"
+#~ "                                     Grow by developing a "
+#~ "<strong>recurring\n"
+#~ "                                     revenue flow</strong> from Odoo\n"
+#~ "                                     Enterprise's commission system. \n"
+#~ "                                   </p>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <h2>A Dedicated Account Manager</h2>\n"
+#~ "                    <p>\n"
+#~ "                        We will assign you a dedicated account manager, "
+#~ "an\n"
+#~ "                        experienced sales person, to help you develop "
+#~ "your\n"
+#~ "                        Odoo business. The account manager helps you get\n"
+#~ "                        leads, close deals, gives you feedback and best\n"
+#~ "                        practices, delivers sales training and is your "
+#~ "direct\n"
+#~ "                        point of contact for any request you may have.\n"
+#~ "                    </p>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Get access to our experts</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p>\n"
+#~ "                                For an extra fee, partners can get access "
+#~ "to Odoo's\n"
+#~ "                                core developers and functional experts. "
+#~ "This can help\n"
+#~ "                                you succeed in delivering more complex or "
+#~ "bigger\n"
+#~ "                                projects by getting the support of highly "
+#~ "experienced\n"
+#~ "                                consultants on demand.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "partner_icon_01.png\">\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Official certified partner</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p>\n"
+#~ "                                Odoo promotes its partners through "
+#~ "various ways:\n"
+#~ "                                publication on our website, official "
+#~ "communication,\n"
+#~ "                                publication of your success stories, etc. "
+#~ "As soon as\n"
+#~ "                                you become an Odoo partner and have "
+#~ "followed the\n"
+#~ "                                official trainings, you will be visible "
+#~ "on the partner\n"
+#~ "                                directory listing.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "openerp_gold_partner.png\">\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Access to the Lead</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p>\n"
+#~ "                                Every year, we redirect more than 100,000 "
+#~ "customer\n"
+#~ "                                requests to our official partners. These "
+#~ "are prospects\n"
+#~ "                                that filled a form on the Odoo website "
+#~ "and wanted to\n"
+#~ "                                use Odoo. The right partner to fulfill "
+#~ "the customer\n"
+#~ "                                request is selected based on the customer "
+#~ "localization\n"
+#~ "                                (nearest partner) and the grade of the "
+#~ "partner.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "partner_icon_02.png\" class=\"img\">\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section data-snippet-id=\"text-block\">\n"
+#~ "                    <h2>Benefit from the Odoo branding</h2>\n"
+#~ "                    <p>\n"
+#~ "                        Every year, we redirect more than 100,000 "
+#~ "customer\n"
+#~ "                        requests to our official partners. These are "
+#~ "prospects\n"
+#~ "                        that filled a form on the Odoo website and wanted "
+#~ "to\n"
+#~ "                        use Odoo. The right partner to fulfill the "
+#~ "customer\n"
+#~ "                        request is selected based on the customer "
+#~ "localization\n"
+#~ "                        (nearest partner) and the grade of the partner.\n"
+#~ "                    </p>\n"
+#~ "                </section>\n"
+#~ "\n"
+#~ "                <section class=\"mb32\" data-snippet-id=\"text-block\">\n"
+#~ "                    <h2>Test developments automatically</h2>\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-5\">\n"
+#~ "                            <img src=\"/website_quote/static/src/img/"
+#~ "partner_sc_01.png\" class=\"img shadow\">\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-7\">\n"
+#~ "                            <p class=\"mt23\">\n"
+#~ "                                Save time in your implementation project "
+#~ "by having your\n"
+#~ "                                developments tested automatically by our "
+#~ "automated test\n"
+#~ "                                servers. At every code commit, you get a "
+#~ "full Odoo\n"
+#~ "                                instance that you can try out online. "
+#~ "When this\n"
+#~ "                                instance is deployed, your code is "
+#~ "automatically put\n"
+#~ "                                through our 2000+ automated unit tests.\n"
+#~ "                            </p><p>\n"
+#~ "                                Our automated testing server software is "
+#~ "called Runbot,\n"
+#~ "                                and you can try it out here: http://"
+#~ "runbot.openerp.com.\n"
+#~ "                                A dedicated runbot server is available "
+#~ "for every\n"
+#~ "                                partner.\n"
+#~ "                            </p>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+
+#~ msgid ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1>Advanced CRM Functional</h1>\n"
+#~ "                </section>\n"
+#~ "                <section data-snippet-id=\"text-image\">\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mb8 mt0\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>Objectives</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-12 mt16 mb0\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <p><span style=\"text-align: -webkit-"
+#~ "center; \">Upon completion of the training, the participant will be able "
+#~ "to:</span></p>\n"
+#~ "                                <ul class=\"list-group\">\n"
+#~ "                                    <li class=\"list-group-item\"> "
+#~ "Install and administer Odoo.</li>\n"
+#~ "                                    <li class=\"list-group-item\"> Become "
+#~ "an Odoo Consultant.</li>\n"
+#~ "                                    <li class=\"list-group-item\"> Do the "
+#~ "GAP analysis of any Business Process.</li>\n"
+#~ "                                    <li class=\"list-group-item\"> "
+#~ "Understand the functional concepts, business processes byOdoo.</li>\n"
+#~ "                                    <li class=\"list-group-item\"> "
+#~ "Operate/Work with Odoo Smoothly on regular basis.</li>\n"
+#~ "                                    <li class=\"list-group-item\"> "
+#~ "Configure Odoo using the standard modules.</li>\n"
+#~ "                                    <li class=\"list-group-item\"> Change "
+#~ "the look and feel from the front-end(GUI) rather than aneed of technical "
+#~ "knowledge.</li>\n"
+#~ "                                </ul>\n"
+#~ "\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mt0 mb16\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>What you will learn?</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 1</"
+#~ "h3>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Introduction</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Installation and Configuration</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Database management</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Module Installation</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Company Configuration and Multi Company Management</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Multi Language Management</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Fetchmail Configuration</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 2</"
+#~ "h3>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Product Category &amp; product Configuration with Order point</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Customers/Suppliers</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Pricelist and auto Segmentation</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Convert Lead to Opportunity &amp; Customer management</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Schedule Phone Calls and Meetings</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Negotiation and Quotation Revisions</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Generate Sale Order &amp; direct mail to customer</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 3</"
+#~ "h3>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Warehouse Management Introduction</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Shop, Location &amp; Warehouse Configuration</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Opening Stock and Physical Inventory</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Purchase Requisition and Purchase Order Management</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Partial and Full Shipment / Delivery</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Product Expiry and Warranty</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">After Sales Service (Helpdesk)</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 mb16 mt16\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <h2>Requirements</h2>\n"
+#~ "\n"
+#~ "                                <ul><li>Bring your own laptop.</li>\n"
+#~ "                                    <li>Participants are expected to have "
+#~ "some knowledge in programming. A basic knowledge of the Python "
+#~ "programming is recommended.</li>\n"
+#~ "                                    <li>Participants preferably have a "
+#~ "functional knowledge of our software (see Functional Training).</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p>To get more information, visit the <a "
+#~ "href=\"http://openerp.com/\">Odoo Official Website</a>.</p>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1>高级CRM功能</h1>\n"
+#~ "                </section>\n"
+#~ "                <section data-snippet-id=\"text-image\">\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mb8 mt0\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>目标</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-12 mt16 mb0\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <p><span style=\"text-align: -webkit-"
+#~ "center; \">培训结束后，参加者将能：</span></p>\n"
+#~ "                                <ul class=\"list-group\">\n"
+#~ "                                    <li class=\"list-group-item\"> 安装和"
+#~ "设置Odoo。</li>\n"
+#~ "                                    <li class=\"list-group-item\"> 成为一"
+#~ "个Odoo顾问。</li>\n"
+#~ "                                    <li class=\"list-group-item\"> 对商业"
+#~ "流程进行 GAP 分析。</li>\n"
+#~ "                                    <li class=\"list-group-item\"> 理解功"
+#~ "能、概念、Odoo商业流程。</li>\n"
+#~ "                                    <li class=\"list-group-item\"> Odoo平"
+#~ "稳运作基础。</li>\n"
+#~ "                                    <li class=\"list-group-item\"> 使用标"
+#~ "准莫开设置Odoo。</li>\n"
+#~ "                                    <li class=\"list-group-item\"> 不需要"
+#~ "技术知识进行前端界面进行外观和体验的改进。</li>\n"
+#~ "                                </ul>\n"
+#~ "\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mt0 mb16\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>你将学习：</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 1</"
+#~ "h3>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item\">介绍"
+#~ "</li>\n"
+#~ "                                        <li class=\"list-group-item\">安装"
+#~ "和设置</li>\n"
+#~ "                                        <li class=\"list-group-item\">数据"
+#~ "库管理</li>\n"
+#~ "                                        <li class=\"list-group-item\">模块"
+#~ "安装</li>\n"
+#~ "                                        <li class=\"list-group-item\">公司"
+#~ "设置和多公司管理</li>\n"
+#~ "                                        <li class=\"list-group-item\">多语"
+#~ "言管理</li>\n"
+#~ "                                        <li class=\"list-group-item\">邮箱"
+#~ "设置</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 2</"
+#~ "h3>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item\">产品"
+#~ "分类 &amp; 订购点的产品设置</li>\n"
+#~ "                                        <li class=\"list-group-item\">客"
+#~ "户/供应商</li>\n"
+#~ "                                        <li class=\"list-group-item\">价格"
+#~ "表和自动细分</li>\n"
+#~ "                                        <li class=\"list-group-item\">转换"
+#~ "线索到商机&amp; 客户管理</li>\n"
+#~ "                                        <li class=\"list-group-item\">电话"
+#~ "计划和会议计划</li>\n"
+#~ "                                        <li class=\"list-group-item\">沟通"
+#~ "和报价回顾</li>\n"
+#~ "                                        <li class=\"list-group-item\">产生"
+#~ "销售订单 &amp; 直接发送邮件给客户</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 3</"
+#~ "h3>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item\">仓库"
+#~ "管理介绍</li>\n"
+#~ "                                        <li class=\"list-group-item\">商"
+#~ "店,库位 &amp; 仓库设置</li>\n"
+#~ "                                        <li class=\"list-group-item\">广义"
+#~ "库存和物理库存</li>\n"
+#~ "                                        <li class=\"list-group-item\">采购"
+#~ "招标和采购单管理</li>\n"
+#~ "                                        <li class=\"list-group-item\">部分"
+#~ "或全部发货/ Delivery</li>\n"
+#~ "                                        <li class=\"list-group-item\">产品"
+#~ "保质期和保证</li>\n"
+#~ "                                        <li class=\"list-group-item\">售后"
+#~ "服务</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 mb16 mt16\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <h2>Requirements</h2>\n"
+#~ "\n"
+#~ "                                <ul><li>请自带笔记本电脑。</li>\n"
+#~ "                                    <li>参加者应有一些编程知识。 推荐有"
+#~ "Python编程的基础。</li>\n"
+#~ "                                    <li>参加者推荐有对我们软件的功能了解"
+#~ "（见功能培训）。</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p>要得到更多信息，请访问 <a href="
+#~ "\"http://odoo.com/\">Odoo官方网站</a>.</p>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+
+#~ msgid ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1>Online Training + Certification</h1>\n"
+#~ "                </section>\n"
+#~ "                <section data-snippet-id=\"text-image\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12 mb32\">\n"
+#~ "                            <p>These courses feature the same high "
+#~ "quality course content found in our traditional classroom trainings, "
+#~ "supplemented with modular sessions and cloud-based labs. Many of our "
+#~ "online learning courses also include dozens of recorded webinars and live "
+#~ "sessions by our senior instructors. At the end of the training, you can "
+#~ "pass the Odoo Certification exam in one of the 5000+ Pearson VUE test "
+#~ "centers worldwide.</p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-offset-1\">\n"
+#~ "                            <h3>Your advantages</h3>\n"
+#~ "                            <ul>\n"
+#~ "                                <li>Modular approach applied to the "
+#~ "learning method</li>\n"
+#~ "                                <li>New interactive learning experience</"
+#~ "li>\n"
+#~ "                                <li>Lower training budget for the same "
+#~ "quality courses</li>\n"
+#~ "                                <li>Better comfort to facilitate your "
+#~ "learning process</li>\n"
+#~ "                            </ul>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>Structure of the Training</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5 col-md-offset-1 mt16 "
+#~ "mb16\">\n"
+#~ "                            <img class=\"img img-responsive\" src="
+#~ "\"https://www.openerp.com/saas_master/static/site_new/img/layout/"
+#~ "online_training.png\">\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-6 mt32\">\n"
+#~ "                            <h4><strong>There are three components to the "
+#~ "training</strong></h4>\n"
+#~ "                            <ul>\n"
+#~ "                                <li>Videos with detailed demos</li>\n"
+#~ "                                <li>Hands-on exercises and their "
+#~ "solutions</li>\n"
+#~ "                                <li>Live Q&amp;A sessions with a trainer</"
+#~ "li>\n"
+#~ "                            </ul>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1>在线培训+认证</h1>\n"
+#~ "                </section>\n"
+#~ "                <section data-snippet-id=\"text-image\">\n"
+#~ "                    <div class=\"row\">\n"
+#~ "                        <div class=\"col-md-12 mb32\">\n"
+#~ "                            <p>相对于传统的课堂培训而言，这些模块化的高质"
+#~ "量的在线课程和基于在线云的实验方式方法，很好很强大（原文就是吹TA的课程牛"
+#~ "13）。这么多在线学习课程还包括在线和我们N多的资深讲师进行网络研讨会和现场"
+#~ "会议记录呢。来吧，培训结束时你还能够在一家超过5000人的VUE测试中心进行Odoo"
+#~ "考试认证哦，亲！</p>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-offset-1\">\n"
+#~ "                            <h3>有什好处</h3>\n"
+#~ "                            <ul>\n"
+#~ "                                <li>应用模块化的学习方法</li>\n"
+#~ "                                <li>全新的教学互动体验</li>\n"
+#~ "                                <li>低于同等质量课程的培训预算</li>\n"
+#~ "                                <li>更优的贴心学习过程</li>\n"
+#~ "                            </ul>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-12\">\n"
+#~ "                            <h2>培训安排</h2>\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-5 col-md-offset-1 mt16 "
+#~ "mb16\">\n"
+#~ "                            <img class=\"img img-responsive\" src="
+#~ "\"https://www.openerp.com/saas_master/static/site_new/img/layout/"
+#~ "online_training.png\">\n"
+#~ "                        </div>\n"
+#~ "                        <div class=\"col-md-6 mt32\">\n"
+#~ "                            <h4><strong>有三个训练组成部分</strong></h4>\n"
+#~ "                            <ul>\n"
+#~ "                                <li>详尽的演示视频</li>\n"
+#~ "                                <li>在线式手把手教学解决方案</li>\n"
+#~ "                                <li>讲师在线答疑</li>\n"
+#~ "                            </ul>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+
+#~ msgid ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1>Technical Training</h1>\n"
+#~ "                </section>\n"
+#~ "                <section id=\"whatsuit\" data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mb8 mt0\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>Course Summary</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-12 mt16 mb0\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <p><span style=\"text-align: -webkit-"
+#~ "center; \">This course is dedicated to developers who need to grasp "
+#~ "knowledge of the <strong>business applications development </"
+#~ "strong>process. This course is for new developers or for IT professionals "
+#~ "eager to learn more about technical aspects.</span></p>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mt0 mb16\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>What you will learn?</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 1</"
+#~ "h3>\n"
+#~ "                                        <p class=\"text-muted\" style="
+#~ "\"margin: 0\">Introduction to Javascript</p>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Hello World</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Variables &amp; Operators</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Dive into Strings</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Functions</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Loops</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Arrays</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                    <div class=\"panel-footer text-center"
+#~ "\">\n"
+#~ "                                        <p class=\"text-muted\"><i>You "
+#~ "will be able to develop simple dynamic compenents in HTML pages.</i></p>\n"
+#~ "                                    </div>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 2</"
+#~ "h3>\n"
+#~ "\n"
+#~ "                                        <p class=\"text-muted\" style="
+#~ "\"margin: 0\">Odoo Web Client</p>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Introduction to JQuery</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Advanced JQuery</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Underscore</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Introduction to QWeb</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Controlers and Views</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Bootstrap CSS</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Calling the ORM</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                    <div class=\"panel-footer text-center"
+#~ "\">\n"
+#~ "                                        <p class=\"text-muted\"><i>You "
+#~ "will be able to create dynamic page interacting with the ORM.</i></p>\n"
+#~ "                                    </div>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">Day 3</"
+#~ "h3>\n"
+#~ "\n"
+#~ "                                        <p class=\"text-muted\" style="
+#~ "\"margin: 0\">Building a Full Application</p>\n"
+#~ "                                    </div>\n"
+#~ "\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Modules</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Python Objects</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Report Engine</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Workflows</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Training Center Module</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Integrated Help</li>\n"
+#~ "                                        <li class=\"list-group-item\">How "
+#~ "to Debug</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                    <div class=\"panel-footer text-center"
+#~ "\">\n"
+#~ "                                        <p class=\"text-muted\"><i>You "
+#~ "will be able to develop a full application with backend and user "
+#~ "interface.</i></p>\n"
+#~ "                                    </div>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mb16 mt0\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>Requirements</h2>\n"
+#~ "                            </div>\n"
+#~ "\n"
+#~ "                            <div class=\"col-md-12 mb16 mt16\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <p><strong>Objectives:</strong></p>\n"
+#~ "\n"
+#~ "                                <p><strong>Having attended this course, "
+#~ "participants should be able to:</strong></p>\n"
+#~ "\n"
+#~ "                                <ul><li>Understand the development "
+#~ "concepts and architecture;</li>\n"
+#~ "                                    <li>Install and administer your own "
+#~ "server;</li>\n"
+#~ "                                    <li>Develop a new module for a "
+#~ "particular application.</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p><strong>Our prices include:</strong></"
+#~ "p>\n"
+#~ "\n"
+#~ "                                <ul><li>drinks and lunch;</li>\n"
+#~ "                                    <li>training material.</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p><strong>Requirements:</strong></p>\n"
+#~ "\n"
+#~ "                                <ul><li>Bring your own laptop.</li>\n"
+#~ "                                    <li>Participants are expected to have "
+#~ "some knowledge in programming. A basic knowledge of the Python "
+#~ "programming is recommended.</li>\n"
+#~ "                                    <li>Participants preferably have a "
+#~ "functional knowledge of our software (see Functional Training).</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p>To get more information, visit the <a "
+#~ "href=\"https://www.odoo.com/\">Odoo Official Website</a>.</p>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<section data-snippet-id=\"title\">\n"
+#~ "                    <h1>技术培训</h1>\n"
+#~ "                </section>\n"
+#~ "                <section id=\"whatsuit\" data-snippet-id=\"text-block\">\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mb8 mt0\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>课程概况</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-12 mt16 mb0\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <p><span style=\"text-align: -webkit-"
+#~ "center; \">本课程倾力打造给：渴望了解更多的关于技术方面的问题的IT从业人"
+#~ "员，以及需要掌握<strong>商业应用程序开发</strong>知识的开发者们。</span></"
+#~ "p>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mt0 mb16\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>你将学到些什么？</h2>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">第1天</"
+#~ "h3>\n"
+#~ "                                        <p class=\"text-muted\" style="
+#~ "\"margin: 0\">介绍Javascript</p>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Hello World</li>\n"
+#~ "                                        <li class=\"list-group-item\">变量"
+#~ "和算法Variables &amp; Operators</li>\n"
+#~ "                                        <li class=\"list-group-item\">字符"
+#~ "串漫谈Dive into Strings</li>\n"
+#~ "                                        <li class=\"list-group-item\">函数"
+#~ "Functions</li>\n"
+#~ "                                        <li class=\"list-group-item\">循环"
+#~ "语句Loops</li>\n"
+#~ "                                        <li class=\"list-group-item\">类"
+#~ "Arrays</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                    <div class=\"panel-footer text-center"
+#~ "\">\n"
+#~ "                                        <p class=\"text-muted\"><i>你将能"
+#~ "实时地构建一个静态HTML页面。</i></p>\n"
+#~ "                                    </div>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">第2天</"
+#~ "h3>\n"
+#~ "\n"
+#~ "                                        <p class=\"text-muted\" style="
+#~ "\"margin: 0\">Odoo的Web客户端</p>\n"
+#~ "                                    </div>\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item\">介绍"
+#~ "JQuery</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">JQuery高级应用</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Underscore</li>\n"
+#~ "                                        <li class=\"list-group-item\">介绍"
+#~ "QWeb</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Controlers与Views</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Bootstrap CSS</li>\n"
+#~ "                                        <li class=\"list-group-item\">调用"
+#~ "ORM</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                    <div class=\"panel-footer text-center"
+#~ "\">\n"
+#~ "                                        <p class=\"text-muted\"><i>你将能"
+#~ "调用ORM来创建一个动态页面。</i></p>\n"
+#~ "                                    </div>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                            <div class=\"col-md-4\" data-snippet-id="
+#~ "\"colmd\">\n"
+#~ "                                <div class=\"panel panel-info\">\n"
+#~ "                                    <div class=\"panel-heading text-center"
+#~ "\">\n"
+#~ "                                        <h3 style=\"margin: 0\">第3天</"
+#~ "h3>\n"
+#~ "\n"
+#~ "                                        <p class=\"text-muted\" style="
+#~ "\"margin: 0\">编写一个完整的应用程序</p>\n"
+#~ "                                    </div>\n"
+#~ "\n"
+#~ "                                    <ul class=\"list-group\">\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Modules</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Python Objects</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Report Engine</li>\n"
+#~ "                                        <li class=\"list-group-item"
+#~ "\">Workflows</li>\n"
+#~ "                                        <li class=\"list-group-item\">培训"
+#~ "中心模块</li>\n"
+#~ "                                        <li class=\"list-group-item\">集成"
+#~ "帮助</li>\n"
+#~ "                                        <li class=\"list-group-item\">如何"
+#~ "Debug</li>\n"
+#~ "                                    </ul>\n"
+#~ "                                    <div class=\"panel-footer text-center"
+#~ "\">\n"
+#~ "                                        <p class=\"text-muted\"><i>你已经"
+#~ "能够狡开发一个完整的用户前端和后台和应用程序啦！</i></p>\n"
+#~ "                                    </div>\n"
+#~ "                                </div>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                    <div class=\"container\">\n"
+#~ "                        <div class=\"row\">\n"
+#~ "                            <div class=\"col-md-12 text-center mb16 mt0\" "
+#~ "data-snippet-id=\"colmd\">\n"
+#~ "                                <h2>要求</h2>\n"
+#~ "                            </div>\n"
+#~ "\n"
+#~ "                            <div class=\"col-md-12 mb16 mt16\" data-"
+#~ "snippet-id=\"colmd\">\n"
+#~ "                                <p><strong>目标：</strong></p>\n"
+#~ "\n"
+#~ "                                <p><strong>参加本课程，学员将能够：</"
+#~ "strong></p>\n"
+#~ "\n"
+#~ "                                <ul><li>了解开发的概念和体系结构；</li>\n"
+#~ "                                    <li>安装和管理自己的服务器；</li>\n"
+#~ "                                    <li>开发一个特定的应用程序的一个新的模"
+#~ "块。</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p><strong>培训费用已包含以下：</strong></"
+#~ "p>\n"
+#~ "\n"
+#~ "                                <ul><li>饮料和用餐；</li>\n"
+#~ "                                    <li>培训教材。</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p><strong>要求：</strong></p>\n"
+#~ "\n"
+#~ "                                <ul><li>上课时要用的电脑你得自带。</li>\n"
+#~ "                                    <li>参训者还得需要有一点点Python编程的"
+#~ "基础知识。</li>\n"
+#~ "                                    <li>参训者最好能先行了解了解我们的软件"
+#~ "（详见功能讲解）。</li>\n"
+#~ "                                </ul><p></p>\n"
+#~ "\n"
+#~ "                                <p>详情请登陆<a href=\"https://www.odoo."
+#~ "com/\">Odoo官方网站</a>（译者注：这是得先学好E文才能听得懂培训课了吧？）。"
+#~ "</p>\n"
+#~ "                            </div>\n"
+#~ "                        </div>\n"
+#~ "                    </div>\n"
+#~ "                </section>\n"
+#~ "            "
+
+#~ msgid "Advanced CRM Functional"
+#~ msgstr "高级CRM功能"
+
+#~ msgid "Description for the website"
+#~ msgstr "网站的简介"
+
+#~ msgid "Functional Training"
+#~ msgstr "功能说明"
+
+#~ msgid ""
+#~ "Learn directly from our team and network of Odoo experts. Choose from the "
+#~ "available training sessions for a better functional understanding of Odoo"
+#~ msgstr ""
+#~ "向我们的团队或Odoo的网络专家学习，更多有用的培训可以更好的理解Odoo的功能。"
+
+#~ msgid ""
+#~ "Learn directly from our team and network of Odoo experts. Choose from the "
+#~ "available training sessions for a better technical understanding of Odoo"
+#~ msgstr ""
+#~ "向我们的团队或Odoo的网络专家学习，更多有用的培训可以更好的理解Odoo的技术"
+
+#~ msgid "Technical Training"
+#~ msgstr "技术培训"
+
+#~ msgid "Validity Date"
+#~ msgstr "有效期"
