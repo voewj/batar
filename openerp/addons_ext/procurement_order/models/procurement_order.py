@@ -20,6 +20,6 @@ class procurement_order(models.Model):
             order_line_id = self.env['sale.order.line'].search([('id','=',sale_line_id)])
             if order_line_id:
                 vals['order_line_id'] = order_line_id.id
-        print vals
+                
         return super(procurement_order,self).create(vals)
     

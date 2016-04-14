@@ -20,7 +20,7 @@
 	        	        <field name="item_fee"></field>
 	    	            <field name="standrad_weight"></field>
 	        	        <field name="sale_price" required='1'/>  
-	        	        <field name='all_weights' placeholder="input wait for weighing"/>
+	        	        <field name='all_weights' readonly='1' placeholder="input wait for weighing"/>
 	        	    </xpath>
 	        	    <xpath expr="//tree/field[@name='price_unit']" position="attributes">
 	        	       <attribute name="invisible">1</attribute>

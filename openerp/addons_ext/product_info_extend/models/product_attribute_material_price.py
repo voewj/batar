@@ -23,6 +23,7 @@ class product_attribute_material_price(models.Model):
     _defaults = {
         'active':False,
     }
+    
     @api.multi
     @api.depends('attribute_id','attribute_value_id')
     def name_get(self):

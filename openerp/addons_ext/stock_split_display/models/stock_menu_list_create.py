@@ -6,7 +6,7 @@ Created on 2016年3月11日
 '''
 
 from openerp import fields,models,api
-from geojson.crs import Default
+
 
 class ir_actions_act_window(models.Model):
     _inherit= 'ir.actions.act_window'

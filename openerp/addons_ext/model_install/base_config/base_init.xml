@@ -8,6 +8,7 @@
             <field name="rounding">0.01</field>
             <field name="position">before</field>
         </record>
+        
 	    <!-- 设置公司基本信息 百泰集团批发事业群 -->
 	    <record id="base.main_partner" model="res.partner" context="{'default_is_company': True}">
             <field name="name">深圳尚金缘</field>
