@@ -3,11 +3,12 @@
     'name': "需要模块一键安装",
 
     'summary': """
-        为了免去每次部署手动安装多个模块的麻烦，采取依赖的方式一键安装所有需要的模块。
-        如果需要新增模块，直接在此模块中添加依赖""",
+    需要模块一键安装
+        """,
 
     'description': """
-        Long description of module's purpose
+        为了免去每次部署手动安装多个模块的麻烦，采取依赖的方式一键安装所有需要的模块。
+        如果需要新增模块，直接在此模块中添加依赖
     """,
 
     'author': "cloudy",
@@ -25,7 +26,7 @@
                 'fetchmail','crm_partner_assign','crm_claim','product_email_template','mail','delivery','sale_order_dates',
                 'product_menu','customer_extend','customer_import','sale_order_extend','product_info_extend',
                 'procurement_order','product_import','stock_extend','stock_import','sale_order_extend',
-                'multi_warehouse_management','recycling_warehouse','stock_split_display',
+                'multi_warehouse_management','recycling_warehouse','stock_split_display','stock_qc','batar_web'
 #                 'account_extend',
                 ],
 
@@ -34,6 +35,8 @@
         # 'security/ir.model.access.csv',
         'base_config/base_init.xml',
         'base_config/product_initial_data.xml',
+        'base_config/stock_init.xml',
+       
        
     ],
     # only loaded in demonstration mode

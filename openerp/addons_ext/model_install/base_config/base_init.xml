@@ -1,12 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <openerp>
-	<data>
+	<data noupdate='1'>
 	    
-	    <!-- 设置公司基本信息 -->
+	    <record id="GOLD" model="res.currency">
+            <field name="name">AU</field>
+            <field name="symbol">Au</field>
+            <field name="rounding">0.01</field>
+            <field name="position">before</field>
+        </record>
+	    <!-- 设置公司基本信息 百泰集团批发事业群 -->
 	    <record id="base.main_partner" model="res.partner" context="{'default_is_company': True}">
             <field name="name">深圳尚金缘</field>
             <field name="company_id" eval="None"/>
-            <field name="image" type="base64" file="model_install/static/img/logo.png"/>
+            <field name="image" type="base64" file="model_install/static/img/group_logo.png"/>
             <field name="customer" eval="False"/>
             <field name="is_company" eval="True"/>
             <field name="street"></field>
@@ -16,7 +22,77 @@
             <field name="email">www@batar.cn</field>
             <field name="website">www.batar.cn</field>
         </record>
-      
-      
+       <record id="base.main_company" model="res.company">
+            <field name="name">深圳尚金缘</field>
+            <field name="partner_id" ref="base.main_partner"/>
+            <field name="rml_header1">团结一心，振兴百泰，顾客至上，品质第一，为百泰尽力，将受到尊重。</field>
+            <field name="currency_id" ref="base.CNY"/>
+        </record>
+<!--         分子公司：深圳尚金缘 -->
+<!--         <record id="show_king_shenzhen" model="res.partner" context="{'default_is_company': True}"> -->
+<!--             <field name="name">深圳尚金缘</field> -->
+<!--             <field name="company_id" eval="None"/> -->
+<!--             <field name="image" type="base64" file="model_install/static/img/show_king.png"/> -->
+<!--             <field name="customer" eval="False"/> -->
+<!--             <field name="is_company" eval="True"/> -->
+<!--             <field name="street"></field> -->
+<!--             <field name="city"></field> -->
+<!--             <field name="zip"></field> -->
+<!--             <field name="phone">400-003-6610</field> -->
+<!--             <field name="email">www@batar.cn</field> -->
+<!--             <field name="website">www.batar.cn</field> -->
+<!--         </record> -->
+<!--        <record id="show_king_shenzhen_company" model="res.company"> -->
+<!--             <field name="name">深圳尚金缘</field> -->
+<!--             <field name="partner_id" ref="show_king_shenzhen"/> -->
+<!--             <field name="parent_id" ref="base.main_company"/> -->
+<!--             <field name="rml_header1">团结一心，振兴百泰，顾客至上，品质第一，为百泰尽力，将受到尊重。</field> -->
+<!--             <field name="currency_id" ref="base.CNY"/> -->
+<!--         </record> -->
+<!--         分子公司：天津尚金缘 -->
+<!--         <record id="show_king_tianjin" model="res.partner" context="{'default_is_company': True}"> -->
+<!--             <field name="name">天津尚金缘</field> -->
+<!--             <field name="company_id" eval="None"/> -->
+<!--             <field name="image" type="base64" file="model_install/static/img/show_king.png"/> -->
+<!--             <field name="customer" eval="False"/> -->
+<!--             <field name="is_company" eval="True"/> -->
+<!--             <field name="street"></field> -->
+<!--             <field name="city"></field> -->
+<!--             <field name="zip"></field> -->
+<!--             <field name="phone">400-003-6610</field> -->
+<!--             <field name="email">www@batar.cn</field> -->
+<!--             <field name="website">www.batar.cn</field> -->
+<!--         </record> -->
+<!--        <record id="show_king_tianjin_company" model="res.company"> -->
+<!--             <field name="name">天津尚金缘</field> -->
+<!--             <field name="partner_id" ref="show_king_tianjin"/> -->
+<!--             <field name="parent_id" ref="base.main_company"/> -->
+<!--             <field name="rml_header1">团结一心，振兴百泰，顾客至上，品质第一，为百泰尽力，将受到尊重。</field> -->
+<!--             <field name="currency_id" ref="base.CNY"/> -->
+<!--         </record> -->
+<!--         分子公司：杭州尚金缘 -->
+<!--         <record id="show_king_hangzhou" model="res.partner" context="{'default_is_company': True}"> -->
+<!--             <field name="name">杭州尚金缘</field> -->
+<!--             <field name="company_id" eval="None"/> -->
+<!--             <field name="image" type="base64" file="model_install/static/img/show_king.png"/> -->
+<!--             <field name="customer" eval="False"/> -->
+<!--             <field name="is_company" eval="True"/> -->
+<!--             <field name="street"></field> -->
+<!--             <field name="city"></field> -->
+<!--             <field name="zip"></field> -->
+<!--             <field name="phone">400-003-6610</field> -->
+<!--             <field name="email">www@batar.cn</field> -->
+<!--             <field name="website">www.batar.cn</field> -->
+<!--         </record> -->
+<!--        <record id="show_king_hangzhou_company" model="res.company"> -->
+<!--             <field name="name">杭州尚金缘</field> -->
+<!--             <field name="partner_id" ref="show_king_hangzhou"/> -->
+<!--             <field name="parent_id" ref="base.main_company"/> -->
+<!--             <field name="rml_header1">团结一心，振兴百泰，顾客至上，品质第一，为百泰尽力，将受到尊重。</field> -->
+<!--             <field name="currency_id" ref="base.CNY"/> -->
+<!--         </record> -->
+        
+        
+       
 	</data>
 </openerp>

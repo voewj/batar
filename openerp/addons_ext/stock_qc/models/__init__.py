@@ -8,3 +8,4 @@ Created on 2016年3月23日
 import stock_move
 import stock_picking
 import purchase_order
+import stock_warehouse
