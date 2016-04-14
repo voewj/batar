@@ -17,7 +17,7 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="partner_id" />
+                                <field name="partner_id"/>
                                 <label for="weight"/>
                                 <div>
                                     <field name="weight" class="oe_inline"/> g
