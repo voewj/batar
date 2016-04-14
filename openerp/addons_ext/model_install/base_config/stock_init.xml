@@ -26,12 +26,19 @@
 	        <field name="en_code">shenzhen_sample_warehourse</field>
 	        <field name="code">深圳:样品库</field>
 	    </record>
-	     <record id="shenzhen_quality_warehourse" model="stock.warehouse">
+	    <record id="shenzhen_quality_warehourse" model="stock.warehouse">
 	        <field name="name">深圳:质检仓</field>
 	        <field name='is_quality'>1</field>
 	        <field name="partner_id" ref="base.main_partner"/>
-	        <field name="en_code">shenzhen_stock_quality_check</field>
+	        <field name="en_code">shenzhen_quality_warehourse</field>
 	        <field name="code">深圳:质检仓</field>
+	    </record>
+	    <record id="shenzhen_return_warehourse" model="stock.warehouse">
+	        <field name="name">深圳:退货仓</field>
+	        <field name="is_return">1</field>
+	        <field name="partner_id" ref="base.main_partner"/>
+	        <field name="en_code">shenzhen_return_warehourse</field>
+	        <field name="code">深圳:退货仓</field>
 	    </record>
 <!-- 	    天津尚金缘 -->
 <!-- 	     <record id="tianjin_gold_warehouse" model="stock.warehouse"> -->

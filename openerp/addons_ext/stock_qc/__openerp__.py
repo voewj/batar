@@ -19,17 +19,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','stock','purchase'],
+    'depends': ['base','stock','purchase','product_info_extend'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         
-        'views/stock_quality_picking.xml',
         'views/purchase_order.xml',
         'views/stock_warehouse.xml',
-        
-       
+        'views/stock_qc.xml',
+      
     ],
     # only loaded in demonstration mode
     'demo': [

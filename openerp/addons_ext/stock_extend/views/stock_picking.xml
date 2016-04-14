@@ -38,9 +38,10 @@
                         <attribute name="options">{'no_open':True}</attribute>
                     </xpath>
                     <xpath expr="//field[@name='move_lines_related']" position="replace">
-                        <field name="move_lines_related">
+                        <field name="move_lines_related"  >
                             <tree string="move_lines_related" editable="bottom">
                                 <field name="product_id" readonly="1"></field>
+                                <field name="standrad_weight"></field>
                                 <field name="real_time_price_unit" readonly="1"></field>
                                 <field name="item_fee" readonly="1"></field>
                                 <field name="weight_fee" readonly="1"></field>

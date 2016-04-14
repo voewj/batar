@@ -9,6 +9,7 @@ from openerp import models,fields,api
 class stock_warehouse(models.Model):
     _inherit = 'stock.warehouse'
     en_code = fields.Char(string='stock warehouse english code')
+ 
     
 class stock_move_detail(models.TransientModel):
     _name = 'stock.move.detail'
