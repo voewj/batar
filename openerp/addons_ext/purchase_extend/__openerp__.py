@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "account_extend",
+    'name': "purchase_extend",
 
     'summary': """
-        财务扩展，用于支持黄金抵价""",
+        采购单改进""",
 
     'description': """
-          财务扩展，用于支持黄金抵价
+        采购单改进，限制客户只能为公司
     """,
 
     'author': "cloudy",
@@ -19,16 +19,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','account'],
+    'depends': ['base','purchase'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'data/account_journal_initial.xml',
-       
+       'views/purchase_order.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-       
+      
     ],
 }
