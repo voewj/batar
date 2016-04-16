@@ -15,9 +15,11 @@ class product_attribute_material_price(models.Model):
     attribute_value_id = fields.Many2one('product.attribute.value',string='product attribute value')
     active = fields.Boolean(string='active')
     price_unit = fields.Float(string='price unit')
+    ornament_price = fields.Float(string="ornament price")
     
     _sql_constraints = [
         ('price_unit', 'CHECK(price_unit > 0.0)','price_unit must be greater than 0.0!'),
+        ('ornament_price', 'CHECK(ornament_price > 0.0)','ornament_price must be greater than 0.0!'),
     ]
 
     _defaults = {

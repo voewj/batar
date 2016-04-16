@@ -4,7 +4,7 @@ Created on 2016年3月23日
 
 @author: cloudy
 '''
-from openerp import models,fields,_
+from openerp import models,fields,_,api
 from openerp.exceptions import UserError
 
 
@@ -32,6 +32,15 @@ class stock_quality_picking(models.Model):
         'qc_result':"passed",
        
     }
+    @api.multi
+    def stock_qc_confirm(self):
+        '''质检完成，将合格的产品调拨到金库，不合格的进入退货仓'''
+        #调拨到金库
+        location_qc = self.location_dest_id
+        stock_picking_type_obj = self.env['stock.picking.type'].search([()])
+        print location_qc
+        print self
+        
     def do_new_transfer(self, cr, uid, ids, context=None):
         """"""
         pack_op_obj = self.pool['stock.pack.operation']

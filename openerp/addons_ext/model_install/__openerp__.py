@@ -25,7 +25,7 @@
                 'account_voucher','account_cancel','account_budget',
                 'fetchmail','crm_partner_assign','crm_claim','product_email_template','mail','delivery','sale_order_dates',
                 'product_menu','customer_extend','customer_import','sale_order_extend','product_info_extend',
-                'procurement_order','product_import','stock_extend','stock_import','sale_order_extend',
+                'procurement_order','product_import','stock_extend','stock_import',
                 'multi_warehouse_management','recycling_warehouse','stock_split_display','stock_qc',
 #                 'account_extend',
                 ],

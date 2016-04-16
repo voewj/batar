@@ -7,6 +7,13 @@
 	    	<field name="inherit_id" ref="stock.view_picking_form"/>
 	    	<field name="arch" type="xml">
 	    	    <data>
+	    	       
+	    	        <xpath expr="//button[@name='do_new_transfer']" position="attributes">
+	    	            <attribute name="attrs">{'invisible':['|',('is_quality','=',True)]}</attribute>
+	    	        </xpath>
+	    	         <xpath expr="//button[@name='do_new_transfer']" position="after">
+	    	            <button name="stock_qc_confirm" string="stock qc confirm" type="object" class="oe_highlight" states="assigned"></button>
+	    	        </xpath>
 	    	        <xpath expr="//sheet/group/group[last()]" position="after">
 	    	        	<group string='quality check result' attrs="{'invisible':[('is_quality','=',False)]}">
 	    	        	    <field name="is_quality" readonly="1"></field>
