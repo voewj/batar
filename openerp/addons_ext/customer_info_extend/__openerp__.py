@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "产品导入",
+    'name': "customer_info_extend",
 
     'summary': """
-        从excel中产品导入""",
+        客户产品优惠信息，利息信息""",
 
     'description': """
-                商品 导入 
+               客户产品优惠信息，利息信息
     """,
 
     'author': "cloudy",
@@ -19,17 +19,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','purchase'],
+    'depends': ['base','product','product_info_extend'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-#         'product_category_data.xml',
-        'wizard/product_import.xml',
         
+        'views/customer_ornament_price.xml',
+        'views/product_discount.xml',
+        'views/res_partner.xml',
+         
     ],
     # only loaded in demonstration mode
     'demo': [
-    
+        
     ],
 }

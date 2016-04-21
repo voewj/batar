@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160321\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 08:52+0000\n"
-"PO-Revision-Date: 2016-03-25 08:52+0000\n"
+"POT-Creation-Date: 2016-04-19 08:34+0000\n"
+"PO-Revision-Date: 2016-04-19 08:34+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -78,17 +78,17 @@ msgstr "单件附加费"
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price___last_update
 msgid "Last Modified on"
-msgstr "最后修改时间"
+msgstr "最后修改日"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_write_uid
 msgid "Last Updated by"
-msgstr "最后更新"
+msgstr "最后更新人"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_write_date
 msgid "Last Updated on"
-msgstr "最后更新于"
+msgstr "最后更新时间"
 
 #. module: product_info_extend
 #: model:ir.ui.view,arch_db:product_info_extend.product_template_only_extend_form
@@ -104,6 +104,11 @@ msgstr "产品"
 #: model:ir.model,name:product_info_extend.model_product_attribute
 msgid "Product Attribute"
 msgstr "产品属性"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_product_email_template_id
+msgid "Product Email Template"
+msgstr "产品的电子邮件模板"
 
 #. module: product_info_extend
 #: model:ir.model,name:product_info_extend.model_product_template
@@ -131,9 +136,19 @@ msgid "Vendor Taxes"
 msgstr "供应商税"
 
 #. module: product_info_extend
+#: model:ir.model.fields,help:product_info_extend.field_product_product_email_template_id
+msgid "When validating an invoice, an email will be sent to the customer based on this template. The customer will receive an email for each product linked to an email template."
+msgstr "验证发票时，基于此模板的电子邮件将会被发送给客户。客户会收到一封关联到邮件模板的关于每个产品的邮件。"
+
+#. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_active
 msgid "active"
 msgstr "活动"
+
+#. module: product_info_extend
+#: model:ir.ui.view,arch_db:product_info_extend.attribute_tree_view
+msgid "code default is empty"
+msgstr "编码默认为空"
 
 #. module: product_info_extend
 #: sql_constraint:product.attribute:0
@@ -146,9 +161,37 @@ msgid "display sale price"
 msgstr "价格"
 
 #. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_material_price
+msgid "material price"
+msgstr "材质价"
+
+#. module: product_info_extend
+#: sql_constraint:product.attribute.material.price:0
+msgid "material price must be greater than 0.0!"
+msgstr "材质价格必须大于0.0!"
+
+#. module: product_info_extend
 #: model:ir.ui.menu,name:product_info_extend.product_attribute_material_price_menu
 msgid "material price setting"
 msgstr "材质基础价格设置"
+
+#. module: product_info_extend
+#: model:ir.actions.act_window,name:product_info_extend.multi_product_attribute_action
+#: model:ir.ui.menu,name:product_info_extend.multi_product_attribute_menu
+#: model:ir.ui.view,arch_db:product_info_extend.multi_product_attribute_form
+#: model:ir.ui.view,arch_db:product_info_extend.multi_product_attribute_tree
+msgid "multi product attribute"
+msgstr "属性值批量设置"
+
+#. module: product_info_extend
+#: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_ornament_price
+msgid "ornament price"
+msgstr "饰品价"
+
+#. module: product_info_extend
+#: sql_constraint:product.attribute.material.price:0
+msgid "ornament price must be greater than 0.0!"
+msgstr "饰品价必须大于0.0!"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_ponderable
@@ -158,13 +201,8 @@ msgstr "可称量"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_price_unit
-msgid "price unit"
-msgstr "差价(g)"
-
-#. module: product_info_extend
-#: sql_constraint:product.attribute.material.price:0
-msgid "price_unit must be greater than 0.0!"
-msgstr "单价必须大于 0.0!"
+msgid "price unit total"
+msgstr "交易价"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_code
@@ -181,6 +219,7 @@ msgstr "产品属性单价"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_attribute_material_price_attribute_value_id
+#: model:ir.ui.view,arch_db:product_info_extend.multi_product_attribute_form
 msgid "product attribute value"
 msgstr "产品属性值"
 
@@ -202,12 +241,7 @@ msgstr "实时单价(g)"
 #. module: product_info_extend
 #: model:ir.ui.view,arch_db:product_info_extend.attribute_tree_view
 msgid "sequence must rather than 100"
-msgstr "sequence must rather than 100"
-
-#. module: product_info_extend
-#: model:ir.model.fields,field_description:product_info_extend.field_product_product_shang_code
-msgid "show king code"
-msgstr "尚金缘编码"
+msgstr "序号必须大于100"
 
 #. module: product_info_extend
 #: model:ir.model.fields,field_description:product_info_extend.field_product_product_weight_fee

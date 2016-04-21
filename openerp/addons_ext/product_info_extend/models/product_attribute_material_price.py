@@ -11,19 +11,28 @@ from openerp.exceptions import UserError
 class product_attribute_material_price(models.Model):
     _name = 'product.attribute.material.price'
     
-    attribute_id = fields.Many2one('product.attribute')
+    @api.one
+    @api.depends('ornament_price', 'material_price')
+    @api.onchange('ornament_price', 'material_price')
+    def _get_price_total(self):
+        ''''''
+        self.price_unit = self.material_price + self.ornament_price
+        
+    attribute_id = fields.Many2one('product.attribute',default= lambda self:self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1])
     attribute_value_id = fields.Many2one('product.attribute.value',string='product attribute value')
     active = fields.Boolean(string='active')
-    price_unit = fields.Float(string='price unit')
+    material_price = fields.Float(string='material price')
     ornament_price = fields.Float(string="ornament price")
+    price_unit = fields.Float(compute='_get_price_total',string='price unit total')
     
     _sql_constraints = [
-        ('price_unit', 'CHECK(price_unit > 0.0)','price_unit must be greater than 0.0!'),
-        ('ornament_price', 'CHECK(ornament_price > 0.0)','ornament_price must be greater than 0.0!'),
+        ('material_price', 'CHECK(material_price > 0.0)','material price must be greater than 0.0!'),
+        ('ornament_price', 'CHECK(ornament_price > 0.0)','ornament price must be greater than 0.0!'),
     ]
 
     _defaults = {
         'active':False,
+#         'attribute_id':  lambda self:self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1]
     }
     
     @api.multi
@@ -40,11 +49,12 @@ class product_attribute_material_price(models.Model):
         '''保存前使之前的价格无效'''
         
         vals['active'] = True
-        attribute_id = vals.get('attribute_id',None)
+
         attribute_value_id = vals.get('attribute_value_id',None)  
-         
-        if not( attribute_id and attribute_value_id):
-            raise UserError(_('attribute or attribute value invalid'))
-        records = self.env['product.attribute.material.price'].search([('attribute_id','=',attribute_id),('attribute_value_id','=',attribute_value_id)])
-        records.write({'active':False})
+        
+        if not attribute_value_id:
+            raise UserError(_('attribute value invalid'))
+        records = self.env['product.attribute.material.price'].search([('active','=',True),('attribute_value_id','=',attribute_value_id)])
+        if records:
+            records.write({'active':False})
         return super(product_attribute_material_price,self).create( vals)

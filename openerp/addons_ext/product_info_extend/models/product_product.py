@@ -17,9 +17,9 @@ class prdouct_product(models.Model):
     standard_weight = fields.Float(compute='_compute_attribute',string="Standard Weight")
     item_fee = fields.Float(string="Item Fee")
     weight_fee = fields.Float(string="weight fee")
+    additional_fee = fields.Float(string='additional fee') 
     ponderable = fields.Boolean(related='product_tmpl_id.ponderable',store=True,string='ponderable')
     real_time_price_unit = fields.Float(compute='_compute_attribute',string='real time price unit')
-    shang_code = fields.Char(string='show king code')
     sale_price = fields.Char(compute='_compute_sale_price',string='display sale price')
     
 

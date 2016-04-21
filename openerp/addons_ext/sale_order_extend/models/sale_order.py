@@ -7,6 +7,10 @@ Created on 2016年2月24日
 
 from openerp import fields,models,api
 
+class sale_order(models.Model):
+    _inherit = 'sale.order'
+    
+    
 class sale_order_line(models.Model):
     _inherit = "sale.order.line"
             
@@ -17,6 +21,10 @@ class sale_order_line(models.Model):
     weight_fee = fields.Float(related='product_id.weight_fee',store=True,string="weight fee")
     ponderable = fields.Boolean(related='product_id.ponderable',string="ponderable")
     sale_price = fields.Char(related='product_id.sale_price',string='display sale price')
+    
+    _sql_constraints = [
+        ('order_line_product', 'unique(product_id, order_id)', 'product must be unique per order!'),
+    ]
     
     defaults = {
         'picking_policy':'one',

@@ -28,7 +28,9 @@
 	    	    <tree string="product attribute material price">
 	    	    	<field name="attribute_id"></field>
 	    	    	<field name="attribute_value_id"></field>
-	    	    	<field name="active"></field>
+	    	    	 <field name="active" invisible='1'/>
+	    	    	<field name="material_price"></field>
+		    	    <field name="ornament_price"></field>
 	    	    	<field name="price_unit"></field>
 	    	    </tree>
 	    	</field>
@@ -52,16 +54,17 @@
 	    	            </div>
 		    	        <group>
 		    	        	<group>
-		    	        	    <field name="attribute_id" required='1'
-		    	        	        domain="[('code', '=', 'material')]" options="{'no_create':True,'no_open': True}"></field>
+		    	        	    <field name="attribute_id"   readonly='1'/>
 		    	    			<field name="attribute_value_id"  required='1'
 		    	    			    domain="[('attribute_id.code', '=', 'material')]"
 		    	    			    options="{'no_create':True,'no_open': True}"></field>
 		    	        	</group>
 		    	        	<group>
-		    	        	    <field name="active"></field>
+		    	        	     <field name="active" invisible='1'/>
+		    	        	    <field name="material_price"></field>
+		    	        	    <field name="ornament_price"></field>
 		    	    			<field name="price_unit"
-		    	    			    required='1'></field>
+		    	    			    readonly='1'></field>
 		    	        	</group>
 		    	        </group>
 	    	        </sheet>

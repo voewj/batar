@@ -27,7 +27,7 @@
                 'product_menu','customer_extend','customer_import','sale_order_extend','product_info_extend',
                 'procurement_order','product_import','stock_extend','stock_import',
                 'multi_warehouse_management','recycling_warehouse','stock_split_display','stock_qc',
-                'purchase_extend',
+                'purchase_extend','customer_info_extend'
 #                 'account_extend',
                 ],
 
@@ -42,7 +42,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        
     ],
     'installable': True,
     'auto_install': True,
