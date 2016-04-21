@@ -45,6 +45,9 @@
 	    		    </tree>
 	    		    <field name="lst_price" position="replace">
 	    		        <field name="sale_price" widget="monetary"></field>
+	    		        <field name="item_fee"></field>
+	    		        <field name="weight_fee"></field>
+	    		        <field name="additional_fee"></field>
 	    		    </field>
 	    		</data>
 	    	</field>
@@ -65,6 +68,9 @@
 	    	       
 	    	        <xpath expr="//field[@name='lst_price']" position="before">
 	    	            <field name="real_time_price_unit" widget="monetary" readonly="1" attrs="{'invisible':[('ponderable','=',False)]}"/> 
+	    	            <field name="item_fee" widget="monetary" attrs="{'invisible':[('ponderable','=',False)]}"/>
+	    		        <field name="weight_fee" widget="monetary" attrs="{'invisible':[('ponderable','=',False)]}"/>
+	    		        <field name="additional_fee" widget="monetary" attrs="{'invisible':[('ponderable','=',False)]}"/>
 	    	        </xpath>
 	    	        <xpath expr="//field[@name='lst_price']" position="attributes">
 	    	            <attribute name="attrs">{'invisible':[('ponderable','=',True)]}</attribute>

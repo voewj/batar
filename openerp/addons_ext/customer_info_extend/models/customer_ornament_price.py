@@ -41,6 +41,7 @@ class customer_ornament_price(models.Model):
             if obj:
                 self.material_price = obj.material_price
                 self.sys_ornament_price = obj.ornament_price
+                self.ornament_price = obj.ornament_price
             else:
                 raise UserError(_('You must set material price before'))
         
