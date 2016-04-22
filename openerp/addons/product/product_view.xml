@@ -102,7 +102,7 @@
                         </div>
                         <notebook>
                             <page string="General Information">
-                                <group>
+                                <group name="group_general_top">
                                     <group name="group_general">
                                         <field name="type" on_change="onchange_type(type, context)"/>
                                     </group>
