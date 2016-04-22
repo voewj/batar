@@ -45,6 +45,9 @@
 	    		    </tree>
 	    		    <field name="lst_price" position="replace">
 	    		        <field name="sale_price" widget="monetary"></field>
+	    		        <field name="item_fee"></field>
+	    		        <field name="weight_fee"></field>
+	    		        <field name="additional_fee"></field>
 	    		    </field>
 	    		</data>
 	    	</field>
@@ -65,10 +68,17 @@
 	    	        </xpath>
 	    	       
 	    	        <xpath expr="//field[@name='lst_price']" position="before">
+<<<<<<< HEAD
 	    	            <field name="real_time_price_unit" widget="monetary" readonly="1" attrs="{'invisible':[('ponderable','=',False)]}"/>
 						<field name="item_fee"/>
 						<field name="weight_fee"/>
 						<field name="additional_fee"/>
+=======
+	    	            <field name="real_time_price_unit" widget="monetary" readonly="1" attrs="{'invisible':[('ponderable','=',False)]}"/> 
+	    	            <field name="item_fee" widget="monetary" attrs="{'invisible':[('ponderable','=',False)]}"/>
+	    		        <field name="weight_fee" widget="monetary" attrs="{'invisible':[('ponderable','=',False)]}"/>
+	    		        <field name="additional_fee" widget="monetary" attrs="{'invisible':[('ponderable','=',False)]}"/>
+>>>>>>> a577935d37ef629b2e781dfe89dcbb633a15d33c
 	    	        </xpath>
 	    	        <xpath expr="//field[@name='lst_price']" position="attributes">
 	    	            <attribute name="attrs">{'invisible':[('ponderable','=',True)]}</attribute>
