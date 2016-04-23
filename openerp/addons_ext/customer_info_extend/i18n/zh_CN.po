@@ -261,10 +261,10 @@ msgstr "加工费"
 #. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_weight_fee_discount
 msgid "weight fee discount"
-msgstr "加工费优惠(金额)"
+msgstr "基础加工费优惠(金额)"
 
 #. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_weight_fee_discount_percent
 msgid "weight fee discount percent"
-msgstr "加工费优惠(百分比)"
+msgstr "基础加工费优惠(百分比)"
 

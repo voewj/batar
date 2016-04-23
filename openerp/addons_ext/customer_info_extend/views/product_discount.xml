@@ -43,9 +43,12 @@
 	    	        			<field name="item_fee" 
 	    	        			    attrs="{'invisible':[('applied_on', '!=', '0_product_variant')],'required':[('applied_on', '=', '0_product_variant')]}"
 	    	        			    readonly='1' widget="monetary"/>
+	    	        			<field name="additional_fee" 
+	    	        			    attrs="{'invisible':[('applied_on', '!=', '0_product_variant')],'required':[('applied_on', '=', '0_product_variant')]}"
+	    	        			    readonly='1' widget="monetary"/>
 	    	            	</group>
 	    	            	<group>
-	    	            	    <field name="ponderable" readonly="1"/>
+	    	            	    <field name="ponderable" />
 	    	            	    <field name="is_percent"/>
 	    	            	    <field name="attribute_value_id"
 	    	            	         attrs="{'invisible':[('applied_on', '=', '0_product_variant')],'required':[('applied_on', '!=', '0_product_variant')]}"
@@ -56,6 +59,7 @@
 	    	            	<group attrs="{'invisible':[('ponderable', '=', False)]}">
 	    	            	    <field name="item_fee_discount" widget="monetary" attrs="{'invisible':[('is_percent', '=', True)]}"/>
 	    	            	    <field name="weight_fee_discount" widget="monetary" attrs="{'invisible':[('is_percent', '=', True)]}"/>
+	    	            	    <field name="additional_fee_discount" widget="monetary" attrs="{'invisible':[('is_percent', '=', True)]}"/>
 	    	            	    <label for="item_fee_discount_percent" attrs="{'invisible':[('is_percent', '=', False)]}"/>
                                 <div name="item_fee_discount_percent" attrs="{'invisible':[('is_percent', '=', False)]}">
                                     <field name="item_fee_discount_percent" class="oe_inline"/> %%
@@ -64,7 +68,10 @@
                                 <div name="weight_fee_discount_percent" attrs="{'invisible':[('is_percent', '=', False)]}">
                                     <field name="weight_fee_discount_percent" class="oe_inline"/> %%
                                 </div>
-	    	            	  
+	    	            	  	<label for="additional_fee_discount_percent" attrs="{'invisible':[('is_percent', '=', False)]}"/>
+                                <div name="additional_fee_discount_percent" attrs="{'invisible':[('is_percent', '=', False)]}">
+                                    <field name="additional_fee_discount_percent" class="oe_inline"/> %%
+                                </div>
     	            	    </group>
 	    	            	<group attrs="{'invisible':[('ponderable', '=', True)]}">
 	    	            		<field name="discount_amount" widget="monetary" attrs="{'invisible':[('is_percent', '=', True)]}"/>
@@ -93,7 +100,7 @@
 	    	        <field name="attribute_value_id"/>
 	    	        <field name="weight_fee_discount"/>
 	    	        <field name="item_fee_discount"/>
-	    	       <field name="ponderable"></field>
+	    	        <field name="additional_fee_discount"/>
 	    	       <field name="discount_amount"></field>
 	    	    </tree>
 	    	</field>

@@ -2,7 +2,7 @@
 {
     'name': 'Change products expense',
     'author': 'Xiao',
-    'depends': ['product_info_extend'],
+    'depends': ['base','product','product_info_extend'],
     'data': ['views/mass_product_expense.xml',
              'views/mass_expense_tree.xml',
              ],

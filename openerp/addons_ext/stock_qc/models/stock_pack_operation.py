@@ -55,7 +55,7 @@ class stock_pack_operation(models.Model):
         if product_qty < pass_qty:
             raise UserError(_('pass qty must less than product qty'))
         if pass_qty < product_qty:
-            print self.pass_qty,self.product_qty
+            
             self.qc_result = 'partial'
         else:
             self.qc_result ="passed"
@@ -63,10 +63,10 @@ class stock_pack_operation(models.Model):
             self.qc_result = 'rejected'
         if self.qc_result != 'passed':
             self.picking_id.qc_result = 'partial'
-            print "picking", self.picking_id.qc_result
+          
         self.qty_done = self.pass_qty
         self.back_qty = self.product_qty - self.pass_qty
-        print self.qc_result
+        
         self.write({
             "qc_result":self.qc_result
         })

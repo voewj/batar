@@ -43,22 +43,27 @@ class product_discount(models.Model):
     ponderable = fields.Boolean(related='product_id.ponderable',string='ponderable')
     discount_amount = fields.Float(string='discount amount')
     discount_percent = fields.Integer(string='discount percent')
+    
     _sql_constraints = [
         ('uniq', 'unique(partner_id,categ_id,product_tmpl_id,product_id,active)', 'must be unique!'), 
     ]
     
-    @api.onchange('product_id','item_fee_discount_percent','weight_fee_discount_percent')
+    @api.onchange('product_id','item_fee_discount_percent','weight_fee_discount_percent','additional_fee_discount_percent')
     def product_id_change(self):
         ''''''
         if self.product_id:
             self.item_fee = self.product_id.item_fee
             self.weight_fee = self.product_id.weight_fee
+            self.additional_fee = self.product_id.additional_fee
         if self.weight_fee_discount_percent:
             if self.weight_fee_discount_percent >= 100 or  self.weight_fee_discount_percent < 0:
                 raise  UserError(_('weight fee discount percent range is [0,100)'))
         if self.item_fee_discount_percent:
             if self.item_fee_discount_percent >= 100 or  self.item_fee_discount_percent < 0:
                 raise  UserError(_('item fee discount percent range is [0,100)'))
+        if self.additional_fee_discount_percent:
+            if self.additional_fee_discount_percent >= 100 or  self.additional_fee_discount_percent < 0:
+                raise  UserError(_('additional fee discount percent range is [0,100)'))
     
     @api.multi
     def cancel_discount(self):
