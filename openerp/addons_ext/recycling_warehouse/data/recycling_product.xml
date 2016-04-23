@@ -12,64 +12,64 @@
 	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD001</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	        <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">千足金料</field>
 	    </record>
 	    <record id="recycling_product_gold" model="product.template">
 	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD002</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	        <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">足金料</field>
 	    </record>
 	    <record id="recycling_product_pure_gold" model="product.template">
 	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD003</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	         <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">千足旧料(外厂)</field>
 	    </record>
 	    <record id="recycling_product_pure_gold_iner" model="product.template">
 	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD004</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	         <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">千足旧料(内厂)</field>
 	    </record>
 	    <record id="recycling_product_bracelet" model="product.template">
 	        <field name="categ_id" ref="product_category_recycling_all"></field>  
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD005</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	         <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">(手环)旧料</field>
 	    </record>
 	    <record id="recycling_product_gold" model="product.template">
 	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD006</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	        <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">足金旧料</field>
 	    </record>
 	    <record id="recycling_product_bank" model="product.template">
-	        <field name="categ_id" ref="product_category_recycling_all"></field>
+	       <field name="categ_id" ref="product_category_recycling_all"></field>
 	       <field name="type">recycling</field>
 	       <field name="default_code">OLD007</field>
-	       <field name="sale_ok">1</field>
-	       <field name="purchase_ok">1</field>
-	        <field name="name">银行料</field>
+	       <field name="sale_ok" eval="False"/>
+	       <field name="purchase_ok" eval="False"/>
+	       <field name="name">银行料</field>
 	    </record>
 	    <record id="recycling_product_not_bank" model="product.template">
 	        <field name="categ_id" ref="product_category_recycling_all"></field>
 	        <field name="type">recycling</field>
 	        <field name="default_code">OLD008</field>
-	        <field name="sale_ok">1</field>
-	        <field name="purchase_ok">1</field>
+	         <field name="sale_ok" eval="False"/>
+	        <field name="purchase_ok" eval="False"/>
 	        <field name="name">非银行料</field>
 	    </record>
 	   <!--  对应的料的差价费用 -->

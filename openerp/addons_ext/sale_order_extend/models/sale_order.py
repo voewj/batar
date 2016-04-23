@@ -25,10 +25,13 @@ class sale_order(models.Model):
             attribute_id = self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1]
             attribute_values = self.env['product.attribute.value'].search([('attribute_id','=',attribute_id)])
             for attribute_value in attribute_values:
+                #搜索是否针对客户设置了材质价格
                 customer_ornament_price_obj=self.env['customer.ornament.price'].search([('partner_id','=',self.partner_id.id),('attribute_value_id','=',attribute_value.id),('active','=',True)])
                 price_unit = 0
+                #若存在为客户单独设置的材质价格
                 if customer_ornament_price_obj:
                     price_unit = customer_ornament_price_obj.price_unit
+                #若没有设置材质价格，采用系统当前的材质价格作为默认的价格
                 else:
                     price_unit = self.env['product.attribute.material.price'].search([('active','=',True),('attribute_value_id','=',attribute_value.id)]).price_unit
                 values = {
