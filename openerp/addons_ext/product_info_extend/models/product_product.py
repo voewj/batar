@@ -9,6 +9,11 @@ import re
 import datetime
 code_format = "%Y%m%d%H%M%S"
 
+class product_template(models.Model):
+    _inherit = 'product.template'
+
+    name = fields.Char(translate=False)
+
 
 class prdouct_product(models.Model):
     _inherit = "product.product"

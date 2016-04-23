@@ -40,6 +40,8 @@ class product_attribute_value(models.Model):
     _inherit = 'product.attribute.value'
     _order = 'id desc'
 
+    name = fields.Char(translate=False)
+
     @api.multi
     def write(self, vals):
         if self.attribute_id.code =='weight':
