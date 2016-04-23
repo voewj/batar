@@ -16,10 +16,10 @@
 	    	            	    <field name="active" invisible='1'/>
 	    	            	</group>
 	    	            	<group>
-	    	            	    <field name="material_price" readonly="1"/>
-	    	            	    <field name="sys_ornament_price" readonly="1"/>
-	    	            	    <field name="ornament_price"/>
-	    	            	    <field name='price_unit' readonly='1'/>
+	    	            	    <field name="material_price" widget="monetary" readonly="1"/>
+	    	            	    <field name="sys_ornament_price" widget="monetary" readonly="1"/>
+	    	            	    <field name="ornament_price" widget="monetary" />
+	    	            	    <field name='price_unit' widget="monetary" readonly='1'/>
 	    	            	</group>
 	    	            </group>
 	    	        </sheet>
