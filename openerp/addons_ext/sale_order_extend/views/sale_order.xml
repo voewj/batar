@@ -19,9 +19,9 @@
 	        	    </xpath>
 	        	    <xpath expr="//tree/field[@name='price_unit']" position="after">
 	        	        <field name='weight_fee' widget="monetary"/>
-	        	        <field name="item_fee" widget="monetary"></field>
-	    	            <field name="standrad_weight"></field>
-	        	        
+	        	        <field name="item_fee" widget="monetary"/>
+	    	            <field name="standrad_weight"/>
+	        	        <field name="additional_fee"/>
 	        	        <field name='all_weights' readonly='1' placeholder="input wait for weighing"/>
 	        	    </xpath>
 	        	    <xpath expr="//tree/field[@name='price_unit']" position="attributes">

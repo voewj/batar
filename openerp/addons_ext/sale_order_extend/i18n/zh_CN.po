@@ -78,7 +78,7 @@ msgstr "税金"
 #. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_additional_fee
 msgid "additional fee"
-msgstr "additional fee"
+msgstr "附加工费"
 
 #. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_all_weights
@@ -143,5 +143,5 @@ msgstr "销售订单材质价格"
 #. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_weight_fee
 msgid "weight fee"
-msgstr "加工费"
+msgstr "基础工费"
 

@@ -25,7 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/stock_picking.xml',
-        'views/stock_product_detail.xml',
+#         'views/stock_product_detail.xml',
        
        
     ],
