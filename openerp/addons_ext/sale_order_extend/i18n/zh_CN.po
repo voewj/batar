@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160321\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-25 08:51+0000\n"
-"PO-Revision-Date: 2016-03-25 08:51+0000\n"
+"POT-Creation-Date: 2016-04-23 07:14+0000\n"
+"PO-Revision-Date: 2016-04-23 07:14+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,14 +16,54 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_item_fee
 msgid "Item Fee"
 msgstr "单件附加费"
 
 #. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: sale_order_extend
+#: model:ir.model,name:sale_order_extend.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: sale_order_extend
 #: model:ir.model,name:sale_order_extend.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "销售订单行"
+msgstr "销售订单明细"
 
 #. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_standrad_weight
@@ -36,14 +76,19 @@ msgid "Tax"
 msgstr "税金"
 
 #. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_additional_fee
+msgid "additional fee"
+msgstr "附加工费"
+
+#. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_all_weights
 msgid "all line weight"
 msgstr "重量小计"
 
 #. module: sale_order_extend
-#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_sale_price
-msgid "display sale price"
-msgstr "价格"
+#: model:ir.ui.view,arch_db:sale_order_extend.sale_order_form_extend
+msgid "customer ornament price"
+msgstr "客户饰品价格"
 
 #. module: sale_order_extend
 #: model:ir.ui.view,arch_db:sale_order_extend.sale_order_form_extend
@@ -51,9 +96,29 @@ msgid "input wait for weighing"
 msgstr "等待称重"
 
 #. module: sale_order_extend
-#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_ponderable
-msgid "ponderable"
-msgstr "可称量"
+#: sql_constraint:sale.order.material.price:0
+msgid "one order attribute value must unique!"
+msgstr "一个订单某个材质必须唯一!"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_attribute_id
+msgid "product attribute"
+msgstr "产品属性"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_attribute_value_id
+msgid "product attribute value"
+msgstr "产品属性值"
+
+#. module: sale_order_extend
+#: sql_constraint:sale.order.line:0
+msgid "product must be unique per order!"
+msgstr "一个订单中的某个产品只能唯一!"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_price_unit
+msgid "real time material price"
+msgstr "实时价格"
 
 #. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_real_time_price_unit
@@ -61,7 +126,22 @@ msgid "real time price unit"
 msgstr "实时单价(g)"
 
 #. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_order_id
+msgid "sale order"
+msgstr "销售订单"
+
+#. module: sale_order_extend
+#: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_material_price_line
+msgid "sale order material price"
+msgstr "销售订单材质价格"
+
+#. module: sale_order_extend
+#: model:ir.model,name:sale_order_extend.model_sale_order_material_price
+msgid "sale.order.material.price"
+msgstr "销售订单材质价格"
+
+#. module: sale_order_extend
 #: model:ir.model.fields,field_description:sale_order_extend.field_sale_order_line_weight_fee
 msgid "weight fee"
-msgstr "加工费"
+msgstr "基础工费"
 

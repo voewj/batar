@@ -12,7 +12,6 @@ class product_attribute_material_price(models.Model):
     _name = 'product.attribute.material.price'
     
     @api.one
-    @api.depends('ornament_price', 'material_price')
     @api.onchange('ornament_price', 'material_price')
     def _get_price_total(self):
         ''''''
@@ -27,12 +26,11 @@ class product_attribute_material_price(models.Model):
     
     _sql_constraints = [
         ('material_price', 'CHECK(material_price > 0.0)','material price must be greater than 0.0!'),
-        ('ornament_price', 'CHECK(ornament_price > 0.0)','ornament price must be greater than 0.0!'),
+        
     ]
 
     _defaults = {
-        'active':False,
-#         'attribute_id':  lambda self:self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1]
+        'active':True,
     }
     
     @api.multi
@@ -48,8 +46,10 @@ class product_attribute_material_price(models.Model):
     def create(self, vals):
         '''保存前使之前的价格无效'''
         
-        vals['active'] = True
-
+        material_price = vals.get('material_price',-1)
+        ornament_price = vals.get('ornament_price',-1)
+        if (material_price < 0) or (ornament_price < 0) :
+            raise UserError(_('material or ornament price must greater than 0'))
         attribute_value_id = vals.get('attribute_value_id',None)  
         
         if not attribute_value_id:

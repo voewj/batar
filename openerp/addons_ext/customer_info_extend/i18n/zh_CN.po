@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160321\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-19 09:07+0000\n"
-"PO-Revision-Date: 2016-04-19 09:07+0000\n"
+"POT-Creation-Date: 2016-04-23 08:44+0000\n"
+"PO-Revision-Date: 2016-04-23 08:44+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,10 +16,20 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: customer_info_extend
+#: model:ir.ui.view,arch_db:customer_info_extend.product_discount_form
+msgid "1.Priority: product series &gt; Product &gt; Product category &gt; all"
+msgstr "1.优先级: 产品 > 模号  > 产品分类 > 所有"
+
+#. module: customer_info_extend
+#: model:ir.ui.view,arch_db:customer_info_extend.product_discount_form
+msgid "2.Not setting the start end time will always be valid"
+msgstr "2.不设置开始结束时间将会一直有效"
+
+#. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_customer_ornament_price_create_uid
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_create_uid
 msgid "Created by"
-msgstr "创建者"
+msgstr "创建人"
 
 #. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_customer_ornament_price_create_date
@@ -64,6 +74,21 @@ msgid "active"
 msgstr "活动"
 
 #. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_additional_fee
+msgid "additional fee"
+msgstr "附加工费"
+
+#. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_additional_fee_discount
+msgid "additional fee discount"
+msgstr "附加工费优惠(金额)"
+
+#. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_additional_fee_discount_percent
+msgid "additional fee discount percent"
+msgstr "附加工费优惠(百分比)"
+
+#. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_applied_on
 msgid "applied on"
 msgstr "应用在"
@@ -98,6 +123,21 @@ msgid "customer.ornament.price"
 msgstr "客户饰品价"
 
 #. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_discount_amount
+msgid "discount amount"
+msgstr "优惠金额"
+
+#. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_is_percent
+msgid "discount depend on percent"
+msgstr "折扣优惠"
+
+#. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_discount_percent
+msgid "discount percent"
+msgstr "优惠折扣"
+
+#. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_date_end
 msgid "end date"
 msgstr "结束时间"
@@ -106,6 +146,11 @@ msgstr "结束时间"
 #: selection:product.discount,applied_on:0
 msgid "global"
 msgstr "全局"
+
+#. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_item_fee
+msgid "item fee"
+msgstr "件工费"
 
 #. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_item_fee_discount
@@ -128,6 +173,11 @@ msgid "min quantity"
 msgstr "最小数量"
 
 #. module: customer_info_extend
+#: sql_constraint:product.discount:0
+msgid "must be unique!"
+msgstr "编码必须唯一!"
+
+#. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_name
 msgid "name"
 msgstr "适用范围"
@@ -138,13 +188,30 @@ msgid "ornament price"
 msgstr "客户饰品价"
 
 #. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_ponderable
+msgid "ponderable"
+msgstr "可称量"
+
+#. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_customer_ornament_price_price_unit
+msgid "price unit"
+msgstr "差价(/g)"
+
+#. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_product_id
 #: selection:product.discount,applied_on:0
 msgid "product"
 msgstr "产品"
 
 #. module: customer_info_extend
+#: model:ir.model.fields,field_description:customer_info_extend.field_customer_ornament_price_attribute_id
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_attribute_id
+msgid "product attribute"
+msgstr "产品属性"
+
+#. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_customer_ornament_price_attribute_value_id
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_attribute_value_id
 msgid "product attribute value"
 msgstr "产品属性值"
 
@@ -187,17 +254,17 @@ msgid "system ornament price"
 msgstr "系统默认饰品价"
 
 #. module: customer_info_extend
-#: model:ir.ui.view,arch_db:customer_info_extend.customer_ornament_price_form
-msgid "system price value"
-msgstr "系统默认价格"
+#: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_weight_fee
+msgid "weight fee"
+msgstr "加工费"
 
 #. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_weight_fee_discount
 msgid "weight fee discount"
-msgstr "加工费优惠(金额)"
+msgstr "基础加工费优惠(金额)"
 
 #. module: customer_info_extend
 #: model:ir.model.fields,field_description:customer_info_extend.field_product_discount_weight_fee_discount_percent
 msgid "weight fee discount percent"
-msgstr "加工费优惠(百分比)"
+msgstr "基础加工费优惠(百分比)"
 

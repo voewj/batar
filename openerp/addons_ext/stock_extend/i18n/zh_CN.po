@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160321\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 08:20+0000\n"
-"PO-Revision-Date: 2016-03-22 08:20+0000\n"
+"POT-Creation-Date: 2016-04-25 11:05+0000\n"
+"PO-Revision-Date: 2016-04-25 11:05+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,16 +17,18 @@ msgstr ""
 
 #. module: stock_extend
 #: model:ir.model.fields,field_description:stock_extend.field_stock_move_item_fee
+#: model:ir.model.fields,field_description:stock_extend.field_stock_pack_operation_item_fee
 msgid "Item Fee"
 msgstr "单件附加费"
 
 #. module: stock_extend
-#: model:ir.ui.menu,name:stock_extend.stock_detail_menu_product_variant
-msgid "Product"
-msgstr "Product"
+#: model:ir.model,name:stock_extend.model_stock_pack_operation
+msgid "Packing Operation"
+msgstr "打包作业"
 
 #. module: stock_extend
 #: model:ir.model.fields,field_description:stock_extend.field_stock_move_standrad_weight
+#: model:ir.model.fields,field_description:stock_extend.field_stock_pack_operation_standrad_weight
 msgid "Standard Weight"
 msgstr "标准重量"
 
@@ -36,14 +38,21 @@ msgid "Stock Move"
 msgstr "库存调拨"
 
 #. module: stock_extend
-#: model:ir.model.fields,field_description:stock_extend.field_stock_move_all_weights
-msgid "all line weight"
-msgstr "重量小计"
+#: model:ir.model,name:stock_extend.model_stock_picking
+msgid "Transfer"
+msgstr "调拨"
 
 #. module: stock_extend
-#: model:ir.ui.view,arch_db:stock_extend.view_picking_form_modify
-msgid "move_lines_related"
-msgstr "move_lines_related"
+#: model:ir.model.fields,field_description:stock_extend.field_stock_move_additional_fee
+#: model:ir.model.fields,field_description:stock_extend.field_stock_pack_operation_additional_fee
+msgid "additional fee"
+msgstr "附加工费"
+
+#. module: stock_extend
+#: model:ir.model.fields,field_description:stock_extend.field_stock_move_all_weights
+#: model:ir.model.fields,field_description:stock_extend.field_stock_pack_operation_all_weights
+msgid "all line weight"
+msgstr "重量小计"
 
 #. module: stock_extend
 #: model:ir.model.fields,field_description:stock_extend.field_stock_move_ponderable
@@ -52,8 +61,14 @@ msgstr "可称量"
 
 #. module: stock_extend
 #: model:ir.model.fields,field_description:stock_extend.field_stock_move_real_time_price_unit
+#: model:ir.model.fields,field_description:stock_extend.field_stock_pack_operation_real_time_price_unit
 msgid "real time price unit"
-msgstr "实时单价(g)"
+msgstr "实时单价(/g)"
+
+#. module: stock_extend
+#: model:ir.model.fields,field_description:stock_extend.field_stock_picking_order_id
+msgid "sale order"
+msgstr "销售订单"
 
 #. module: stock_extend
 #: model:ir.model.fields,field_description:stock_extend.field_stock_move_order_line_id
@@ -61,7 +76,13 @@ msgid "sale order line"
 msgstr "订单明细"
 
 #. module: stock_extend
+#: model:ir.model.fields,field_description:stock_extend.field_stock_move_price_subtotal
+msgid "sub total"
+msgstr "小计"
+
+#. module: stock_extend
 #: model:ir.model.fields,field_description:stock_extend.field_stock_move_weight_fee
+#: model:ir.model.fields,field_description:stock_extend.field_stock_pack_operation_weight_fee
 msgid "weight fee"
-msgstr "加工费"
+msgstr "基础工费"
 

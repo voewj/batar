@@ -70,6 +70,6 @@
     </record>
     <!--record#action_batar_mass_product_expense[model=ir.actions.act_window].test>field[name=name]{batar.mass.product.expense.action}+field[name=res_model]{vatar.wer}-->
 
-    <menuitem id="menu_batar_mass_product_expense" name="Mass update expense" action="action_batar_mass_product_expense" sequence="10" parent="product_menu.left_prod_config_main"/>
+    <menuitem id="menu_batar_mass_product_expense" name="Mass update expense" action="action_batar_mass_product_expense" sequence="10" parent="product_menu.left_menu_product_products"/>
 
 </odoo>

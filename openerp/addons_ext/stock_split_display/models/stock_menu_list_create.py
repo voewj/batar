@@ -43,7 +43,7 @@ class stock_menu_list_create(models.Model):
     def action_auto_delete_warehouse_list(self):
         ''''''
         list = self.search([()])
-        print list
+        
     @api.multi
     def action_auto_create_warehouse_list(self):
         ''''''

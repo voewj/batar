@@ -12,10 +12,11 @@ class stock_move(models.Model):
 
     order_line_id = fields.Many2one(related='procurement_id.order_line_id',string='sale order line')
     real_time_price_unit = fields.Float(related='order_line_id.real_time_price_unit',string='real time price unit')
-    standrad_weight = fields.Float(related='product_id.standard_weight',string="Standard Weight")
-    all_weights = fields.Float(string='all line weight')
-    item_fee = fields.Float(string="Item Fee")
-    weight_fee = fields.Float(string="weight fee")
+    standrad_weight = fields.Float(related='order_line_id.standrad_weight',string="Standard Weight")
+    all_weights = fields.Float(related='order_line_id.all_weights',string='all line weight')
+    item_fee = fields.Float(related='order_line_id.item_fee',string="Item Fee")
+    weight_fee = fields.Float(related='order_line_id.weight_fee',string="weight fee")
+    additional_fee = fields.Float(related='order_line_id.additional_fee',string='additional fee') 
     ponderable = fields.Boolean(related='product_id.ponderable',string="ponderable")
     price_subtotal = fields.Float(realted='order_line_id.price_subtotal',string='sub total')
     

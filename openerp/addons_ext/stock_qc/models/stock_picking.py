@@ -38,8 +38,7 @@ class stock_quality_picking(models.Model):
         #调拨到金库
         location_qc = self.location_dest_id
         stock_picking_type_obj = self.env['stock.picking.type'].search([()])
-        print location_qc
-        print self
+        
         
     def do_new_transfer(self, cr, uid, ids, context=None):
         """"""

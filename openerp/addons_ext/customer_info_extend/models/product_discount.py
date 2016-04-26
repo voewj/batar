@@ -22,32 +22,53 @@ class product_discount(models.Model):
     date_start = fields.Date(string='start date')
     date_end = fields.Date(string='end date')
     min_quantity = fields.Float(string='min quantity',default=1.0)
+    
     item_fee = fields.Float(related='product_id.item_fee', string='item fee')
     weight_fee =fields.Float(related='product_id.weight_fee', string='weight fee')
+    additional_fee = fields.Float(string='additional fee') 
+    
     item_fee_discount = fields.Float(string='item fee discount')
     weight_fee_discount =fields.Float(string='weight fee discount')
-    item_fee_discount_percent = fields.Float(string='item fee discount percent')
-    weight_fee_discount_percent =fields.Float(string='weight fee discount percent')
+    additional_fee_discount = fields.Float(string='additional fee discount') 
+    
+    item_fee_discount_percent = fields.Integer(string='item fee discount percent')
+    weight_fee_discount_percent =fields.Integer(string='weight fee discount percent')
+    additional_fee_discount_percent = fields.Float(string='additional fee discount percent') 
+    
     is_percent = fields.Boolean(string='discount depend on percent')
     active = fields.Boolean(string='active')
+    attribute_value_id = fields.Many2one('product.attribute.value',string='product attribute value')
+    attribute_id = fields.Many2one('product.attribute',\
+                                   default= lambda self:self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1],string='product attribute')
+    ponderable = fields.Boolean(related='product_id.ponderable',string='ponderable')
+    discount_amount = fields.Float(string='discount amount')
+    discount_percent = fields.Integer(string='discount percent')
     
     _sql_constraints = [
-        ('uniq', 'unique(partner_id,categ_id,product_tmpl_id,product_id,active)', 'code must be unique!'), 
+        ('uniq', 'unique(partner_id,categ_id,product_tmpl_id,product_id,active)', 'must be unique!'), 
     ]
     
-    @api.onchange('product_id','item_fee_discount_percent','weight_fee_discount_percent')
+    @api.onchange('product_id','item_fee_discount_percent','weight_fee_discount_percent','additional_fee_discount_percent')
     def product_id_change(self):
         ''''''
         if self.product_id:
             self.item_fee = self.product_id.item_fee
             self.weight_fee = self.product_id.weight_fee
+            self.additional_fee = self.product_id.additional_fee
         if self.weight_fee_discount_percent:
-            if int(self.weight_fee_discount_percent*100) >=100 or  int(self.weight_fee_discount_percent*100) <1:
-                raise  UserError(_('weight fee discount percent range is [0,1]'))
+            if self.weight_fee_discount_percent >= 100 or  self.weight_fee_discount_percent < 0:
+                raise  UserError(_('weight fee discount percent range is [0,100)'))
         if self.item_fee_discount_percent:
-            if int(self.item_fee_discount_percent*100) >=100 or  int(self.item_fee_discount_percent*100) <1:
-                raise  UserError(_('item fee discount percent range is [0,1]'))
-
+            if self.item_fee_discount_percent >= 100 or  self.item_fee_discount_percent < 0:
+                raise  UserError(_('item fee discount percent range is [0,100)'))
+        if self.additional_fee_discount_percent:
+            if self.additional_fee_discount_percent >= 100 or  self.additional_fee_discount_percent < 0:
+                raise  UserError(_('additional fee discount percent range is [0,100)'))
+    
+    @api.multi
+    def cancel_discount(self):
+        '''取消优惠'''
+        self.write({'active':False})
     
     @api.model
     def create(self, vals):

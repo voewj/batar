@@ -27,7 +27,8 @@
         
         'views/purchase_order.xml',
         'views/stock_warehouse.xml',
-        'views/stock_qc.xml',
+#         'views/stock_qc.xml',
+        'views/stock_quanlity_check.xml',
       
     ],
     # only loaded in demonstration mode

@@ -8,30 +8,34 @@
 	        <field name="arch" type="xml">
 		        <data>
 		            <xpath expr="//field[@name='partner_id']" position="attributes">
-		                <attribute name="domain">[('is_company','=',True)]</attribute>
+		                <attribute name="domain">[('is_company','=',True),('customer','=',True)]</attribute>
 		                <attribute name="options">{'no_create':True,'no_open':True}</attribute>
 		            </xpath>
 					<xpath expr="//notebook/page/field[@name='order_line']/tree//field[@name='product_id']" position="attributes">
 						<attribute name="options">{'no_create':True,'no_open':True}</attribute>
 					</xpath>
-	        	   	<xpath expr="//notebook/page/field[@name='order_line']/form/group/group//field[@name='product_id']" position="after">
-	        	   	    <field name="item_fee"></field>
-	        	   	    <field name="standrad_weight"></field>
-	        	   	    <field name="sale_price"></field>
-	        	   	</xpath>
-
 	        	   	<xpath expr="//tree/field[@name='name']" position="attributes">
 	        	   	    <attribute name="invisible">1</attribute>
 	        	    </xpath>
 	        	    <xpath expr="//tree/field[@name='price_unit']" position="after">
-	        	        <field name='weight_fee'/>
-	        	        <field name="item_fee"></field>
-	    	            <field name="standrad_weight"></field>
-	        	        <field name="sale_price" required='1'/>  
+	        	        <field name='weight_fee' widget="monetary"/>
+	        	        <field name="item_fee" widget="monetary"/>
+	    	            <field name="standrad_weight"/>
+	        	        <field name="additional_fee"/>
 	        	        <field name='all_weights' readonly='1' placeholder="input wait for weighing"/>
 	        	    </xpath>
 	        	    <xpath expr="//tree/field[@name='price_unit']" position="attributes">
 	        	       <attribute name="invisible">1</attribute>
+	        	    </xpath>
+	        	    <xpath expr="//notebook/page[last()]" position="after">
+	        	        <page string="customer ornament price">
+	        	        	<field name="material_price_line">
+	        	        		<tree string="customer ornament price" editable="bottom">
+	        	        			<field name="attribute_value_id" readonly='1'/>
+	        	        			<field name="price_unit" widget="monetary"/>
+	        	        		</tree>
+	        	        	</field>
+	        	        </page>
 	        	    </xpath>
         	    </data>
 	        </field>
