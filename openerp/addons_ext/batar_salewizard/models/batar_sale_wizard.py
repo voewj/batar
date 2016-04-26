@@ -6,10 +6,10 @@ _logger = logging.getLogger(__name__)
 class Sale_orderWiard(models.TransientModel):
     _name = 'batar.sale.wizard'
 
-    product_id = fields.Many2one('product.template', string='产品类别')
-    sale_line = fields.Many2many('sale.order.line', string='已选产品')
+    product_id = fields.Many2one('product.template', string='Product template')
+    sale_line = fields.Many2many('sale.order.line', string='Added Product')
     test = fields.Integer(string="Test", default=1)
-    attribute_value_ids = fields.Many2many('product.attribute.value', string='属性')
+    attribute_value_ids = fields.Many2many('product.attribute.value', string='Arribute value')
 
     @api.onchange('product_id')
     def attribute_value_onchange(self):
@@ -51,7 +51,7 @@ class Sale_orderWiard(models.TransientModel):
     def confirm_attribute(self):
         self.ensure_one()
         if not self.product_id:
-            raise exceptions.ValidationError('未选择产品种类！')
+            raise exceptions.ValidationError('no product template！')
 #        elif self.sale_line:
 #            if self.sale_line[0].product_id.product_tmpl_id == self.product_id:
 #                raise exceptions.ValidationError('已添加该类产品！')

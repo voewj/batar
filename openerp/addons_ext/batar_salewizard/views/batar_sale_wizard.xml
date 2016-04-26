@@ -28,7 +28,7 @@
                     </group>
                     -->
                     <div class="oe_right">
-                        <button name="confirm_attribute" string="添加" type="object" class="oe_highlight"/>
+                        <button name="confirm_attribute" string="Add" type="object" class="oe_highlight"/>
                     </div>
 
                     <field name="sale_line">
@@ -44,7 +44,7 @@
                         <!--
                         <button name="next_choose_product" type="object" string="继续挑选" />
                         -->
-                        <button name="confirm" string="确认" type="object" class="oe_highlight"/>
+                        <button name="confirm" string="Confirm" type="object" class="oe_highlight"/>
                         <button name="cancel" string="Cancel" type="object"/>
                         <!--
                         <button special="cancel" string="取消"/>
@@ -67,7 +67,7 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='action_cancel']" position="after">
-                    <button name="batar_salewizard.action_batar_sale_wizard" type="action" string="批量产品"/>
+                    <button name="batar_salewizard.action_batar_sale_wizard" type="action" string="Multi Product"/>
                 </xpath>
             </field>
         </record>

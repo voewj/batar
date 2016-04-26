@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': '尚金缘存欠支付',
+    'name': 'Batar payment',
     'author': 'Xiao',
     'description': """
-    统计客户存欠信息。以客户存欠信息抵扣销售收款。
+    AU payment
     """,
     'depends': ['base', 'account', 'product', 'sale'],
     'data': [

@@ -36,8 +36,8 @@ class Batar_sale_Order(models.Model):
                       })
 
 
-    lailiao_payment = fields.Boolean(string="存欠支付", default=True, help="使用客户在我司回料进行抵扣", readonly=True, states={'draft': [('readonly', False)]})
-    lailiao_total = fields.Float(string="现有存料", compute=_get_customer_lailiao_total, help="正数为有存料，负数为有欠料")
+    lailiao_payment = fields.Boolean(string="Batar payment", default=True, help="deduction lailiao", readonly=True, states={'draft': [('readonly', False)]})
+    lailiao_total = fields.Float(string="lailiao total", compute=_get_customer_lailiao_total, help="Positive for material stock, negative to owe")
 
 
 
@@ -108,10 +108,10 @@ class Batar_sale_order_line(models.Model):
                 })
 
 
-    price_process = fields.Float(string='基础工费', related='product_id.process_cost', default=0.0)
-    cost_total = fields.Float(string='工费总和', digits=dp.get_precision('Product Price'), compute=_compute_cost_total)
-    cost_subtotal = fields.Float(string='总和', digits=dp.get_precision('Product Price'), compute=_compute_cost_total)
-    cost_tax = fields.Float(string='工费税总和', digits=dp.get_precision('Product Price'), compute=_compute_cost_total)
+    price_process = fields.Float(string='Base cost', related='product_id.process_cost', default=0.0)
+    cost_total = fields.Float(string='cost total', digits=dp.get_precision('Product Price'), compute=_compute_cost_total)
+    cost_subtotal = fields.Float(string='Cost subtotal', digits=dp.get_precision('Product Price'), compute=_compute_cost_total)
+    cost_tax = fields.Float(string='Cost tax', digits=dp.get_precision('Product Price'), compute=_compute_cost_total)
     lailiao_payment = fields.Boolean(related='order_id.lailiao_payment', readonly=True)
 
 

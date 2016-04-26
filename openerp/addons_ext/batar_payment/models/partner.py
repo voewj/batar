@@ -15,8 +15,8 @@ class Partner(models.Model):
                 partner.compute_total = total
             return True
 
-    lailiao = fields.Boolean(string='来料', default=False)
-    lailiao_account = fields.Many2one('account.account', string="来料科目")
+    lailiao = fields.Boolean(string='Lailiao', default=False)
+    lailiao_account = fields.Many2one('account.account', string="Lailiao account")
     compute_total = fields.Float(compute=_compute_total, digits=dp.get_precision('Lai liao'))
 
 #    @api.model

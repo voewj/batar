@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='internal_notes']" position="before">
-                    <page string="尚金缘">
+                    <page string="Batar">
                         <group>
                             <group>
                                 <field name="lailiao"/>
@@ -21,7 +21,7 @@
                 <xpath expr="//div[@name='button_box']" position="inside">
                     <button class="oe_stat_button" type="action" name="%(batar_payment.action_batar_lailiao)d" icon="fa-hourglass-half"
                     context="{'search_default_partner_id': active_id, 'default_partner_id': active_id}">
-                        <field string="存欠" name="compute_total" widget="statinfo" />
+                        <field string="Batar payment" name="compute_total" widget="statinfo" />
                     </button>
                 </xpath>
             </field>
