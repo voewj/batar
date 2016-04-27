@@ -115,10 +115,10 @@ class sale_order_line(models.Model):
             #获得工费信息
             #如果对客户的具体产品进行设置
             #搜索条件：优惠有效，具体的产品
-            product_discount_first = self.env['product.discount'].search([('product_id','=',self.product_id.id),('active','=',True)])
-            product_discount_second = self.env['product.discount'].search([('attribute_value_id','=',material_value_id),('product_tmpl_id','=',self.product_id.product_tmpl_id.id),('active','=',True)])
-            product_discount_third = self.env['product.discount'].search([('categ_id','=',self.product_id.categ_id.id),('active','=',True)])
-            product_discount_fourth = self.env['product.discount'].search([('applied_on','=','3_global'),('active','=',True)])
+            product_discount_first = self.env['product.discount'].search([('partner_id','=',self.order_id.partner_id),('product_id','=',self.product_id.id),('active','=',True)])
+            product_discount_second = self.env['product.discount'].search([('partner_id','=',self.order_id.partner_id),('attribute_value_id','=',material_value_id),('product_tmpl_id','=',self.product_id.product_tmpl_id.id),('active','=',True)])
+            product_discount_third = self.env['product.discount'].search([('partner_id','=',self.order_id.partner_id),('categ_id','=',self.product_id.categ_id.id),('active','=',True)])
+            product_discount_fourth = self.env['product.discount'].search([('partner_id','=',self.order_id.partner_id),('applied_on','=','3_global'),('active','=',True)])
 
             #如果有产品系列优惠
             if product_discount_first:
