@@ -22,5 +22,5 @@ class stock_picking(models.Model):
                 vals['order_id'] = sale_obj.id
             purchase_obj = self.env['purchase.order'].search([('name','=',origin)])
             if purchase_obj:
-                vals['order_id'] = purchase_obj.id
+                vals['purchase_id'] = purchase_obj.id
         return super(stock_picking,self).create(vals)
