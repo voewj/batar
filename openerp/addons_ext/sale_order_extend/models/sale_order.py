@@ -43,7 +43,10 @@ class sale_order(models.Model):
             self.material_price_line = material_price_line
             
             
-                
+    @api.multi
+    def write(self, vals):
+        print vals
+        return super(sale_order,self).write( vals)      
                 
             
             
