@@ -136,7 +136,7 @@ msgstr "基础工费?"
 #. module: batar_product_cart
 #: model:ir.actions.act_window,name:batar_product_cart.action_batar_product_cart
 msgid "action.batar.product.cart"
-msgstr "action.batar.product.cart"
+msgstr "选货"
 
 #. module: batar_product_cart
 #: model:ir.model,name:batar_product_cart.model_batar_product_cart

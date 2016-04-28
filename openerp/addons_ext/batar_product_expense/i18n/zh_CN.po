@@ -143,7 +143,7 @@ msgstr "基础工费?"
 #. module: batar_product_expense
 #: model:ir.actions.act_window,name:batar_product_expense.action_batar_mass_product_expense
 msgid "batar.mass.product.expense.action"
-msgstr "batar.mass.product.expense.action"
+msgstr "批量修改工费"
 
 #. module: batar_product_expense
 #: model:ir.model,name:batar_product_expense.model_batar_product_expense
