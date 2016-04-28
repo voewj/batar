@@ -56,6 +56,6 @@ class sale_order_material_price(models.Model):
                                    default= lambda self:self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1],string='product attribute')
     price_unit = fields.Float(string='real time material price')
     _sql_constraints = [
-        ('unique', '(order_id, attribute_value_id)','one order attribute value must unique!'),
+        ('unique', 'unique(order_id, attribute_value_id)','one order attribute value must unique!'),
     ]
 
