@@ -10,6 +10,7 @@ from openerp.tools import DEFAULT_SERVER_DATE_FORMAT as DATE_FORMAT
 import time
 from openerp.addons.product.product import produce_price_history
 from openerp.addons_ext.customer_info_extend.models.product_discount import product_discount
+from pychart.chart_data import fwrite_csv
 
 class sale_order_line(models.Model):
     _inherit = "sale.order.line"
@@ -35,14 +36,16 @@ class sale_order_line(models.Model):
     _sql_constraints = [
         ('order_line_product', 'unique(product_id, order_id)', 'product must be unique per order!'),
     ]
-    
-    
-            
+      
     defaults = {
         'picking_policy':'one',
         'all_weights':0,
     }
     
+    @api.multi
+    def write(self, vals):
+        print 'sale_order_line:',vals
+        return super(sale_order_line,self).write( vals)
     def _time_vaild(self,time_stamp=int(time.time()),product_discount_obj=None):
         '''判断时间是否有效'''
         if product_discount_obj is None:
@@ -147,12 +150,14 @@ class sale_order_line(models.Model):
                 self.item_fee = self.product_id.item_fee
             
         
-       
-    @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id','all_weights')
+    
+    @api.onchange('product_uom_qty', 'tax_id','all_weights','standrad_weight')            
+    @api.depends('product_uom_qty', 'tax_id','all_weights','standrad_weight')
     def _compute_amount(self):
         """
         Compute the amounts of the SO line.
         """
+      
         for line in self:
             price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)  
             weight_fee = line.additional_fee+line.weight_fee
@@ -161,9 +166,10 @@ class sale_order_line(models.Model):
                                              real_time_price_unit=line.real_time_price_unit,item_fee=line.item_fee,\
                                              weight_fee=weight_fee, standrad_weight=line.standrad_weight,all_weights=line.all_weights)
             
-            line.update({
+            values = {
                 'price_tax': taxes['total_included'] - taxes['total_excluded'],
                 'price_total': taxes['total_included'],
                 'price_subtotal': taxes['total_excluded'],
-            })
+            }
+            line.update(values)
             
