@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* batar_salewizard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160321\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-28 01:00+0000\n"
+"PO-Revision-Date: 2016-04-28 01:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: batar_salewizard
+#: model:ir.ui.view,arch_db:batar_salewizard.batar_sale_wizard
+msgid "Add"
+msgstr "添加"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_sale_line
+msgid "Added Product"
+msgstr "已加产品"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_attribute_value_ids
+msgid "Arribute value"
+msgstr "产品属性"
+
+#. module: batar_salewizard
+#: model:ir.actions.act_window,name:batar_salewizard.action_batar_sale_wizard
+msgid "Batar Sale Wizard"
+msgstr "批量下单"
+
+#. module: batar_salewizard
+#: model:ir.ui.view,arch_db:batar_salewizard.batar_sale_wizard
+msgid "Cancel"
+msgstr "取消"
+
+#. module: batar_salewizard
+#: model:ir.ui.view,arch_db:batar_salewizard.batar_sale_wizard
+msgid "Confirm"
+msgstr "确定"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_create_date
+msgid "Created on"
+msgstr "创建在"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_id
+msgid "ID"
+msgstr "标识"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard___last_update
+msgid "Last Modified on"
+msgstr "最后修改日期"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_write_uid
+msgid "Last Updated by"
+msgstr "最近更新被"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_write_date
+msgid "Last Updated on"
+msgstr "最近更新在"
+
+#. module: batar_salewizard
+#: model:ir.ui.view,arch_db:batar_salewizard.batar_wizard_sale_order_form
+msgid "Multi Product"
+msgstr "批量产品"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_product_id
+msgid "Product template"
+msgstr "产品类别"
+
+#. module: batar_salewizard
+#: model:ir.model.fields,field_description:batar_salewizard.field_batar_sale_wizard_test
+msgid "Test"
+msgstr "Test"
+
+#. module: batar_salewizard
+#: model:ir.model,name:batar_salewizard.model_batar_sale_wizard
+msgid "batar.sale.wizard"
+msgstr "batar.sale.wizard"
+
+#. module: batar_salewizard
+#: model:ir.model,name:batar_salewizard.model_product_attribute_value
+msgid "product.attribute.value"
+msgstr "product.attribute.value"
+

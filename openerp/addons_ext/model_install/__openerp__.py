@@ -27,7 +27,8 @@
                 'product_menu','customer_extend','customer_import','sale_order_extend','product_info_extend',
                 'procurement_order','product_import','stock_extend','stock_import',
                 'multi_warehouse_management','recycling_warehouse','stock_split_display','stock_qc',
-                'purchase_extend','customer_info_extend','batar_salewizard','batar_product_expense'
+                'purchase_extend','customer_info_extend','batar_salewizard','batar_product_expense','batar_payment','batar_product_cart',
+                'batar_bi',
 #                 'account_extend',
                 ],
 

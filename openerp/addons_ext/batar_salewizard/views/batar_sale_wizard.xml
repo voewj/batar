@@ -11,7 +11,7 @@
                             <field name="product_id" options="{'no_create': True}"/>
                         </group>
                         <group>
-                            <field name="test"/>
+                            <!--<field name="test"/>-->
                         </group>
                     </group>
                     <group>

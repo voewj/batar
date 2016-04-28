@@ -1,30 +1,32 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* batar_payment
+# 	* batar_payment
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20160321\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-26 01:37+0000\n"
-"PO-Revision-Date: 2016-04-26 01:37+0000\n"
+"PO-Revision-Date: 2016-04-28 08:55+0800\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_batar_lailiao_assay
 msgid "Assay"
-msgstr "Assay"
+msgstr "成色"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_product_template_process_cost
 #: model:ir.model.fields,field_description:batar_payment.field_sale_order_line_price_process
 msgid "Base cost"
-msgstr "Base cost"
+msgstr "基础工费"
 
 #. module: batar_payment
 #: model:ir.ui.view,arch_db:batar_payment.view_partner_batar_form
@@ -37,12 +39,12 @@ msgstr "Batar"
 #: model:ir.ui.menu,name:batar_payment.menu_batar
 #: model:ir.ui.view,arch_db:batar_payment.view_partner_batar_form
 msgid "Batar payment"
-msgstr "Batar payment"
+msgstr "存欠支付"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_res_partner_compute_total
 msgid "Compute total"
-msgstr "Compute total"
+msgstr "计算总和"
 
 #. module: batar_payment
 #: model:ir.ui.view,arch_db:batar_payment.view_batar_lailiao_form
@@ -52,12 +54,12 @@ msgstr "确认"
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_sale_order_line_cost_subtotal
 msgid "Cost subtotal"
-msgstr "Cost subtotal"
+msgstr "工费小计"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_sale_order_line_cost_tax
 msgid "Cost tax"
-msgstr "Cost tax"
+msgstr "工费税费"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_batar_lailiao_create_uid
@@ -99,23 +101,23 @@ msgstr "显示名称"
 #. module: batar_payment
 #: selection:batar.lailiao,state:0
 msgid "Done"
-msgstr "Done"
+msgstr "完成"
 
 #. module: batar_payment
 #: selection:batar.lailiao,state:0
 msgid "Draft"
-msgstr "Draft"
+msgstr "草稿"
 
 #. module: batar_payment
 #: model:ir.model.fields,help:batar_payment.field_product_template_process_cost
 #: model:ir.model.fields,help:batar_payment.field_sale_order_line_price_process
 msgid "Each product basic processing fee"
-msgstr "Each product basic processing fee"
+msgstr "每个产品的基本工费"
 
 #. module: batar_payment
 #: model:ir.ui.view,arch_db:batar_payment.view_batar_lailiao_search
 msgid "Groupby"
-msgstr "Groupby"
+msgstr "分组"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_batar_lailiao_id
@@ -126,18 +128,18 @@ msgstr "标识"
 #: model:ir.model.fields,field_description:batar_payment.field_res_partner_lailiao
 #: model:ir.ui.menu,name:batar_payment.menu_batar_lailiao
 msgid "Lailiao"
-msgstr "Lailiao"
+msgstr "来料"
 
 #. module: batar_payment
 #: model:ir.actions.act_window,name:batar_payment.action_batar_lailiao
 #: model:ir.ui.menu,name:batar_payment.menu_lailiao
 msgid "Lailiao Order"
-msgstr "Lailiao Order"
+msgstr "存欠单"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_res_partner_lailiao_account
 msgid "Lailiao account"
-msgstr "Lailiao account"
+msgstr "存欠科目"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_batar_lailiao___last_update
@@ -167,7 +169,7 @@ msgstr "业务伙伴"
 #. module: batar_payment
 #: model:ir.model.fields,help:batar_payment.field_sale_order_lailiao_total
 msgid "Positive for material stock, negative to owe"
-msgstr "Positive for material stock, negative to owe"
+msgstr "正数为有存料，负数为欠料"
 
 #. module: batar_payment
 #: model:ir.model,name:batar_payment.model_product_template
@@ -177,12 +179,12 @@ msgstr "产品模板"
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_batar_lailiao_weight
 msgid "R-weight"
-msgstr "R-weight"
+msgstr "原重"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_batar_lailiao_sale_id
 msgid "Reference Oder"
-msgstr "Reference Oder"
+msgstr "关联单据"
 
 #. module: batar_payment
 #: model:ir.model,name:batar_payment.model_sale_order
@@ -207,16 +209,15 @@ msgstr "batar.lailiao"
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_sale_order_line_cost_total
 msgid "cost total"
-msgstr "cost total"
+msgstr "工费总计"
 
 #. module: batar_payment
 #: model:ir.model.fields,help:batar_payment.field_sale_order_lailiao_payment
 #: model:ir.model.fields,help:batar_payment.field_sale_order_line_lailiao_payment
 msgid "deduction lailiao"
-msgstr "deduction lailiao"
+msgstr "抵扣来料"
 
 #. module: batar_payment
 #: model:ir.model.fields,field_description:batar_payment.field_sale_order_lailiao_total
 msgid "lailiao total"
-msgstr "lailiao total"
-
+msgstr "存欠总计"
