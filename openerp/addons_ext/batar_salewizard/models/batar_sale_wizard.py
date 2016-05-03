@@ -74,7 +74,7 @@ class Sale_orderWiard(models.TransientModel):
                                                  'order_id': order.id,
                                                  'name': name,
                                                  'price_unit': 0.0,
-                                                 'product_uom_qty': 1.0,
+                                                 'product_uom_qty': p.standard_weight,
                                                  'product_uom': p.uom_id.id,
 
                                                  })
