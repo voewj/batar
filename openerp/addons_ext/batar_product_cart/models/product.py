@@ -12,10 +12,10 @@ class product_product(models.Model):
         cart = self.env['batar.product.cart']
         vals = {}
         carts = cart.search([])
-        if len(carts):
-            for c in carts:
-                if c.product_id.id == self.id:
-                    raise exceptions.ValidationError('Added!')
-        else:
-            vals['product_id'] = self.id
+        # if len(carts):
+        for c in carts:
+            if c.product_id.id == self.id:
+                raise exceptions.ValidationError('Added!')
+        # else:
+        vals['product_id'] = self.id
         return cart.create(vals)
