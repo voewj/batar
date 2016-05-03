@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "stock_product_detail",
+    'name': "batar_account",
 
     'summary': """
-        对产品的具体位置进行管理""",
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        对产品的具体位置进行管理
+        Long description of module's purpose
     """,
 
     'author': "cloudy",
@@ -19,16 +20,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','stock'],
+    'depends': ['base','account'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/stock_location_detail.xml',
-       
+       'views/account_product_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-       
+    
     ],
 }

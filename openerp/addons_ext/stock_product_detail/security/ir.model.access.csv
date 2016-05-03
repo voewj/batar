@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_stock_product_detail_stock_product_detail,stock_product_detail.stock_product_detail,model_stock_product_detail_stock_product_detail,,1,0,0,0
