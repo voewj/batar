@@ -29,12 +29,13 @@ class stock_import(osv.osv_memory):
     def apply(self, cr, uid, ids, context=None):
         '''将库存盘点数据导入到系统中'''
         wizard = self.browse(cr, uid, ids[0], context)
+        print wizard.file
         exceObj = ImportExcelFile(wizard.file)
         data = exceObj.readFile()
         stock_obj = self.pool.get('stock.inventory')
         stock_line_obj = self.pool.get('stock.inventory.line')
         stock_data = data['data']
-        name = wizard.name
+        name =""
         location_id = wizard.location_id.id
         val = {
             'name':name,

@@ -9,7 +9,7 @@
 	    	        <group>
 	    	        	<group>
 	    	        		<field name="file" required="1"></field>
-	    	        		<field name="action" required="1" readonly="1"></field>
+	    	        		
 	    	        	</group>
 	    	        </group>
 	    	        <footer>

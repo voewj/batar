@@ -21,7 +21,13 @@ class customer_ornament_price(models.Model):
         ''''''
         self.price_unit = self.material_price+self.ornament_price
         
-        
+    
+    @api.depends('material_price','sys_ornament_price','ornament_price')
+    def _get_price_discount(self):
+        '''获得饰品优惠信息'''
+        self.price_discount = self.sys_ornament_price - self.ornament_price
+        if self.price_discount < 0:
+            self.price_discount = 0
     partner_id = fields.Many2one('res.partner',string='customer')
     active = fields.Boolean(string='active')
     attribute_value_id = fields.Many2one('product.attribute.value',string='product attribute value')
@@ -31,6 +37,7 @@ class customer_ornament_price(models.Model):
     sys_ornament_price = fields.Float(string='system ornament price')
     ornament_price = fields.Float(string='ornament price')
     price_unit = fields.Float(compute='_get_price_uint',string='price unit')
+    price_discount = fields.Float(compute='_get_price_discount',string='price discount')
     
     
     @api.onchange('attribute_value_id')

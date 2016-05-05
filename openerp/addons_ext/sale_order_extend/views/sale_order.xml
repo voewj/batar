@@ -32,6 +32,7 @@
 	        	        	<field name="material_price_line">
 	        	        		<tree string="customer ornament price" editable="bottom">
 	        	        			<field name="attribute_value_id" readonly='1'/>
+	        	        			<field name="price_discount"/>
 	        	        			<field name="price_unit" widget="monetary"/>
 	        	        		</tree>
 	        	        	</field>

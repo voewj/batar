@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "purchase_extend",
+    'name': "batar_delivery_bill",
 
     'summary': """
-        采购单改进""",
+        送货单""",
 
     'description': """
-        采购单改进，限制客户只能为公司
+        Long description of module's purpose
     """,
 
     'author': "cloudy",
@@ -15,20 +15,22 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'batar',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','purchase'],
+    'depends': ['base','product','purchase'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/product_template.xml',
-       'views/purchase_order.xml',
+        'views/delivery_bill_view.xml',
+        'wizard/delivery_bill_import.xml',
+        
+         
     ],
     # only loaded in demonstration mode
     'demo': [
-      
+         
     ],
 }

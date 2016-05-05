@@ -26,6 +26,7 @@
         # 'security/ir.model.access.csv',
         'views/multi_product_attribute.xml',
         'data/product_attribute_init.xml',
+        'views/product_product.xml',
         'views/product_template.xml',
         'views/product_attribute.xml',
         'views/product_attribute_price.xml',
