@@ -52,7 +52,11 @@
 	    	            <attribute name="options">{'no_create':True,'no_open':True}</attribute>
 	    	            <attribute name="attrs">{'readonly':True}</attribute>
 	    	        </xpath>
+	    	        <xpath expr="//notebook/page//field[@name='pack_operation_product_ids']/tree[@editable='bottom']" position="attributes">
+	    	             <attribute name="create">false</attribute>
+	    	        </xpath>
 	    	        <xpath expr="//notebook/page//field[@name='pack_operation_product_ids']/tree[@editable='bottom']//field[@name='location_dest_id']" position="after">
+	    	            
 	    	            <field name="standrad_weight" readonly='1'/>
 	    	            <field name="weight_fee" readonly='1'/>
 	    	            <field name="additional_fee" readonly='1'/>
