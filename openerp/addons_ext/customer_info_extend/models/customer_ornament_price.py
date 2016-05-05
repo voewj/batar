@@ -49,10 +49,11 @@ class customer_ornament_price(models.Model):
     @api.model
     def create(self, vals):
         vals['active'] = True
+        partner_id = vals.get('partner_id',None)
         attribute_value_id = vals.get('attribute_value_id',None)  
         if not attribute_value_id:
             raise UserError(_('attribute value invalid'))
-        records = self.env['customer.ornament.price'].search([('partner_id','=',self.partner_id.id),('active','=',True),('attribute_value_id','=',attribute_value_id)])
+        records = self.env['customer.ornament.price'].search([('partner_id','=',partner_id),('active','=',True),('attribute_value_id','=',attribute_value_id)])
         obj = self.env['product.attribute.material.price'].search([('active','=',True),('attribute_value_id','=',attribute_value_id)])
         if obj:
             vals['material_price'] = obj.material_price

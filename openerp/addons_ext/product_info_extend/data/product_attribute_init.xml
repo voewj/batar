@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <openerp>
 	<data>
+	     <record id="product.product_category_all" model="product.category">
+            <field name="name">所有</field>
+        </record>
 	    <record id="product_attribute_material" model="product.attribute">
 	    	<field name="name">材质</field>
 	    	<field name="sequence">1</field>

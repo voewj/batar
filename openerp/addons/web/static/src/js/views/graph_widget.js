@@ -231,8 +231,8 @@ return Widget.extend({
     display_line: function () {
         if (this.data.length < 2) {
             this.$el.append(QWeb.render('GraphView.error', {
-                title: _t("Not enough data points"),
-                description: "You need at least two data points to display a line chart."
+                title: _t("Not enough data points!"),
+                description: "You need at least two data points to display a line chart!"
             }));
             return;
         }

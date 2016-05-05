@@ -9,8 +9,10 @@ openerp.batar_bi = function(instance, local){
 
             var chart;
             var data;
-            var model = new instance.web.Model('xiao.test.graph');
-            model.call('get_bi_data', {context: new instance.web.CompoundContext()}).then(function(result){
+            var model = new instance.web.Model('batar.bi');
+            model.call('get_product_bi_data', {context: new instance.web.CompoundContext()}).then(function(result){
+//            var model = new instance.web.Model('xiao.test.graph');
+//            model.call('get_bi_data', {context: new instance.web.CompoundContext()}).then(function(result){
                 nv.addGraph(function() {
                     chart = nv.models.lineChart()
                         .options({
@@ -24,6 +26,7 @@ openerp.batar_bi = function(instance, local){
                     chart.xAxis
                         .axisLabel("Time (s)")
                         .tickFormat(function(d) { return d3.time.format("%x %X")(new Date(d)); })
+                        .ticks(d3.time.minutes, 1)
 //                        .tickValues([1,2,3])
 
 //                        .tickFormat(d3.time.format(',.1f'))
