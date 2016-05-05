@@ -68,6 +68,7 @@
 	    	<field name="model">delivery.bill</field>
 	    	<field name="arch" type="xml">
 	    	    <tree string="delivery bill">
+	    	        
 	    	        <field name="name"></field>
 	    	        <field name="purchase_number"></field>
 	    	        <field name="partner_id"></field>
