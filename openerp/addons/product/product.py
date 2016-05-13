@@ -3,6 +3,7 @@
 
 import re
 import time
+import datetime
 
 import openerp
 from openerp import api, tools, SUPERUSER_ID
@@ -15,6 +16,9 @@ import openerp.addons.decimal_precision as dp
 from openerp.tools.float_utils import float_round, float_compare
 from openerp.exceptions import UserError
 from openerp.exceptions import except_orm
+
+import logging
+_logger = logging.getLogger(__name__)
 
 #----------------------------------------------------------
 # UOM
@@ -667,12 +671,16 @@ class product_template(osv.osv):
 
             # create new product
             for variant_ids in all_variants:
+                s = datetime.datetime.now()
                 values = {
                     'product_tmpl_id': tmpl_id.id,
                     'attribute_value_ids': [(6, 0, variant_ids)]
                 }
                 id = product_obj.create(cr, uid, values, context=ctx)
                 variants_active_ids.append(id)
+                e = datetime.datetime.now()
+                i = (e - s).seconds
+                _logger.info("Add %s product,cost: %d", id,i)
 
             # unlink or inactive product
             for variant_id in map(int,variants_inactive):

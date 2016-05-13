@@ -23,12 +23,14 @@ openerp.batar_bi = function(instance, local){
                         })
                     ;
                     // chart sub-models (ie. xAxis, yAxis, etc) when accessed directly, return themselves, not the parent chart, so need to chain separately
+
+
+
                     chart.xAxis
                         .axisLabel("Time (s)")
                         .tickFormat(function(d) { return d3.time.format("%x %X")(new Date(d)); })
-                        .ticks(d3.time.minutes, 1)
-//                        .tickValues([1,2,3])
-
+                        .tickValues([1451606400000,1483228799000])
+//                        .tickValues([])
 //                        .tickFormat(d3.time.format(',.1f'))
                         .staggerLabels(true)
                     ;
