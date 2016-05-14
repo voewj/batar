@@ -4,10 +4,10 @@ Created on 2016年2月25日
 
 @author: cloudy
 '''
-from openerp import fields,models,api
+from openerp import fields,models,api,_
+from openerp.exceptions import UserError
 import re
-import datetime
-code_format = "%Y%m%d%H%M%S"
+
 
 class product_template(models.Model):
     _inherit = 'product.template'
@@ -32,7 +32,9 @@ class prdouct_product(models.Model):
         'type': "product",
         'ponderable':True,
     }
-    
+    _sql_constraints = [
+        ('default_uniq', 'unique(default_code)', 'default_code must be unique!'),
+    ]
     @api.multi
     def _compute_sale_price(self):
         '''根据不同类型的产品显示显示销售价格'''
@@ -44,30 +46,42 @@ class prdouct_product(models.Model):
                 line.sale_price = "%s/件" % line.list_price
     @api.model
     def create(self, vals):
+        product_tmpl_id = vals.get('product_tmpl_id',None)
+        if not product_tmpl_id:
+            raise UserError(_("Must set the product template before create product")) 
+        tmplObj = self.env['product.template'].search([('id','=',product_tmpl_id)])
         attribute_value_ids = vals.get('attribute_value_ids',[])
-        material = 0
-        style = 0
-        model = 0
-        norms_list = []
+
+        #下面3个list用于生成编码
+        firstCode =None
+        SecondCode = {}
+        thirdCode=''
+        default_code=''
         if attribute_value_ids:
+            material=self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1]
             attribute_value_ids = attribute_value_ids[0][2]
             value_objs = self.env['product.attribute.value'].search([('id','in',attribute_value_ids)])
             for line in value_objs:
                 if line.attribute_id.code == 'material':
-                    material = line.sequence
-                elif line.attribute_id.code == 'style':
-                    style = line.sequence
-                elif line.attribute_id.code == 'model':
-                    model = line.sequence
+                    firstCode = line.sequence
+                elif line.attribute_id.code == 'weight':
+                    m = re.match(r"(^[0-9]\d*\.\d|\d+)",line.name)
+                    thirdCode =  m.group(1)
                 else:
-                    norms_list.append(line.sequence)
-            norms_list.sort()
-            suffix = ''
-            for i in range(len(norms_list)):
-                suffix = "%s%s" % (suffix,norms_list[i])
-            default_code = "%s%s-%s-%s" %(material,style,model,suffix)
+                    SecondCode[line.attribute_id.name] = "%s" % line.sequence
+                    
+            if firstCode is None:
+                raise UserError(_("Must set the material of the product")) 
+            default_code = "%s0%s" % (firstCode,tmplObj.sequence)
+            if SecondCode:
+                
+                SecondCodeStr = "0".join([SecondCode[v] for v in sorted(SecondCode.keys())])
+                default_code = "%s-%s"%(default_code,SecondCodeStr)
+            if thirdCode:
+                default_code = "%s-%s"%(default_code,thirdCode)
             vals['default_code'] = default_code
-            
+        else:
+            raise UserError(_("Must set the properties of the product")) 
         return super(prdouct_product,self).create(vals)
     @api.multi
     def _compute_attribute(self):
