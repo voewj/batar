@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="product_category_no_variant_form_view">
+            <field name="name">product.category.no.variant.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view" />
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="no_create_variants" />
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_template_no_variant_form_view">
+            <field name="name">product.template.no.variant.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+                <field name="attribute_line_ids" position="before">
+                    <group>
+                        <field name="variants_create_auto" />
+                    </group>
+                </field>
+            </field>
+        </record>
+
+        <record id="batar_product_product_view_form" model="ir.ui.view">
+            <field name="name">batar.product.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="product_tmpl_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                    <attribute name="readonly">0</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
