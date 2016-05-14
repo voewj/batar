@@ -5,7 +5,8 @@ Created on 2016年3月18日
 @author: cloudy
 '''
 from openerp import models,fields,api
-from openerp.exceptions import UserError, ValidationError
+from openerp.exceptions import UserError
+from openerp.tools.common_ext import GetNextSequence
 import re
 
 class product_attribute(models.Model):
@@ -24,13 +25,10 @@ class product_attribute(models.Model):
     @api.model
     def create(self, vals):
         code = vals.get('code','')
-        sequence_list  = self.env['product.attribute'].search([])
+        attributeObj  = self.env['product.attribute'].search([],limit=1,order='id desc')
         sequence = 1
-        sequence_list = [line.sequence for line in sequence_list]
-        if sequence_list:
-           
-            sequence = max(sequence_list) + 1
-        
+        if attributeObj:
+            sequence = GetNextSequence(sequence)
         vals['sequence'] = sequence
         if code:
             vals['code'] = code.strip()
@@ -55,38 +53,13 @@ class product_attribute_value(models.Model):
     @api.model
     def create(self, vals):
         attribute_id = vals.get('attribute_id',None)
-        if attribute_id == self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_material')[1]:
-            material_list = self.env['product.attribute.value'].search([('attribute_id','=',attribute_id)])
-            sequence_list = [line.sequence for line in material_list]
-            if sequence_list:
-                sequence = max(sequence_list) +1
-            else:
-                sequence = 10
+        if attribute_id:
+            attributeValueObj = self.env['product.attribute.value'].search([('attribute_id','=',attribute_id)],limit=1)
+            sequence = 1
+            if attributeValueObj:
+                sequence = GetNextSequence(sequence)
             vals['sequence'] = sequence
-        elif attribute_id == self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_style')[1]:
-            material_list = self.env['product.attribute.value'].search([('attribute_id','=',attribute_id)])
-            sequence_list = [line.sequence for line in material_list]
-            if sequence_list:
-                sequence = max(sequence_list) +1
-            else:
-                sequence = 1
-            vals['sequence'] = sequence
-        elif attribute_id == self.env['ir.model.data'].get_object_reference('product_info_extend', 'product_attribute_model')[1]:
-            material_list = self.env['product.attribute.value'].search([('attribute_id','=',attribute_id)])
-            sequence_list = [line.sequence for line in material_list]
-            if sequence_list:
-                sequence = max(sequence_list) +1
-            else:
-                sequence = 1
-            vals['sequence'] = sequence
-        else:
-            material_list = self.env['product.attribute.value'].search([('attribute_id.code','not in',('material','style','model'))],limit=1)
-            sequence_list = [line.sequence for line in material_list]
-            if sequence_list:
-                sequence = max(sequence_list) +1
-            else:
-                sequence = 1
-            vals['sequence'] = sequence
+       
         attr_obj = self.env['product.attribute'].search([('id','=',attribute_id)])
         if attr_obj.code == 'weight':
             name = vals.get('name','')
