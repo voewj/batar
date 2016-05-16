@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Product no autocreate',
-    'author': 'xiao',
+    "author": "OdooMRP team,"
+              "AvanzOSC,"
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza",
     'category': 'batar',
     'description': """
     This module creates a check in categories and an option in product templates,

@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+
 from openerp import api, fields, models, _
 
 class ProductCategory(models.Model):
@@ -82,23 +83,6 @@ class Product(models.Model):
             return {'domain': {'attribute_value_ids': [('id', 'in', values.ids)]}}
         else:
             return {'domain': {'attribute_value_ids': [('id', 'in', [])]}}
-    #
-    # attribute_value_ids = fields.Many2many(domain=product_tmpl_values_onchange)
 
-    # product_tmpl_values = fields.Many2many('product.attribute.value', id1='value_id', id2='tmpl')
-    # @api.multi
-    # @api.onchange('product_tmpl_id')
-    # def onchange_product_tmpl(self):
-    #     context = self._context or {}
-    #     self.ensure_one()
-    #     if self.product_tmpl_id:
-    #         values = self.env['product.attribute.value']
-    #         attribute_line = self.env['product.attribute.line'].search(
-    #             [('product_tmpl_id', '=', self.product_tmpl_id.id)])
-    #         for i in attribute_line:
-    #             values += i.value_ids
-    #         print values
-    #         # self.product_tmpl_values = values
-    #         self._context['domain_ids']=values.ids
 
 
